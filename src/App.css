@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Gotham:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+  /* the background color not working for whole body */
+  background-color: #F4F5F6 !important;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
+:root {
+  
+  --heading-h-3: "DM Sans";
+  --font-gotham: Gotham;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  /* font sizes */
+  --heading-h-3-size: 2rem;
+  --paragraph-p-1-size: 1rem;
+  --paragraph-p-2-size: 0.88rem;
+  --title-t-2-size: 1.25rem;
+  --title-t-1-size: 1.5rem;
+  --heading-h-1-size: 5rem;
+  --heading-h-2-size: 2.5rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  /* Colors */
+  --greyscale-shade-4: #f4f5f6;
+  --color-whitesmoke-100: #ebecef;
+  --essential-black: #000a1a;
+  --primary-shade-1: #ffd700;
+  --essential-white: #fff;
+  --greyscale-shade-1: #52637a;
 
-.App-link {
-  color: #61dafb;
-}
+  /* Gaps */
+  --gap-9xs: 0.25rem;
+  --gap-xs: 0.75rem;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* Paddings */
+  --padding-xl: 1.25rem;
+  --padding-17xl: 2.25rem;
+  --padding-21xl: 2.5rem;
+  --padding-sm: 0.88rem;
+  --padding-9xl-6: 1.79rem;
+  --padding-32xl-4: 3.21rem;
+  --padding-3xs: 0.63rem;
+
+  /* border radiuses */
+  --br-21xl: 40px;
+  --br-11xs: 2px;
+  --br-9xs: 4px;
+  --br-5xs: 8px;
+  --br-481xl: 500px;
+  --br-57xl: 76px;
+  --br-7xs: 6px;
 }

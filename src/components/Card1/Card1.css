@@ -1,0 +1,114 @@
+.box {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .box .free-design-service-wrapper {
+    border: 0px none;
+    height: 352px;
+    overflow-x: hidden;
+    width: 282px;
+  }
+  
+  .box .free-design-service {
+    height: 352px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 286px;
+  }
+  
+  .box .overlap-group {
+    height: 352px;
+    position: relative;
+    width: 282px;
+  }
+  
+  .box .rectangle {
+    background-color: whitw;
+    border-radius: 4px;
+    box-shadow: 0px 20px 80px #000a190a;
+    height: 330px;
+    left: 0;
+    position: absolute;
+    top: 22px;
+    width: 282px;
+  }
+  
+  .box .re-bath-s-design {
+    /* color: var(--greyscaleshade-1); */
+    /* font-family: var(--paragraph-p-2-font-family);
+    font-size: var(--paragraph-p-2-font-size);
+    font-style: var(--paragraph-p-2-font-style);
+    font-weight: var(--paragraph-p-2-font-weight);
+    height: 110px; */
+    left: 29px;
+    letter-spacing: var(--paragraph-p-2-letter-spacing);
+    line-height: var(--paragraph-p-2-line-height);
+    position: absolute;
+    text-align: center;
+    top: 214px;
+    width: 224px;
+    color: var(--greyscale-shade-1, #52637A);
+text-align: center;
+
+/* Paragraph/P 2 */
+font-family: DM Sans;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 1.4rem */
+text-transform: capitalize;
+  }
+  
+  .box .text-wrapper {
+    /* color: var(--essentialblack); */
+    /* font-family: var(--title-t-2-font-family); */
+    /* font-size: var(--title-t-2-font-size);
+    font-style: var(--title-t-2-font-style);
+    font-weight: var(--title-t-2-font-weight);
+    height: 24px; */
+    left: 48px;
+    letter-spacing: var(--title-t-2-letter-spacing);
+    line-height: var(--title-t-2-line-height);
+    position: absolute;
+    text-align: center;
+    top: 180px;
+    white-space: nowrap;
+    color: var(--essential-black, #000A1A);
+text-align: center;
+
+/* Title/T 2 */
+font-family: DM Sans;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 1.5rem */
+text-transform: capitalize;
+  }
+  .group{
+    background-color: #F4F5F6 !important;
+  }
+  .box .group {
+    /* background-image: url(./rectangle-4919.svg); */
+    background-color: transparent;
+    background-size: 100% 100%;
+    height: 154px;
+    left: 32px;
+    position: absolute;
+    top: 0;
+    width: 218px;
+  }
+  
+  .box .image {
+    height: 100px;
+    left: 59px;
+    object-fit: cover;
+    position: absolute;
+    top: 22px;
+    width: 100px;
+  }
+  

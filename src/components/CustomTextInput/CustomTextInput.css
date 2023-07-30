@@ -1,0 +1,108 @@
+/* CustomTextInput.css */
+
+/* Common styles for both mobile and large views */
+.custom-text-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3.125rem;
+    background-color: #000a1a;
+    border: 0.5rem solid white;
+    max-width: 63.75rem;
+    max-height: 4.125rem;
+    position: relative;
+    /* Added position relative */
+}
+
+.custom-text-input input {
+    margin-left: 10px;
+    border: none;
+    background-color: #000a1a;
+    border-radius: 3.125rem;
+    font-size: 1.2rem;
+    color: white;
+    /* Added text color */
+    padding: 10px 20px;
+    /* Added padding */
+    width: 150px;
+    /* Adjust the width as needed */
+}
+.custom-text-input input:focus{
+    outline: none;
+}
+.form-header {
+    padding-top: 0.65rem;
+    max-width: 10rem;
+    font-weight: 500;
+    color: black;
+}
+
+.formArea {
+    display: flex;
+    background-color: white;
+    border: 0.5rem solid white;
+    border-radius: 3.125rem;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+    /* Added flex-wrap to wrap the elements */
+}
+
+.btn-for-input {
+    margin-left: auto;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.5rem solid #000a1a;
+    border-radius: 50%;
+    background: var(--primary-shade-1, #ffd700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-line {
+    height: 2rem;
+    margin: 0 20px;
+    /* Added margin to separate inputs */
+}
+.mobile-consultation{
+    display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .form-header {
+        display: none;
+        /* display: none; */
+    }
+
+    .custom-text-input {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 100%;
+        background-color: transparent;
+    }
+
+    .custom-text-input input{
+        width: 100%;
+        
+        margin-top: 10px;
+    }
+    .input-line {
+        display: none;
+    }
+    .btn-for-input{
+        margin-top: 1rem;
+        width: fit-content;
+        border-radius: 1rem;
+    }
+    .mobile-consultation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .formArea {
+        margin-top: 7rem;
+        flex-direction: column;
+    }
+}
