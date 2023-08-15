@@ -6,7 +6,7 @@ import './CustomTextInput.css';
 
 const CustomTextInput = () => {
   return (
-    <div className="formArea">
+    <div className="formArea" data-aos="fade-right">
         <p className="form-header">Free Design Consultation</p>
       <div className='custom-text-input'>
         <input type="text" placeholder="Name" />

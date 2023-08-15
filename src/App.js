@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import HeroPart from './components/HeroPart/HeroPart';
 import WhyChoosePart from './components/WhyChoosePart/WhyChoosePart';
+import ServiceArea from './components/ServiceArea/ServiceArea';
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
       <CustomNavbar />
       <HeroPart />
       <WhyChoosePart />
+      <ServiceArea />
     </div>
   );
 }

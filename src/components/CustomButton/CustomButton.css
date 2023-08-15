@@ -16,3 +16,10 @@
     transition: all 0.3s ease-in-out;
     background: #ebc90c;
 }
+@media (max-width: 767px) {
+    .customBtn{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+}
