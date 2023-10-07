@@ -1,0 +1,19 @@
+.work-area {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-area-title {
+    color: var(--essential-black, #000A1A);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 3.15rem */
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}

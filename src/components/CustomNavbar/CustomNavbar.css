@@ -1,0 +1,46 @@
+.customnav{
+    background-color: #000A1A;
+    min-height: 3rem;
+}
+.customnav a{
+    color: white;
+    text-decoration: none;
+    font-family: var(--heading-h-3);
+    border: solid 1px transparent;
+}
+.logo{
+    color: var(--essential-white, #FFF);
+/* Heading/H 3 */
+    font-family: DM Sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 2.4rem */
+    text-transform: capitalize;
+}
+.logo:hover{
+    transition: all 0.3s ease-in-out;
+    color: #FFD700 !important;
+}
+.navlinks{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 2.5rem;  
+    margin-left: 1px;
+}
+.navlinks a{
+    padding: 0.1rem 0.5rem;
+    font-size: 1rem;
+}
+.navlinks a:hover{
+    transition: all 0.3s ease-in-out;
+    color: #FFD700;
+}
+.navlinks a:focus{
+    border: solid 1px #FFD700;
+    transition: border-radius 0.3s ease-in-out;
+    border-radius: 2rem;
+}
+span.navbar-toggler-icon{
+    background-image: url('../../Images/menu.png');
+}
