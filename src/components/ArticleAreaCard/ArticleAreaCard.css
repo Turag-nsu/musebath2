@@ -1,0 +1,81 @@
+.ArticleAreaCardContainer{
+    margin: 3rem 0 3rem 0;
+    max-width: 24rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.article-area-top {
+    
+    /* background-color: rgb(126, 151, 189); */
+    position: relative;
+}
+
+.article-area-pic-container {
+    position: relative;
+    max-height: 15rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-area-pic-container img {
+    max-width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.article-area-date {
+    position: absolute;
+    z-index: 1;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex; /* Use flex to center the content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    gap: 0.25rem;
+    border-radius: 0.375rem;
+    background: var(--essential-white, #FFF);
+    padding: 0.4375rem 0.75rem;
+    
+    /* background-color: green; */
+}
+
+.article-area-date-text {
+    /* background-color: aqua; */
+    color: var(--essential-black, #000A1A);
+    font-family: DM Sans;
+    /* Add your font size, style, weight, and line-height styles here as needed */
+}
+.article-area-date-text p{
+    margin: 0;
+}
+.article-area-date img {
+    /* background-color: rgb(255, 179, 0); */
+    width: 1rem; /* Adjust the width as needed */
+    height: 1rem; /* Adjust the height as needed */
+}
+
+.article-area-card-body{
+    margin: 1rem 0 1rem 0;
+}
+.article-area-card-title{
+    color: var(--essential-black, #000A1A);
+
+/* Title/T 2 */
+font-family: DM Sans;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 1.75rem */
+}
+
+.article-area-card-text{
+    color: var(--greyscale-shade-1, #52637A);
+
+/* Paragraph/P 2 */
+font-family: DM Sans;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 1.4rem */
+}

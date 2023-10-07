@@ -6,6 +6,7 @@
     color: white;
     text-decoration: none;
     font-family: var(--heading-h-3);
+    border: solid 1px transparent;
 }
 .logo{
     color: var(--essential-white, #FFF);

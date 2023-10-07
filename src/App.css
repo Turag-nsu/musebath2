@@ -4,7 +4,7 @@ body {
   margin: 0;
   line-height: normal;
   /* the background color not working for whole body */
-  background-color: #F4F5F6 !important;
+  background-color: #F8F9FA;
 
 }
 :root {

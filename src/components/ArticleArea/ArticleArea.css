@@ -1,0 +1,26 @@
+.article-area{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.article-area-title {
+    color: var(--essential-black, #000A1A);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 3.15rem */
+    text-transform: uppercase;
+}
+
+.article-cards{
+    margin: 1rem;
+    max-width: 90%;
+}
+
+.article-area-btn{
+    display: flex;
+    justify-content: center;
+}

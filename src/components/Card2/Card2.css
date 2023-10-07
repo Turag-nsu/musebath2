@@ -15,6 +15,7 @@
 
 .card2-container-img {
     /* min-height: 23rem; */
+    max-height: 28.75rem;
     height: 100%;
     width: 100%;
     border-radius: 0.5rem;
@@ -32,14 +33,21 @@
 .card2-container {
     &:hover {
         transform: translateY(-4rem);
-        transition: all 0.3s ease-in-out;
+        /* transform: translateZ(1rem); */
+        max-height: 28.75rem;
+        /* height: 80%; */
+        /* max-height: min-content; */
+        transition: all 0.5s ease-in-out;
 
         .card2-body {
             /* margin-left: 1.75rem; */
             color: var(--greyscale-shade-1, #52637A);
-            transition: all 0.3s ease-in-out;
+            /* transition: all 0.5s ease-in-out; */
         }
 
+        /* .card2-img-container{
+            width: 100%;
+        } */
         .card2-title {
             display: none;
         }
@@ -89,7 +97,7 @@
 }
 
 .card2-container {
-    margin: 2rem 0 10rem 0;
+    margin: 2rem 0 5rem 0;
     position: relative;
     /* Added */
     /* max-width: 140%; */
@@ -119,7 +127,7 @@
     /* display: none; */
     color: #F4F5F6;
     margin: 1rem;
-    width: 80%;
+    width: 90%;
     text-align: justify;
 }
 
@@ -142,8 +150,8 @@
     .card2-img-container {
         flex-direction: column;
         margin-bottom: 0;
-        height: 20rem;
-        width: 100%;
+        height: 22rem;
+        /* width: 100%; */
     }
 
     .card2-title {
@@ -152,7 +160,9 @@
 
     .card2-container {
         &:hover {
+            margin-bottom: 12rem;
             transform: translateY(0);
+            transition: all 0.3s ease-in-out;
             .card2-body-title {
                 margin-left: 1rem;
                 /* display: none; */
@@ -163,9 +173,11 @@
             .card2-body-underline {
                 margin-left: 2.25rem;
                 /* width: 2rem; */
+                /* margin-bottom: 10rem; */
             }
             .card2-body-text {
                 display: block;
+                
             }
             .card2-img-overlay{
                 display: none;
@@ -175,7 +187,7 @@
 
     .card2-container {
         margin: 0.5rem;
-        /* max-width: 100%; */
+        
     }
 
     .card2-body-text {
@@ -186,10 +198,11 @@
     }
 
     .card2-container-img {
+        width: 18rem;
         /* justify-content: center; */
-        margin-left: 0rem;
-        margin-right: 1.75rem;
-        width: 20rem;
+        /* margin-left: 0rem;
+        margin-right: 1.75rem; */
+        /* width: 20rem; */
     }
     .card2-img-overlay{
         position: absolute;

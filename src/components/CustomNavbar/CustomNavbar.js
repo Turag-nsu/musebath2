@@ -3,11 +3,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './CustomNavbar.css';
 import CustomButton from '../CustomButton/CustomButton';
-// import CustomButton from '../CustomButton/CustomButton';
-
+import { useState } from 'react';
 const CustomNavbar = () => {
+  const [selected, setSelected] = useState(null);
+
   return (
-    <Navbar expand="lg" className="customnav">
+    <Navbar expand="lg" className="customnav fixed-top">
       <Container>
         <Navbar.Brand href="#home" className="logo my-auto">Muse bath</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
