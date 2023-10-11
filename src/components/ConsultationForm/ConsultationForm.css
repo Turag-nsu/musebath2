@@ -1,0 +1,96 @@
+.consultation-form {
+    padding: 6rem 0 6rem 0;
+}
+
+.consultation-area-title {
+    color: var(--essential-black, #000A1A);
+
+    /* Heading/H 2 */
+    font-family: DM Sans;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 50.4px */
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.consultation-area-subtitle {
+    color: var(--greyscale-shade-1, #52637A);
+    text-align: center;
+
+    /* Title/T 2 */
+    font-family: DM Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 28px */
+}
+
+.consultation-input {
+    /* border: none; */
+    /* border-bottom: 2px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+}
+
+.consultation-input input:focus {
+    outline: none;
+}
+
+.consultation-input input {
+    border: none;
+    border-bottom: 1px solid var(--greyscale-shade-2, #A8B1BC);
+    width: 80%;
+    margin: 1rem 0;
+}
+
+.consultation-area-radio-group-title {
+    color: var(--essential-black, #000A1A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 25.6px */
+    text-align: left;
+}
+
+.consultation-area-radio-group {
+    width: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.radio-label {
+    margin-right: 2rem;
+}
+
+.consultation-area-button {
+    border-radius: 6px;
+    background: var(--primary-shade-1, #FFD700);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 2rem 0;
+    color: var(--essential-black, #000A1A);
+
+/* Paragraph/P 2 */
+font-family: DM Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 22.4px */
+}
+.consultation-col{
+    /* display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between; */
+}

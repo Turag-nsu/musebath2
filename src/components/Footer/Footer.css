@@ -1,0 +1,34 @@
+.footer{
+    background-color: var(--essentialblack,#000a1a);
+}
+.footer-col1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-col2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-area1{
+    max-width: 190px;
+}
+.footer-area2{
+    max-width: 190px;
+}
+.footer-area3{
+    max-width: 190px;
+}
+.footer-area4{
+    max-width: 180px;
+}
+.footer-title{
+    
+}
+.footer-subtitle{
+    
+}
+.footer-logo{
+    
+}

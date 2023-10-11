@@ -1,15 +1,16 @@
 /* CustomTextInput.css */
 .formArea {
     display: flex;
-    background-color: white;
-    border: 0.5rem solid white;
+    background-color: var(--greyscale-shade-4, #F8F9FA);
+    /* border: 0.5rem solid var(--greyscale-shade-4, #F8F9FA); */
     border-radius: 3.125rem;
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
     max-width: 80%;
-    margin-top: 10rem;
+    margin-top: 9rem;
     /* flex-wrap: wrap; */
     /* Added flex-wrap to wrap the elements */
 }
+
 /* Common styles for both mobile and large views */
 .custom-text-input {
     display: flex;
@@ -17,7 +18,7 @@
     /* justify-content: center; */
     border-radius: 3.125rem;
     background-color: #000a1a;
-    border: 0.5rem solid white;
+    border: 0.5rem solid var(--greyscale-shade-4, #F8F9FA);
     /* max-width: 63.75rem; */
     /* width: 90%; */
     max-height: 4.125rem;
@@ -34,17 +35,36 @@
     border: none;
     background-color: #000a1a;
     border-radius: 3.125rem;
-    font-size: 1.2rem;
-    color: white;
+    color: var(--essential-white, #FFF);
+    /* Paragraph/P 2 */
+    font-family: DM Sans;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 1.4rem */
     /* Added text color */
     padding: 10px 0px 10px 20px;
     /* Added padding */
     /* max-width: 20%; */
     /* Adjust the width as needed */
 }
-.custom-text-input input:focus{
+
+.custom-text-input input:focus {
     outline: none;
 }
+
+.custom-text-input input::placeholder {
+    color: var(--essential-white, #FFF);
+    /* Paragraph/P 2 */
+    font-family: DM Sans;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 1.4rem */
+}
+
 .form-header {
     padding-top: 0.65rem;
     max-width: 10rem;
@@ -71,7 +91,8 @@
     /* margin: 0 1rem; */
     /* Added margin to separate inputs */
 }
-.mobile-consultation{
+
+.mobile-consultation {
     display: none;
 }
 
@@ -79,7 +100,7 @@
 @media (max-width: 767px) {
     .form-header {
         display: none;
-        
+
     }
 
     .custom-text-input {
@@ -95,32 +116,36 @@
         /* margin-bottom: 1rem; */
     }
 
-    .custom-text-input input{
+    .custom-text-input input {
         width: 100%;
         /* border: none; */
         margin-top: 10px;
     }
+
     .input-line {
         display: none;
     }
-    .btn-for-input{
+
+    .btn-for-input {
         margin-top: 1rem;
         width: fit-content;
         border-radius: 1rem;
     }
-    .mobile-consultation{
+
+    .mobile-consultation {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 1rem;
     }
+
     .formArea {
         border: none;
         padding-left: 0;
         margin-top: 2rem;
         margin-bottom: 20rem;
         flex-direction: column;
-        
-        
+
+
     }
 }

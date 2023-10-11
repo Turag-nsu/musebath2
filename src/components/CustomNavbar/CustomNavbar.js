@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './CustomNavbar.css';
 import CustomButton from '../CustomButton/CustomButton';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const CustomNavbar = () => {
   const [selected, setSelected] = useState(null);
 
@@ -14,11 +15,11 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto navlinks">
-            <a href="#home">Design</a>
-            <a href="#link">Service</a>
-            <a href="#home">Process</a>
-            <a href="#link">About</a>
-            <a href="#home">Career</a>
+            <Link to="/">Home</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/blog">Blog</Link>
+            {/* <a href="#home">Career</a> */}
           </Nav>
           <CustomButton text="Free consultation" />
         </Navbar.Collapse>

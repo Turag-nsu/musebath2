@@ -1,7 +1,8 @@
 import React from 'react';
 import './ServiceArea2.css';
 import { Row, Col, Container } from 'react-bootstrap';
-import Mymap from './MyMap/Mymap';
+// import Mymap from './MyMap/Mymap';
+import Mymap from '../MyMap/MyMap';
 import CustomButton from '../CustomButton/CustomButton';
 import locationMarker from "../../Images/Location-marker.png";
 import SingleLocation from './SingleLocation/SingleLocation';
@@ -47,8 +48,10 @@ const ServiceArea2 = () => {
                     Restyling Bathrooms Across the United States
                 </p>
                 <Row>
-                    <Col md={6}>
-                        {/* <Mymap /> */}
+                    <Col md={6} >
+                        <div className='map-area'>
+                        <Mymap />
+                        </div>
                     </Col>
                     <Col md={6}>
                         <p className="service-area-text">

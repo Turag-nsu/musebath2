@@ -5,6 +5,7 @@ import cardImg1 from '../../Images/image-1663.png';
 import cardImg2 from '../../Images/image-1664.png';
 import cardImg3 from '../../Images/image-1665.png';
 import cardImg4 from '../../Images/image-1666.png';
+import { Container } from 'react-bootstrap';
 const card1Data = [
     {   
         imageLink: cardImg1,
@@ -30,12 +31,13 @@ const card1Data = [
 const WhyChoosePart = () => {
     let id=1; 
     return (
-        <div className='why-choose-area container' >
+        <div className='why-choose-area' >
+            <Container>
             <p className="title-line">Why Choose our products</p>
             <div className="cardArea">
                 {card1Data.map((data, index) => <Card1 key={index} imageLink={data.imageLink} title={data.title} text={data.text} id={id++}/>)}
             </div>
-
+            </Container>
         </div>
     );
 };

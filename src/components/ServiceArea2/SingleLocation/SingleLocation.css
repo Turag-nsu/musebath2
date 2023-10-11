@@ -7,7 +7,7 @@
 .single-location-container img{
     width: 1rem;
     height: 1rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     /* margin: auto; */
 }
 .single-location-text {
@@ -16,7 +16,7 @@
 
     /* Paragraph/P 2 */
     font-family: DM Sans;
-    font-size: 0.875rem;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%;

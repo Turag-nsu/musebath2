@@ -88,16 +88,17 @@
 
 .card2-body-link {
     text-decoration: none;
-    border-bottom: 2px solid #F4F5F6;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
     /* background: var(--greyscale-shade-4, #F4F5F6); */
     /* color: #F4F5F6; */
-    color: #F4F5F6;
+    color: #FFFFFF;
 
 
 }
 
 .card2-container {
-    margin: 2rem 0 5rem 0;
+    margin: 2rem 0 2rem 0;
     position: relative;
     /* Added */
     /* max-width: 140%; */
@@ -125,7 +126,7 @@
 
 .card2-body {
     /* display: none; */
-    color: #F4F5F6;
+    color: #FFFFFF;
     margin: 1rem;
     width: 90%;
     text-align: justify;

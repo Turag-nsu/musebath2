@@ -4,7 +4,7 @@ body {
   margin: 0;
   line-height: normal;
   /* the background color not working for whole body */
-  background-color: #F8F9FA;
+  background-color: var(--greyscale-shade-4, #F8F9FA) !important;
 
 }
 :root {
@@ -22,7 +22,7 @@ body {
   --heading-h-2-size: 2.5rem;
 
   /* Colors */
-  --greyscale-shade-4: #f4f5f6;
+  --greyscale-shade-4: #F8F9FA;
   --color-whitesmoke-100: #ebecef;
   --essential-black: #000a1a;
   --primary-shade-1: #ffd700;

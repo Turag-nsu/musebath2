@@ -26,7 +26,7 @@ const ArticleAreaCard = ({img, date, title, body}) => {
                     <p>{body}</p>
                 </div>
                 <div className="article-area-card-button">
-                    <button style={{border: "none"}}>Read More - </button>
+                    <button style={{border: "none", backgroundColor: "transparent"}}>Read More - </button>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@
 }
 
 .gallary-area {
-    margin: 8rem 0 8rem 0;
+    padding: 6rem 0 6rem 0;
 
 }
 
@@ -27,7 +27,7 @@
 }
 .gallary-pic-container {
     overflow: hidden;
-    border: 5px 5px 5px solid gray;
+    /* border: 5px 5px 5px solid gray; */
 }
 @media (max-width: 767px) {
     .gallary-area-title {

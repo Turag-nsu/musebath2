@@ -1,0 +1,8 @@
+.Blogs-area-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Blogs-area{
+    padding: 6rem 0 6rem 0;
+}

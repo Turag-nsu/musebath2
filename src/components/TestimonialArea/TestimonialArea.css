@@ -21,6 +21,10 @@
 .testimonial-area-title-buttons{
     display:  flex;
     align-items: center;
+    /* background-color: aqua; */
+}
+.testimonial-area-title-buttons button{
+    background-color: var(--greyscale-shade-4, #F8F9FA);
 }
 .testimonial-next-button {
     background: var(--essential-black, #000A1A);

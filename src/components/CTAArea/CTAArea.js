@@ -8,7 +8,8 @@ const CTAArea = () => {
             <div className="cta-container">
                 <Row>
                     <Col></Col>
-                    <Col className="cta-area-col2">
+                    <Col className="whole-cta-area-col2">
+                        <div className='cta-area-col2'>
                         <div className="cta-area-content">
                             <div className="cta-area-title">
                                 <p>Transform Your Bathroom Today with Muse Bath!</p>
@@ -21,6 +22,7 @@ const CTAArea = () => {
                             <div className="cta-area-button">
                                 <CustomButton text="Get Free Consultation" color='white'/>
                             </div>
+                        </div>
                         </div>
                     </Col>
                 </Row>

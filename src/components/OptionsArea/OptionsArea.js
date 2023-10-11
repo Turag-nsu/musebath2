@@ -2,9 +2,11 @@ import React from 'react';
 import './OptionsArea.css'
 import optionAreaImg from '../../Images/optionAreaImg.png';
 import CustomButton from '../CustomButton/CustomButton';
+import { Container } from 'react-bootstrap';
 const OptionsArea = () => {
     return (
         <div className='option-area'  >
+            <Container>
             <p className="option-area-title" data-aos="zoom-in">
                 Need bathroom upgrade?
             </p>
@@ -19,6 +21,7 @@ const OptionsArea = () => {
             <div className="option-area-button mx-auto">
             <CustomButton text="Contact Us Now"  />
             </div>
+            </Container>
         </div>
     );
 };
