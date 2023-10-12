@@ -9,10 +9,10 @@ import FooterArea from '../components/FooterArea/FooterArea';
 import Blogs from '../components/Blogs/Blogs';
 import ConsultationForm from '../components/ConsultationForm/ConsultationForm';
 import BlogHeroPart from '../components/BlogHeroPart/BlogHeroPart';
-function App() {
+const BlogPage=()=> {
   return (
-    <div className="App">
-      <CustomNavbar />
+    <div>
+      {/* <CustomNavbar /> */}
        {/* <div style={{ backgroundColor: '#F8F9FA' }}>
         <HeroPart />
       </div> */}
@@ -27,10 +27,10 @@ function App() {
       <div style={{ backgroundColor: '#F8F9FA' }}>
         <TrustedArea />
       </div>
-      <FooterArea />
+      {/* <FooterArea /> */}
       </div>
     </div>
   );
 }
 
-export default App;
+export default BlogPage;

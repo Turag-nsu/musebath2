@@ -15,10 +15,10 @@ import ArticleArea from '../components/ArticleArea/ArticleArea';
 import TrustedArea from '../components/TrustedArea/TrustedArea';
 import CTAArea from '../components/CTAArea/CTAArea';
 import FooterArea from '../components/FooterArea/FooterArea';
-function HomePage() {
+const HomePage=()=> {
   return (
-    <div className="App">
-      <CustomNavbar />
+    <div>
+      {/* <CustomNavbar /> */}
        <div style={{ backgroundColor: '#F8F9FA' }}>
         <HeroPart />
       </div>
@@ -53,7 +53,7 @@ function HomePage() {
       <div style={{ backgroundColor: '#FFF' }}>
         <CTAArea />
       </div>
-      <FooterArea />
+      {/* <FooterArea /> */}
       </div>
   );
 }
