@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card1.css";
-import cardImg1 from '../../Images/image-1663.png'
+// import cardImg1 from '../../Images/image-1663.png'
 const Card1 = ({imageLink, title, text, id}) => {
   return (
     <div className="box" data-aos="flip-up" data-aos-delay={200+id*100}>

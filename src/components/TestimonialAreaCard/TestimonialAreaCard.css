@@ -9,6 +9,14 @@
     line-height: 160%;
     /* 1.6rem */
     min-height: 13rem;
+    
+}
+.testimonial-area-card-container{
+    background-color: var(--essential-white, #FFF);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    margin-top: 4rem;
+    min-height: 35rem;
 }
 
 .reviewer-profile {
@@ -18,6 +26,7 @@
     border-radius: 4.75rem;
     border: 8px solid var(--greyscale-shade-4, #F8F9FA);
     background: var(--essential-white, #FFF);
+    border: 8px solid var(--greyscale-shade-4, #F8F9FA);
 
 
     max-width: 30.75rem;
@@ -29,7 +38,7 @@
 .reviewer-profile img {
     width: 3.75rem;
     height: 3.75rem;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 
 }
 

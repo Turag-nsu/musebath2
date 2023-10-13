@@ -2,6 +2,7 @@ import React from 'react';
 import './ArticleAreaCard.css'
 import ArticleAreaPic1 from '../../Images/Article-area-pic-1.png'
 import calender_month from '../../Images/calendar_month.svg'
+import arrow from '../../Images/arrow.svg'
 const ArticleAreaCard = ({img, date, title, body}) => {
     return (
         <div className="ArticleAreaCardContainer">
@@ -26,7 +27,7 @@ const ArticleAreaCard = ({img, date, title, body}) => {
                     <p>{body}</p>
                 </div>
                 <div className="article-area-card-button">
-                    <button style={{border: "none", backgroundColor: "transparent"}}>Read More - </button>
+                    <button style={{border: "none", backgroundColor: "transparent"}}>Read More <img style={{width: "1.5rem",height: "0.5rem"}} src={arrow}></img></button>
                 </div>
             </div>
         </div>

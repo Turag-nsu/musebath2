@@ -10,13 +10,13 @@
 }
 .logo{
     color: var(--essential-white, #FFF);
-/* Heading/H 3 */
     font-family: DM Sans;
-    font-size: 2rem;
-    font-style: normal;
+    font-size: 32px;
     font-weight: 700;
-    line-height: 120%; /* 2.4rem */
-    text-transform: capitalize;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    
 }
 .logo:hover{
     transition: all 0.3s ease-in-out;

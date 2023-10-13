@@ -28,6 +28,7 @@
 .gallary-pic-container {
     overflow: hidden;
     /* border: 5px 5px 5px solid gray; */
+    border-radius: 0.5rem;
 }
 @media (max-width: 767px) {
     .gallary-area-title {

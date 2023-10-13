@@ -18,6 +18,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 3rem */
+    margin-bottom: 3rem;
 }
 .cardArea{
     display: flex;
