@@ -5,6 +5,7 @@
     overflow: hidden;
     min-height: 28rem;
     background-color: brown;
+    justify-content: space-between;
 }
 .article-area-top {
     
@@ -68,6 +69,7 @@
     flex-direction: column;
     background-color: aqua;
     /* align-content: space-between; */
+    align-self: normal;
 }
 .article-area-card-title{
     color: var(--essential-black, #000A1A);
@@ -91,7 +93,5 @@ font-weight: 400;
 line-height: 160%; /* 1.4rem */
 }
 .article-area-card-button{
-    /* display: flex;
-    justify-content: center;
-    width: 100%; */
+    margin-top: auto;
 }

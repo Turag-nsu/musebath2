@@ -10,8 +10,9 @@ import { Container } from 'react-bootstrap';
 const TrustedArea = () => {
 
     return (
+        <Container>
         <div className="trusted-area">
-            <Container>
+            
                 <p className='trusted-area-title'>
                     The Bathroom Remodeler Trusted by the Entire Nation
                 </p>
@@ -34,8 +35,9 @@ const TrustedArea = () => {
                         </div>
                     </div>
                 </div>
-            </Container>
+            
         </div>
+        </Container>
     );
 };
 

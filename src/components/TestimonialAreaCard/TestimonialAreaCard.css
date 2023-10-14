@@ -22,13 +22,12 @@
 .reviewer-profile {
     /* border-radius: 31.25rem; */
     padding: 1rem;
-    margin-top: 3rem;
+    /* margin-top: 9rem; */
     border-radius: 4.75rem;
-    border: 8px solid var(--greyscale-shade-4, #F8F9FA);
+    /* border: 8px solid var(--greyscale-shade-4, #F8F9FA); */
     background: var(--essential-white, #FFF);
     border: 8px solid var(--greyscale-shade-4, #F8F9FA);
-
-
+    display: flex;
     max-width: 30.75rem;
     height: 6.75rem;
 }

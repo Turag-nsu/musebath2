@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import FooterArea from '../src/components/FooterArea/FooterArea';
 import ContactUs from './Pages/ContactUs';
+import CTA2 from '../src/components/CTA2/CTA2';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
+    {/* <CTA2 /> */}
     <FooterArea />
     </div>
   );

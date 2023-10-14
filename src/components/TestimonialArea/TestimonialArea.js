@@ -25,7 +25,7 @@ const TestimonialArea = () => {
 
     ]
     return (
-        <div className='testimonial-area'>
+        <div className='testimonial-area card-deck'>
             <Container>
                 <div className="testimonial-area-title">
                     <div>
