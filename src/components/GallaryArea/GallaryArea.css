@@ -25,6 +25,12 @@
     justify-content: center;
     margin: 3rem 0;
 }
+
+.gallary-pic-container img{
+    width: 100%;
+    /* height: min-content; */
+    max-height: 25rem;
+}
 .gallary-pic-container {
     overflow: hidden;
     /* border: 5px 5px 5px solid gray; */
