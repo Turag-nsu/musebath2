@@ -12,22 +12,25 @@
     line-height: 120%;
     /* 3.15rem */
     text-transform: uppercase;
+    padding: 0 20%;
 }
 .trusted-area-logos {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 95%;
     padding: 2rem 4rem;
     position: relative; /* Add position relative */
     z-index: 1; /* Ensure it's above the pseudo-element */
 }
 .trust-single-logo{
-    margin-left: 1rem;
+    /* padding-right: 10%; */
+    /* margin: 0 15%; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .trust-single-logo img{
+    /* margin-right: 5rem; */
     width: 100%;
     
 }
@@ -40,7 +43,7 @@
     width: 100%;
     height: 100%;
     background-color: var(--essential-white, #ffffff);
-    transform: skew(10deg); /* Skew in the opposite direction */
+    transform: skew(10deg 0); /* Skew in the opposite direction */
     z-index: -1; /* Place it below the content */
 }
 

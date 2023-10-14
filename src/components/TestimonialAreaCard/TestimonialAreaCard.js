@@ -7,13 +7,13 @@ import dotdot from '../../Images/dotdot.svg'
 import { Row, Col } from 'react-bootstrap';
 const TestimonialAreaCard = ({img, text, name, title}) => {
     return (
-        <div>
-            <img style={{ margin: "2rem 0 2rem 0" }} src={stars} alt="" />
+        <div className='testimonial-area-card-container'>
+            <img src={stars} alt="" />
             <p className="testimonial-area-card-text">{text}</p>
             <div className="reviewer-profile">
                 <Row>
                     <Col xs={2}>
-                        <img src={img} alt="" />
+                        <img style={{borderRadius: "50%"}} src={img} alt="" />
                     </Col>
                     <Col  xs={7}>
                         <div className='reviewer-details'>

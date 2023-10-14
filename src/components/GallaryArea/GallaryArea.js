@@ -17,21 +17,36 @@ const GallaryArea = () => {
                     Bathroom Remodel Showcase
                 </p>
                 <Row className='gallary-row' xs={1} md={3}>
-                    <Col className='gallary-pic-container'>
+                    <Col className='gallary-pic-container' md={3} >
+                        <div className='gallery-pic-container'>
                         <img src={gallaryPic1} alt="" />
+                        </div>
+                        
                     </Col>
-                    <Col className='gallary-pic-container'>
+                    <Col className='gallary-pic-container' md={5}>
+                        <div className='gallery-pic-container'>
                         <img src={gallaryPic2} alt="" />
+                        </div>
+                        
                     </Col>
-                    <Col className='gallary-pic-container'>
+                    <Col className='gallary-pic-container' md={4}>
+                        <div className='gallery-pic-container'>
                         <img src={gallaryPic3} alt="" />
+                        </div>
+                        
                     </Col>
                 </Row>
                 <Row className='gallary-row' xs={1} md={2}>
-                    <Col className='gallary-pic-container'>
+                    <Col className='gallary-pic-container' md={6}>
+                        <div className='gallery-pic-container'>
                         <img src={gallaryPic4} alt="" />
+                        </div>
+                        
                     </Col>
-                    <Col className='gallary-pic-container'>
+                    <Col className='gallary-pic-container' md={6}>
+                        <div className='gallery-pic-container'>
+
+                        </div>
                         <img src={gallaryPic5} alt="" />
                     </Col>
                 </Row>

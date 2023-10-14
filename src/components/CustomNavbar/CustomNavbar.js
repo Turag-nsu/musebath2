@@ -21,9 +21,14 @@ const CustomNavbar = () => {
             <Link to="/blog">Blog</Link>
             {/* <a href="#home">Career</a> */}
           </Nav>
-          <CustomButton text="Free consultation" />
+
+          <Link to="/contact-us">
+            <CustomButton text="Contact Us" />
+          </Link>
+
+          {/* <CustomButton text="Contact Us" /> */}
         </Navbar.Collapse>
-        
+
       </Container>
     </Navbar>
   );
