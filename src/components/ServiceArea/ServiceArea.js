@@ -5,7 +5,7 @@ import service2 from '../../Images/service-2.jpeg';
 import service3 from '../../Images/service-3.jpeg';
 import Card2 from '../Card2/Card2';
 import CustomButton from '../CustomButton/CustomButton';
-
+import { Row, Col, Container } from 'react-bootstrap';
 const servicesData = [
     {
         id: 1,
@@ -28,19 +28,23 @@ const servicesData = [
 ]
 const ServiceArea = () => {
     return (
-        <div className="service-area container">
+        <Container>
+            <div className="service-area container">
             <div className="service-title-area" data-aos="zoom-in-down">
                 <p className="service-title-text">services We Provide</p>
                 <CustomButton text="Free Consultation" className="service-button" />
             </div>
 
             <div className="service-cards-area">
+                <Row xs={1} md={3}>
                 {servicesData.map((service) => (
-                    <Card2 key={service.id} imgLink={service.imgLink} title={service.title} body={service.body} id={service.id} />
+                    <Col><Card2 key={service.id} imgLink={service.imgLink} title={service.title} body={service.body} id={service.id} /></Col>
                 ))}
+                </Row>
             </div>
 
         </div>
+        </Container>
 
     );
 };

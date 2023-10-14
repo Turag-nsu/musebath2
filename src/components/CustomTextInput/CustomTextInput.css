@@ -1,27 +1,29 @@
 /* CustomTextInput.css */
 .formArea {
     display: flex;
+    /* background-color: cyan; */
     background-color: var(--greyscale-shade-4, #F8F9FA);
     /* border: 0.5rem solid var(--greyscale-shade-4, #F8F9FA); */
     border-radius: 3.125rem;
-    /* padding-left: 1rem; */
-    max-width: 80%;
-    margin-top: 9rem;
-    /* flex-wrap: wrap; */
-    /* Added flex-wrap to wrap the elements */
+    padding-left: 1rem;
+    width: 80%;
+    margin-top: 10%;
+    /* margin-top: 10.62rem; */
+    height: 4.125rem;
+   
 }
 
-/* Common styles for both mobile and large views */
 .custom-text-input {
     display: flex;
     align-items: center;
     /* justify-content: center; */
     border-radius: 3.125rem;
     background-color: #000a1a;
-    border: 0.5rem solid var(--greyscale-shade-4, #F8F9FA);
+    border: 0.5rem solid var(--greyscale-shade-4, #75bf7c);
     /* max-width: 63.75rem; */
     /* width: 90%; */
-    max-height: 4.125rem;
+    height: 4.125rem;
+    width: 100%;
     /* position: relative; */
     /* Added position relative */
 }
@@ -65,13 +67,24 @@
     /* 1.4rem */
 }
 
-.form-header {
-    padding-top: 0.65rem;
-    max-width: 10rem;
-    font-weight: 500;
-    color: black;
-}
+.form-header{
+    padding-left: 1rem;
+    margin-top: 5px;
+    /* padding: 10px 0 -10px 0 ; */
+    color: var(--essential-black, #000A1A);
 
+/* Title/T 2 */
+font-family: DM Sans;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 1.75rem */
+margin-right: 5rem;
+}
+ .form-header p{
+     margin-bottom: 0rem;
+     /* margin-top: 10px; */
+ }
 
 
 .btn-for-input {

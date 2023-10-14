@@ -11,8 +11,8 @@ const HeroPart = () => {
     return (
         <div className="hero-part">
             <div className="container2" data-aos="zoom-in" >
-                <p className="hero-text" >The future of your bathroom is here</p>
-                <p className="hero-text2">Elegant and incredible comfort</p>
+                <p className="hero-text" >Elevate your bathroom to a tranquil sanctuary.</p>
+                <p className="hero-text2">Your Destination for Bathroom Renovation, Style, and Aesthetics</p>
                 <CustomButton text="GET A FREE ESTIMATE NOW" />
             </div>
             {/* <div data-aos="fade-right"> */}
