@@ -38,7 +38,7 @@ const ArticleArea = () => {
                     Tips for a Successful Bathroom Remodel
                 </p>
                 <div className="article-cards">
-                    <Row>
+                    <Row className='card-group'>
                         {data.map(article => (
 
                             <Col key={article.id} md={4} xs={12}>
