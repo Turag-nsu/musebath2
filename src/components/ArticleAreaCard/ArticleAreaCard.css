@@ -100,3 +100,7 @@ line-height: 160%; /* 1.4rem */
     
     margin-top: auto;
 }
+
+.card{
+    background-color: transparent;
+}
