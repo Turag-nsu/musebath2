@@ -46,7 +46,7 @@ const TestimonialArea = () => {
                     </div>
                 </div>
                 <div className="testimonial-review-area">
-                    <Row xs={1} md={2}>
+                    <Row xs={1} md={2} className='card-group'>
                         {testimonials.map(testimonial => 
                         <Col key={testimonial.id}>
                             <TestimonialAreaCard img={testimonial.img} text={testimonial.text} name={testimonial.name} title={testimonial.title}></TestimonialAreaCard></Col>)

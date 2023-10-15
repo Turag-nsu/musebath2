@@ -5,7 +5,7 @@ import calender_month from '../../Images/calendar_month.svg'
 import arrow from '../../Images/arrow.svg'
 const ArticleAreaCard = ({img, date, title, body}) => {
     return (
-        <div className="ArticleAreaCardContainer">
+        <div className="ArticleAreaCardContainer card">
             <div className="article-area-top">
                 <div className="article-area-pic-container">
                     <img src={img} alt="" />
@@ -19,17 +19,18 @@ const ArticleAreaCard = ({img, date, title, body}) => {
                     </div>
                 </div>
             </div>
-            <div className="article-area-card-body">
+            <div className="article-area-card-body ">
                 <div className="article-area-card-title">
                     <p>{title}</p>
                 </div>
                 <div className="article-area-card-text">
                     <p>{body}</p>
                 </div>
-                <div className="article-area-card-button">
+                
+            </div>
+            <div className="article-area-card-button">
                     <button style={{border: "none", backgroundColor: "transparent"}}>Read More <img style={{width: "1.5rem",height: "0.5rem"}} src={arrow}></img></button>
                 </div>
-            </div>
         </div>
     );
 };

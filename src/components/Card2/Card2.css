@@ -98,7 +98,7 @@
 .card2-body-link {
     text-decoration: none;
     border: none;
-    border-bottom: 2px solid #FFFFFF;
+    /* border-bottom: 2px solid #FFFFFF; */
     /* background: var(--greyscale-shade-4, #F4F5F6); */
     /* color: #F4F5F6; */
     /* color: #FFFFFF; */
@@ -194,6 +194,7 @@
 
             .card2-body-underline {
                 margin-left: 2.25rem;
+                color: #fff;
                 /* width: 2rem; */
                 /* margin-bottom: 10rem; */
             }
