@@ -2,6 +2,7 @@ import React from "react";
 import "./FooterArea.css";
 import { Container, Row, Col } from "react-bootstrap";
 import socialIcons from "../../Images/Social-Media-Icons.svg"
+import footerLine from "../../Images/footerLine.svg"
 const FooterArea = () => {
     return (
         <div className="footer-area">
@@ -36,6 +37,11 @@ const FooterArea = () => {
 
                     </Col>
                 </Row>
+
+                <img className="footer-line" src={footerLine} ></img>
+                <div className="copyright-area">
+                    <p>Copyright © 2023  All rights reserved</p>
+                </div>
             </Container>
 
         </div>

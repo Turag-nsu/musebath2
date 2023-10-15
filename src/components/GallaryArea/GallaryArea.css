@@ -29,7 +29,7 @@
 .gallary-pic-container img{
     width: 100%;
     /* height: min-content; */
-    max-height: 25rem;
+    height: 25rem;
 }
 .gallary-pic-container {
     overflow: hidden;

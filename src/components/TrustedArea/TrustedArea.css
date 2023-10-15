@@ -43,7 +43,7 @@
     width: 100%;
     height: 100%;
     background-color: var(--essential-white, #ffffff);
-    transform: skew(10deg 0); /* Skew in the opposite direction */
+    transform: skew(10deg); /* Skew in the opposite direction */
     z-index: -1; /* Place it below the content */
 }
 

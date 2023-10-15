@@ -7,7 +7,9 @@
     /* margin-bottom: 6rem; */
     padding: 6rem 0;
 }
-
+.half-area{
+    width: 50%;
+}
 .cta-container::before {
     content: "";
     position: absolute;
@@ -20,7 +22,7 @@
     max-height: 26rem;
 }
 
-.cta-area-col2::before {
+.cta-area-col2::after {
     position: absolute;
     z-index: 1;
     content: "";
@@ -43,6 +45,7 @@
 
 .cta-area-content {
     padding: 6rem;
+    
 }
 
 .cta-area-title {
@@ -56,6 +59,8 @@
     font-weight: 700;
     line-height: 120%;
     text-transform: capitalize;
+    /* text-align:right; */
+
 }
 
 .cta-area-subtitle {
@@ -67,12 +72,13 @@
     font-weight: 500;
     line-height: 160%;
     margin-top: 1rem;
+    /* text-align: justify; */
 }
 
 .cta-area-button {
     position: relative;
     z-index: 2;
-    margin-left: -10%;
+    margin-left: -20%;
     margin-top: 2rem;
 }
 
