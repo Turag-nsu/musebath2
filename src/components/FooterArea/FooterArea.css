@@ -41,7 +41,11 @@
     max-width: 11rem;
 }
 
+.footer-area1 img{
+    margin-top: 2rem;
+}
 .footer-logo {
+    margin-bottom: 1.75rem;
     color: var(--essential-white, #FFF);
 
     /* Heading/H 3 */
@@ -55,6 +59,7 @@
 }
 
 .footer-subtitle {
+    margin-bottom: 0.75rem;
     color: var(--essential-white, #FFF);
 
     /* Paragraph/P 2 */
@@ -77,6 +82,8 @@
     line-height: 160%;
     /* 1.6rem */
     text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    padding-right: 1rem;
 }
 
 .footer-col2 {

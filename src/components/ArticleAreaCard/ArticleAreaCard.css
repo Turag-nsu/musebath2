@@ -1,13 +1,14 @@
 .ArticleAreaCardContainer{
-    
-    margin: 3rem 0 3rem 0;
+    /* margin-top: 3rem; */
     /* max-width: 24rem; */
     border-radius: 0.5rem;
     overflow: hidden;
-    min-height: 25.625rem;
+    min-height: 100%;
+    /* min-height: 25.625rem; */
     /* background-color: brown; */
     justify-content: space-between;
 }
+
 .article-area-top {
     
     /* background-color: rgb(126, 151, 189); */

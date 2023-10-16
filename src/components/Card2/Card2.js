@@ -2,33 +2,6 @@ import React, { useState } from 'react';
 import './Card2.css';
 
 const Card2 = ({ imgLink, title, body, id }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
-    let hoverTimeout; // Add a variable to store the timeout
-
-    const delay = ms => new Promise(
-        resolve => setTimeout(resolve, ms)
-    );
-
-    const handleMouseOver = () => {
-        console.log("Mouse over");
-        // Clear the timeout if the mouse re-enters
-        clearTimeout(hoverTimeout);
-        if (!isExpanded) {
-            hoverTimeout = setTimeout(() => setIsExpanded(true), 300); // Delay the expansion
-        }
-        if (isExpanded) {
-            // hoverTimeout = setTimeout(() => setIsExpanded(true), 100);
-        }
-    };
-
-    const handleMouseOut = () => {
-        console.log("Mouse out");
-        // Clear the timeout when the mouse leaves
-        clearTimeout(hoverTimeout);
-        if (isExpanded) {
-            setIsExpanded(false);
-        }
-    };
 
     return (
         <div
@@ -47,7 +20,7 @@ const Card2 = ({ imgLink, title, body, id }) => {
                 <div
                     className={`card2-overley`}
                 ></div>
-                <p className="card2-title">{title}</p>
+                <p className="card2-title" style={{width: "16.625rem"}}>{title}</p>
             </div>
             {/* {isExpanded && ( */}
                 <div className='card2-body'>

@@ -11,7 +11,7 @@ import CustomButton from '../CustomButton/CustomButton';
 
 const GallaryArea = () => {
     return (
-        <div className='gallary-area'>
+        <div className='gallary-area' >
             <Container>
                 <p className='gallary-area-title'>
                     Bathroom Remodel Showcase

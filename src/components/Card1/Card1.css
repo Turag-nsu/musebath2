@@ -1,4 +1,4 @@
-.box{
+.box {
   /* animation-name: fade-in-from-right;
   animation-duration: 0.5s; */
   background-color: white;
@@ -10,71 +10,76 @@
   /* margin: 1rem; */
   /* border: 5px solid black; */
   border-radius: 0.75rem;
-  min-height: 26.5rem;
+  min-height: 105%;
 }
-.photo-container{
+
+.photo-container {
   max-width: 80%;
   padding: 0 20% 10% 20%;
-  background-color:var(--greyscale-shade-4, #F8F9FA);
+  background-color: var(--greyscale-shade-4, #F8F9FA);
   border-bottom-right-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
-  /* position: ; */
   display: flex;
   align-items: center;
-  
+
 }
-.photo-box{
+
+.photo-box {
   max-width: 6.25rem;
   max-height: 6.25rem;
 }
-.photo-container img{
+
+.photo-container img {
   max-width: 100%;
 
 }
-.title-text{
+
+.title-text {
   color: var(--essential-black, #000A1A);
-text-align: center;
+  text-align: center;
 
-/* Title/T 2 */
-font-family: DM Sans;
-font-size: 1.25rem;
-font-style: normal;
-font-weight: 500;
-line-height: 140%; /* 1.75rem */
-  padding: 0 2rem;
+  /* Title/T 2 */
+  font-family: DM Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  padding: 1rem 2rem 0.5rem 2rem;
 }
-.body-text{
-  color: var(--greyscale-shade-1, #52637A);
-text-align: center;
 
-/* Paragraph/P 2 */
-font-family: DM Sans;
-font-size: 0.875rem;
-font-style: normal;
-font-weight: 400;
-line-height: 160%; /* 1.4rem */
+p{
+  margin-bottom: 0;
+}
+
+.body-text {
+  color: var(--greyscale-shade-1, #52637A);
+  text-align: center;
+
+  /* Paragraph/P 2 */
+  font-family: DM Sans;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  /* 1.4rem */
   width: 80%;
   text-align: center;
+  /* padding: 0 0 0 0; */
 }
 
 
 @media (max-width: 767px) {
-  
-  .box{
+
+  .box {
     /* min-height: 20rem; */
     height: max-content;
     margin: 0 10% 10% 10%;
   }
-  .photo-container{
-    
-  }
-  .title-text{
-    /* font-size: 1rem;
-    padding: 0 1rem; */
-  }
-  .body-text{
+
+  .photo-container {}
+
+  .body-text {
     /* font-size: 0.75rem;
     width: 100%; */
   }
 }
-  

@@ -13,6 +13,7 @@
     line-height: 120%;
     /* 3.15rem */
     text-transform: uppercase;
+    margin-bottom: 3.15rem;
 }
 
 .article-cards{
@@ -21,9 +22,18 @@
 }
 
 .article-area-btn{
+    margin-top: 3.75rem;
     display: flex;
     justify-content: center;
 }
 .article-area-card-button button{
     background-color: var(--essential-white, #ffffff);
+}
+@media (max-width: 767px) {
+    .article-area-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    
 }

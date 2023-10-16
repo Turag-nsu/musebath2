@@ -1,6 +1,4 @@
 .option-area {
-    /* display: inline-block;
-    align-items: center; */
     padding: 6rem 0 6rem 0;
 }
 
@@ -14,6 +12,7 @@
     line-height: 120%;
     /* 3.15rem */
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .option-area-subtitle {
@@ -32,8 +31,8 @@
 .option-are-img {
 
     border-radius: 0.5rem;
-    width: 80%;
-    margin: 4rem 0 3rem 0;
+    width: 90%;
+    margin: 3rem 0 3rem 0;
 
 }
 
@@ -55,12 +54,13 @@
     line-height: 120%;
     /* 2.4rem */
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .option-area-subtitle2 {
     color: var(--greyscale-shade-1, #52637A);
     text-align: center;
-    width: 80%;
+    width: 90%;
     /* Paragraph/P 1 */
     font-family: DM Sans;
     font-size: 1rem;

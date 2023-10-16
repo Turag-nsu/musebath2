@@ -1,8 +1,8 @@
 import React from 'react';
 import './ServiceArea.css';
-import service1 from '../../Images/service-1.png';
-import service2 from '../../Images/service-2.png';
-import service3 from '../../Images/service-3.png';
+import service1 from '../../Images/service-1.jpeg';
+import service2 from '../../Images/service-2.jpeg';
+import service3 from '../../Images/service-3.jpeg';
 import Card2 from '../Card2/Card2';
 import CustomButton from '../CustomButton/CustomButton';
 import { Row, Col, Container } from 'react-bootstrap';
@@ -36,7 +36,7 @@ const ServiceArea = () => {
             </div>
 
             <div className="service-cards-area">
-                <Row xs={1} md={3}>
+                <Row xs={1} md={1} lg={3}>
                 {servicesData.map((service) => (
                     <Col><Card2 key={service.id} imgLink={service.imgLink} title={service.title} body={service.body} id={service.id} /></Col>
                 ))}

@@ -13,7 +13,7 @@ const Card1 = ({imageLink, title, text, id}) => {
       <div className="title-text">
         <p>{title}</p>
       </div>
-      <div className="body-text">
+      <div className="body-text" >
         <p>{text}</p>
       </div>
     </div>
