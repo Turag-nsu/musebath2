@@ -1,0 +1,23 @@
+.project-tabs{
+    /* background-color: rgb(201, 35, 35); */
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.project-tabs .nav-link{
+    color: var(--greyscale-shade-1, #52637A);
+text-align: center;
+
+/* Title/T 3 */
+font-family: DM Sans;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 1.575rem */
+}
+
+.project-tabs .nav-link.active{
+    color: var(--essential-black, #000A1A);
+}

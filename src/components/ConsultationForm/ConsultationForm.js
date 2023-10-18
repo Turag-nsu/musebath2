@@ -21,8 +21,11 @@ const ConsultationForm = () => {
           <Col>
             <div className="consultation-col">
               <div className="consultation-input">
-                <input type="text" placeholder="Describe your project" />
-                <p className="consultation-area-radio-group-title">Preferred Time to Talk</p>
+                <p className="consultation-input-title">Describe your project</p>
+                <input className="project-description-input" type="text" placeholder="" />
+              </div>
+              <div className="consultation-area-radio-group-title" >
+                <p >Preferred Time to Talk</p>
               </div>
               <div className="consultation-area-radio-group">
                 <Form.Group className='d-flex'>

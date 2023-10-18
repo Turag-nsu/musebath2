@@ -1,5 +1,6 @@
 .consultation-form {
-    padding: 6rem 0 6rem 0;
+    padding: 5rem 0 5rem 0;
+    background-color: var(--essential-white, #ffffff);
 }
 
 .consultation-area-title {
@@ -14,6 +15,7 @@
     /* 50.4px */
     text-transform: capitalize;
     text-align: center;
+    padding-bottom: 3.75rem;
 }
 
 .consultation-area-subtitle {
@@ -39,6 +41,19 @@
 
 }
 
+.consultation-input-title {
+    color: var(--essential-black, #000A1A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin-bottom: 0.5rem;
+    /* 1.6rem */
+}
+
 .consultation-input input:focus {
     outline: none;
 }
@@ -47,10 +62,16 @@
     border: none;
     border-bottom: 1px solid var(--greyscale-shade-2, #A8B1BC);
     width: 80%;
-    margin: 1rem 0;
+    margin-bottom: 2.5rem;
+}
+.consultation-input .project-description-input {
+    margin: 0 0 1rem 0;
+}
+.consultation-area-radio-group-title{
+    margin: .5rem 0 0.5rem 0;
 }
 
-.consultation-area-radio-group-title {
+.consultation-area-radio-group-title p{
     color: var(--essential-black, #000A1A);
 
     /* Paragraph/P 1 */
@@ -77,20 +98,26 @@
     border-radius: 6px;
     background: var(--primary-shade-1, #FFD700);
     border: none;
-    padding: 0.5rem 1rem;
-    margin: 2rem 0;
+    padding: 0.7rem 2rem;
+    margin: 2.5rem 0 0 0;
     color: var(--essential-black, #000A1A);
 
-/* Paragraph/P 2 */
+    /* Paragraph/P 2 */
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 22.4px */
+}
+
+::placeholder{
+    color: var(--essential-black, #000A1A);
+
+/* Paragraph/P 1 */
 font-family: DM Sans;
-font-size: 14px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400;
-line-height: 160%; /* 22.4px */
-}
-.consultation-col{
-    /* display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: space-between; */
+line-height: 160%; /* 1.6rem */
 }

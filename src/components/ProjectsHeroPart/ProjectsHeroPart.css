@@ -1,0 +1,43 @@
+.projects-hero-part {
+    background-image: url('../../Images/Project/project-hero-bg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6.25rem;
+    background-color: (--greyscale-shade-4, #F8F9FA);
+    position: relative;
+}
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    padding-bottom: 0;
+}
+
+.projects-hero-text {
+    color: var(--essential-white, #FFF);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    /* 4.95rem */
+    text-transform: capitalize;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+}
+
+@media (max-width: 767px) {
+    .hero-text {
+        margin-top: 20%;
+        font-size: 2.5rem;
+        width: 80%;
+    }
+
+}

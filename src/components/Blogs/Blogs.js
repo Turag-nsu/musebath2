@@ -107,12 +107,13 @@ const Blogs = () => {
         <div className='Blogs-area'>
             <Container>
                 <div className="Blogs-cards">
-                    <Row  md={3} xs={1} >
+                    <Row md={3} xs={1} >
                         {data.map(article => (
-
-                            <Col key={article.id}>
-                                <ArticleAreaCard img={article.img} date={article.date} title={article.title} body={article.body} />
-                            </Col>
+                            <div className="blogs-row">
+                                <Col key={article.id}>
+                                    <ArticleAreaCard img={article.img} date={article.date} title={article.title} body={article.body} />
+                                </Col>
+                            </div>
                         ))
                         }
                     </Row>
