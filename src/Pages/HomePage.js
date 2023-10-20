@@ -1,6 +1,5 @@
 import React from 'react';
 // import './App.css';
-import CustomNavbar from '../components/CustomNavbar/CustomNavbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import HeroPart from '../components/HeroPart/HeroPart';
@@ -14,7 +13,6 @@ import TestimonialArea from '../components/TestimonialArea/TestimonialArea';
 import ArticleArea from '../components/ArticleArea/ArticleArea';
 import TrustedArea from '../components/TrustedArea/TrustedArea';
 import CTAArea from '../components/CTAArea/CTAArea';
-import FooterArea from '../components/FooterArea/FooterArea';
 const HomePage=()=> {
   return (
     <div>

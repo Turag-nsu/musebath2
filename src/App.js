@@ -29,7 +29,6 @@ function App() {
 
       </Routes>
     </BrowserRouter>
-    {/* <CTA2 /> */}
     <FooterArea />
     </div>
   );

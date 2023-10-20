@@ -25,7 +25,7 @@ const TestimonialArea = () => {
 
     ]
     return (
-        <div className='testimonial-area card-deck'>
+        <div className='testimonial-area'>
             <Container>
                 <div className="testimonial-area-title">
                     <div>
@@ -46,7 +46,7 @@ const TestimonialArea = () => {
                     </div>
                 </div>
                 <div className="testimonial-review-area">
-                    <Row xs={1} md={2} className='card-group'>
+                    <Row xs={1} md={2}>
                         {testimonials.map(testimonial => 
                         <Col key={testimonial.id}>
                             <TestimonialAreaCard img={testimonial.img} text={testimonial.text} name={testimonial.name} title={testimonial.title}></TestimonialAreaCard></Col>)

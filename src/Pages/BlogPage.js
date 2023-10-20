@@ -12,10 +12,6 @@ import BlogHeroPart from '../components/BlogHeroPart/BlogHeroPart';
 const BlogPage=()=> {
   return (
     <div>
-      {/* <CustomNavbar /> */}
-       {/* <div style={{ backgroundColor: '#F8F9FA' }}>
-        <HeroPart />
-      </div> */}
         <div style={{ backgroundColor: '#FFF' }}>
             <BlogHeroPart />
         </div>
