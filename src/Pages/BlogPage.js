@@ -17,7 +17,7 @@ const BlogPage=()=> {
         <HeroPart />
       </div> */}
         <div style={{ backgroundColor: '#FFF' }}>
-            <BlogHeroPart />
+            <BlogHeroPart text="Our Blogs"/>
         </div>
       <div style={{ backgroundColor: '#F8F9FA' }}>
         <Blogs /> 

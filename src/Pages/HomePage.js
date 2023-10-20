@@ -15,6 +15,13 @@ import ArticleArea from '../components/ArticleArea/ArticleArea';
 import TrustedArea from '../components/TrustedArea/TrustedArea';
 import CTAArea from '../components/CTAArea/CTAArea';
 import FooterArea from '../components/FooterArea/FooterArea';
+
+import gallaryPic1 from '../Images/Gallery-pic-1.png';
+import gallaryPic2 from '../Images/Gallery-pic-2.png';
+import gallaryPic3 from '../Images/Gallery-pic-3.png';
+import gallaryPic4 from '../Images/Gallery-pic-4.png';
+import gallaryPic5 from '../Images/Gallery-pic-5.png';
+const images = [gallaryPic1, gallaryPic2, gallaryPic3, gallaryPic4, gallaryPic5];
 const HomePage=()=> {
   return (
     <div>
@@ -36,7 +43,7 @@ const HomePage=()=> {
         <WorkArea />
       </div>
       <div style={{ backgroundColor: '#F8F9FA' }}>
-        <GallaryArea />
+        <GallaryArea images={images} title="Bathroom Remodel Showcase"/>
       </div>
       <div style={{ backgroundColor: '#FFF' }}>
         <ServiceArea2 />

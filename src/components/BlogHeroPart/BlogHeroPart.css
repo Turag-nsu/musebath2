@@ -9,7 +9,7 @@
     /* margin-bottom: 2rem; */
     background-color: (--greyscale-shade-4, #F8F9FA);
 }
-.container2 {
+.blog-hero-text-area {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@
     padding-bottom: 0;
 }
 
-.blog-hero-text {
+.blog-hero-text-area p {
     color: var(--essential-white, #FFF);
     text-align: center;
     font-family: DM Sans;
@@ -28,15 +28,16 @@
     line-height: 110%;
     /* 4.95rem */
     text-transform: capitalize;
+    
+}
+.blog-hero-text-area{
     margin-top: 15rem;
     margin-bottom: 15rem;
 }
 
 @media (max-width: 767px) {
-    .hero-text {
-        margin-top: 20%;
+    .blog-hero-text-area p {
         font-size: 2.5rem;
-        width: 80%;
     }
 
 }
