@@ -1,6 +1,7 @@
 .consultation-form {
     padding: 5rem 0 5rem 0;
     background-color: var(--essential-white, #ffffff);
+    position: relative;
 }
 
 .consultation-area-title {
@@ -120,4 +121,19 @@ font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: 160%; /* 1.6rem */
+}
+.consultation-form-close-btn button{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.consultation-form-close-btn{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: none;
+}
+.close.btn{
+    
 }

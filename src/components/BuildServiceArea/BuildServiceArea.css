@@ -1,0 +1,66 @@
+
+.build-area {
+    padding: 7.81rem 0;
+
+}
+
+.build-area-logo {
+    /* width: 20.625rem; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: blue; */
+    /* width: 10rem;
+    height: 10rem; */
+    padding-right: 3rem;
+}
+
+.build-area-logo img {
+
+    max-width: 20.625rem;
+    max-height: 20.625rem; 
+    opacity: 0.5;
+    
+}
+
+.build-area-text {}
+
+.build-area-container {
+    /* background-color: lightgray; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%); */
+
+    /* background-image: url('../../Images/Service'); */
+}
+
+.build-area-text-title p {
+    color: var(--essential-white, #FFF);
+
+    /* Heading/H 2 */
+    font-family: DM Sans;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 3.15rem */
+    text-transform: capitalize;
+}
+
+.build-area-text-body p {
+    color: var(--essential-white, #FFF);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    padding-top: 1.5rem;
+    /* 1.6rem */
+}
+
+.build-area-btn {
+    padding-top: 2.5rem;
+}

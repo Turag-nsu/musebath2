@@ -2,10 +2,16 @@ import React from "react";
 import "./ConsultationForm.css";
 import { Container, Row, Col, Form } from "react-bootstrap"; // Import Form
 import CustomButton2 from "../CustomButton/CustomButton";
+import closeBtn from "../../Images/closeButton.svg"
 
 const ConsultationForm = () => {
   return (
     <div className="consultation-form">
+      <div className="consultation-form-close-btn">
+        <button>
+          <img src={closeBtn} />
+        </button>
+      </div>
       <Container>
         <p className="consultation-area-subtitle">SCHEDULE YOUR</p>
         <p className="consultation-area-title">Free on-site consultation today!</p>
