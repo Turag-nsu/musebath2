@@ -9,15 +9,9 @@ const BuildServiceArea = ({ img }) => {
 
         <div
             className='build-area-container'
-            style={{
-                backgroundImage: `
-                                
-                                url(${img})
-                                
-                                `
-                                
-            }}
+            style={{backgroundImage: `url(${img})`}}
         >
+            <div className='build-area-overlay'></div>
             <Container>
                 <div className='build-area'>
                     <Row>

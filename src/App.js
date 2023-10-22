@@ -11,25 +11,28 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import FooterArea from '../src/components/FooterArea/FooterArea';
 import ContactUs from './Pages/ContactUs';
 import CTA2 from '../src/components/CTA2/CTA2';
-
+import data from './Database/Data'
 
 function App() {
+  
   return (
 
     <div className="App">
       <BrowserRouter>
-      <CustomNavbar />
-    
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/services" element={<ServicePage />} />
-        <Route path="/projects" element={<ProjectPage />} />
+        <CustomNavbar />
 
-      </Routes>
-    </BrowserRouter>
-    <FooterArea />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/services" element={<ServicePage />} >
+            <Route path=":serviceID" element={<ServicePage />} />
+          </Route>
+          <Route path="/projects" element={<ProjectPage />} />
+
+        </Routes>
+      </BrowserRouter>
+      <FooterArea />
     </div>
   );
 }

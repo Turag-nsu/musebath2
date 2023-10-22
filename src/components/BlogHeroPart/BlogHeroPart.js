@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './BlogHeroPart.css';
-import { useLocation } from 'react-router-dom';
-import overlayBtn from '../../Images/Service/estimate-btn.svg'
-import overlayBoder from '../../Images/Service/estimate-btn-border.svg'
+import overlayBtn from '../../Images/Service/estimate-btn.svg';
+import overlayBoder from '../../Images/Service/estimate-btn-border.svg';
+import ConsultationForm from './../ConsultationForm/ConsultationForm';
+
 const BlogHeroPart = ({ text, bg }) => {
+    const [showForm, setShowForm] = useState(false);
 
     return (
+        <>
+        {/* <div className="blog-hero-overlay"></div> */}
         <div className="blog-hero-part" style={{ backgroundImage: `url(${bg})` }}>
+            
             <div className="blog-hero-text-area" data-aos="zoom-in" >
                 <p>{text}</p>
             </div>
             <div className='estimate-btn'>
-                <button>
+                <button onClick={() => setShowForm(true)}>
                     <div className='overlay-btn'>
                         <img src={overlayBtn} alt="" />
                     </div>
@@ -24,7 +29,13 @@ const BlogHeroPart = ({ text, bg }) => {
                     </div>
                 </button>
             </div>
+            {showForm && (
+                <div className='blog-hero-part-overlay'>
+                    <ConsultationForm colCount={1} showForm={showForm} setShowForm={setShowForm} />
+                </div>
+            )}
         </div>
+        </>
     );
 };
 

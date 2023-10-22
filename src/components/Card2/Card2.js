@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Card2.css';
+import { Link } from 'react-router-dom';
 
 const Card2 = ({ imgLink, title, body, id }) => {
 
@@ -26,7 +27,9 @@ const Card2 = ({ imgLink, title, body, id }) => {
                 <div className='card2-body'>
                     <p className="card2-body-title">{title}</p>
                     <p className="card2-body-text">{body}</p>
-                    <a className='card2-body-link' href='#'>Learn More</a>
+                    <a className='card2-body-link' href='#'>
+                        <Link to={`/services/${id}`}>Read More</Link>
+                    </a>
                 </div>
             {/* )} */}
         </div>

@@ -13,8 +13,6 @@ import TestimonialArea from '../components/TestimonialArea/TestimonialArea';
 import ArticleArea from '../components/ArticleArea/ArticleArea';
 import TrustedArea from '../components/TrustedArea/TrustedArea';
 import CTAArea from '../components/CTAArea/CTAArea';
-import FooterArea from '../components/FooterArea/FooterArea';
-
 import gallaryPic1 from '../Images/Gallery-pic-1.png';
 import gallaryPic2 from '../Images/Gallery-pic-2.png';
 import gallaryPic3 from '../Images/Gallery-pic-3.png';
@@ -32,7 +30,9 @@ const HomePage=()=> {
       <div style={{ backgroundColor: '#F8F9FA' }}>
         <WhyChoosePart />
       </div>
-      <div style={{ backgroundColor: '#FFF' }}>
+      <div 
+      id='services'
+      style={{ backgroundColor: '#FFF' }}>
         <ServiceArea />
       </div>
       <div style={{ backgroundColor: '#F8F9FA' }}>
@@ -59,7 +59,6 @@ const HomePage=()=> {
       <div style={{ backgroundColor: '#FFF' }}>
         <CTAArea />
       </div>
-      {/* <FooterArea /> */}
       </div>
   );
 }

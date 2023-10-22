@@ -4,7 +4,7 @@ import star from '../../Images/stars.svg'
 import { Button, Container } from 'react-bootstrap';
 import nextbtn from '../../Images/arrow.svg'
 import prevbtn from '../../Images/Service/previous-arrow.svg'
-const ServiceTestimonial = ({ img, name, title }) => {
+const ServiceTestimonial = ({ img, name, title, text }) => {
     return (
         <div className='service-container'>
             <Container>
@@ -15,7 +15,7 @@ const ServiceTestimonial = ({ img, name, title }) => {
                     <div className='service-testimonial-area-card'>
                         <div className='service-testimonial-area-card-container'>
                             <img style={{ width: '11rem', marginBottom: '1rem' }} src={star} alt="" />
-                            <p className="service-testimonial-area-card-text">Muse Bath has truly redefined my bathing experience with their exceptional products. From their exquisite selection of bath salts to their soothing aromatherapy mists, every product is a testament to their commitment to quality and relaxation. The carefully curated ingredients and captivating scents transform my daily bath routine into a luxurious and rejuvenating ritual. Muse Bath's attention to detail and dedication to creating a serene atmosphere make them my go-to choice for elevating self-care moments.</p>
+                            <p className="service-testimonial-area-card-text">{text}</p>
                         </div>
                         <div className="service-reviewer-profile">
                             <div className="service-reviewer-img">

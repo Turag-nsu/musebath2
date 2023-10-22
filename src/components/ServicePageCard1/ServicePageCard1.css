@@ -21,13 +21,18 @@
 }
 
 .service-page-card-1-pic-container img {
-    width: 100%;
+    /* width: 100%; */
+    object-fit: cover;
 }
 
 .service-page-card-1-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--essential-white, #FFF);
     border-radius: 0.5rem;
-    padding: 4rem 4.5rem;
+    padding: 0 4.5rem;
     position: absolute;
     right: 0;
     top: 1.88rem;
@@ -80,8 +85,9 @@ line-height: 160%; /* 1.6rem */
     .service-page-card-1-pic-container{
         max-width: 100%;
         max-height: 100%;
-        margin-bottom: 25rem;
+        margin-bottom: 35rem;
     }
+    
     .service-page-card-1-text-container{
         /* position: relative; */
         /* content: ""; */
@@ -91,7 +97,7 @@ line-height: 160%; /* 1.6rem */
         /* min-height: 100%; */
         padding: 2rem 2.5rem;
         top: 50%;
-
+        /* background: transparent; */
         
     }
     .service-page-card-1-text-container::after{

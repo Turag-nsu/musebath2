@@ -18,7 +18,7 @@ const ProjectPage = () => {
                 <ProjectArea />
             </div>
             <div>
-                <ConsultationForm />
+                <ConsultationForm showForm={true}/>
             </div>
             <div>
                 <TrustedArea />

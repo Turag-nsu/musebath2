@@ -9,17 +9,18 @@ import FooterArea from '../components/FooterArea/FooterArea';
 import Blogs from '../components/Blogs/Blogs';
 import ConsultationForm from '../components/ConsultationForm/ConsultationForm';
 import BlogHeroPart from '../components/BlogHeroPart/BlogHeroPart';
+import blogBG from '../Images/Blog/blog_bg.png'
 const BlogPage=()=> {
   return (
     <div>
         <div style={{ backgroundColor: '#FFF' }}>
-            <BlogHeroPart text="Our Blogs"/>
+            <BlogHeroPart text="Our Blogs" bg={blogBG}/>
         </div>
       <div style={{ backgroundColor: '#F8F9FA' }}>
         <Blogs /> 
       </div>
       <div style={{ backgroundColor: '#FFF' }}>
-        <ConsultationForm />
+        <ConsultationForm showForm={true}/>
       <div style={{ backgroundColor: '#F8F9FA' }}>
         <TrustedArea />
       </div>

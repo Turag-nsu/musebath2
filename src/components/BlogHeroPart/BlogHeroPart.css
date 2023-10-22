@@ -9,13 +9,25 @@
     /* margin-bottom: 2rem; */
     background-color: (--greyscale-shade-4, #F8F9FA);
     position: relative;
+    z-index: 0;
+}
+
+.blog-hero-overlay{
+    background-color: #00000033;
+    /* opacity: 0.2; */
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 .blog-hero-text-area {
+    position: relative;
+    z-index: -1;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70%;
+
     padding-bottom: 0;
 }
 
@@ -44,9 +56,10 @@
 }
 .estimate-btn{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 0;
     width: 8.75rem;
+    z-index: -1;
 }
 .estimate-btn-text{
     position: absolute;
@@ -81,6 +94,37 @@
     position: absolute;
     top: 10%;
 
+}
+.blog-hero-part-overlay{
+    /* border-radius: 0.5rem; */
+    position: absolute;
+    top: 50%;
+    left: 8.5rem;
+    width: 31.5rem;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    
+
+}
+.blog-hero-part-overlay .consultation-area-container{
+    /* width: 80%; */
+}
+
+.blog-hero-part-overlay .consultation-area-title{
+    font-size: 1.5rem;
+    
+}
+.blog-hero-part-overlay .consultation-area-subtitle{
+    font-size: 0.875rem;
+}
+.blog-hero-part-overlay .consultation-form{
+    padding: 3rem;
+    border-radius: .5rem;
+}
+.blog-hero-part-overlay .consultation-form-close-btn{
+    display: block;
 }
 @media (max-width: 767px) {
     .blog-hero-text-area p {

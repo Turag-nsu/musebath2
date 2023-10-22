@@ -2,7 +2,7 @@
     background-color: #000A1A;
     min-height: 3rem;
 }
-.customnav a{
+.customnav ,.navlinks a{
     color: white;
     text-decoration: none;
     font-family: var(--heading-h-3);

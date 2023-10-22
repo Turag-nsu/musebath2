@@ -1,9 +1,20 @@
 
 .build-area {
     padding: 7.81rem 0;
+    position: relative;
+    z-index: 1;
 
 }
-
+.build-area-overlay{
+    z-index: 0;
+    background-color: var(--essential-black, #000A1A);
+    opacity: 0.35;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .build-area-logo {
     /* width: 20.625rem; */
     display: flex;
@@ -27,6 +38,7 @@
 
 .build-area-container {
     /* background-color: lightgray; */
+    position: relative;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

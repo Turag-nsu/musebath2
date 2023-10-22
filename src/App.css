@@ -7,6 +7,15 @@ body {
   background-color: var(--greyscale-shade-4, #F8F9FA) !important;
 
 }
+.not-found-area{
+  padding: 7.5rem 0;
+  text-align: center;
+  font-size: 5rem;
+  color: red;
+  font-family: DM Sans;
+  font-weight: 700;
+  /* background-color: ; */
+}
 :root {
   
   --heading-h-3: "DM Sans";
