@@ -22,7 +22,7 @@ const images = [pic1, pic2, pic3, pic4, pic5];
 
 
 const ServicePage = () => {
-  
+  console.log(data);
   const params = useParams();
   const serviceID = params.serviceID;
   if(serviceID >3 || serviceID <1){
@@ -35,10 +35,10 @@ const ServicePage = () => {
       </Container>
     )
   }
-  console.log(data[0]);
+  // console.log(data[0]);
   const service = data[0][`service${serviceID}`];
-  console.log(serviceID);
-  console.log(service);
+  // console.log(serviceID);
+  // console.log(service);
 
   return (
     <div>
