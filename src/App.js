@@ -12,6 +12,7 @@ import FooterArea from '../src/components/FooterArea/FooterArea';
 import ContactUs from './Pages/ContactUs';
 import CTA2 from '../src/components/CTA2/CTA2';
 import data from './Database/Data'
+import MyMap from './components/MyMap/MyMap';
 
 function App() {
   
@@ -29,7 +30,7 @@ function App() {
             <Route path=":serviceID" element={<ServicePage />} />
           </Route>
           <Route path="/projects" element={<ProjectPage />} />
-
+          <Route path="/map" element={<MyMap />} />
         </Routes>
       </BrowserRouter>
       <FooterArea />

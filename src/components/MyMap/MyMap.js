@@ -1,32 +1,18 @@
 import React from 'react';
-import Map, { Marker, Popup } from 'react-map-gl';
-import maplibregl from 'maplibre-gl';
 
 const MyMap = () => {
   return (
-    <div className="custom-map">
-      <Map
-        mapLib={maplibregl}
-        initialViewState={{
-          longitude: -90.260540,
-          latitude: 38.649615,
-          zoom: 12,
-        }}
-        style={{ width: "40rem", height: "35rem" }}
-        mapStyle="https://api.maptiler.com/maps/streets/style.json?key=LjtMlun2ItzC4SpG4DFp"
-      >
-        <Marker
-          longitude={-90.260540}
-          latitude={38.649615}
-          offsetTop={-20}
-          offsetLeft={-10}
-        >
-          <div className="marker">
-            {/* You can customize the marker with HTML or CSS */}
-          </div>
-        </Marker>
-      </Map>
-    </div>
+    // <div className="custom-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.771869952227!2d-90.3182611!3d38.6311289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8ca95530f59a5%3A0xe041703204b50c6f!2s7477%20Wise%20Ave%2C%20Richmond%20Heights%2C%20MO%2063117%2C%20USA!5e0!3m2!1sen!2sbd!4v1698244296176!5m2!1sen!2sbd"
+        width="100%"
+        height="100%"
+        style={{ border: "0" }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    // </div>
   );
 };
 
