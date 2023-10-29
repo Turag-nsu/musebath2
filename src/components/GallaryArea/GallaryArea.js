@@ -14,19 +14,28 @@ const GallaryArea = ({ images, title }) => {
                 </p>
                 <Row xs={1} md={3}>
                     <Col md={3} >
-                        <div className='gallary-pic-container'>
+                        <div className='gallary-pic-container' 
+                        data-aos="flip-left"
+                        data-aos-delay={200 + 0 * 100}
+                        >
                             <img src={images[0]} alt="" />
                         </div>
 
                     </Col>
                     <Col md={5}>
-                        <div className='gallary-pic-container'>
+                        <div 
+                        data-aos="flip-left"
+                        data-aos-delay={200 + 1 * 100}
+                        className='gallary-pic-container'>
                             <img src={images[1]} alt="" />
                         </div>
 
                     </Col>
                     <Col md={4}>
-                        <div className='gallary-pic-container'>
+                        <div 
+                        data-aos="flip-left"
+                        data-aos-delay={200 + 2 * 100}
+                        className='gallary-pic-container'>
                             <img src={images[2]} alt="" />
                         </div>
 
@@ -34,13 +43,19 @@ const GallaryArea = ({ images, title }) => {
                 </Row>
                 <Row xs={1} md={2}>
                     <Col md={6}>
-                        <div className='gallary-pic-container'>
+                        <div 
+                        data-aos="flip-left"
+                        data-aos-delay={200 + 3 * 100}
+                        className='gallary-pic-container'>
                             <img src={images[3]} alt="" />
                         </div>
 
                     </Col>
                     <Col md={6}>
-                        <div className='gallary-pic-container'>
+                        <div
+                        data-aos="flip-left"
+                        data-aos-delay={200 + 4 * 100}
+                        className='gallary-pic-container'>
                             <img src={images[4]} alt="" />
                         </div>
 

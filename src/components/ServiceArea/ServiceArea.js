@@ -29,21 +29,21 @@ const servicesData = [
 const ServiceArea = () => {
     return (
         <Container>
-            <div className="service-area container">
-            <div className="service-title-area" data-aos="zoom-in-down">
-                <p className="service-title-text">services We Provide</p>
-                <CustomButton text="Free Consultation" className="service-button" />
-            </div>
+            <div className="service-area-container">
+                <div className="service-title-area" data-aos="zoom-in-down">
+                    <p className="service-title-text">services We Provide</p>
+                    <CustomButton text="Free Consultation" className="service-button" />
+                </div>
 
-            <div className="service-cards-area">
-                <Row xs={1} md={1} lg={3}>
-                {servicesData.map((service) => (
-                    <Col><Card2 key={service.id} imgLink={service.imgLink} title={service.title} body={service.body} id={service.id} /></Col>
-                ))}
-                </Row>
-            </div>
+                <div className="service-cards-area">
+                    <Row xs={1} md={1} lg={3}>
+                        {servicesData.map((service) => (
+                            <Col><Card2 key={service.id} imgLink={service.imgLink} title={service.title} body={service.body} id={service.id} /></Col>
+                        ))}
+                    </Row>
+                </div>
 
-        </div>
+            </div>
         </Container>
 
     );

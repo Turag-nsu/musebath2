@@ -3,6 +3,9 @@
    /* max-width: 80%;*/
    /* overflow: hidden;  */
 }
+.service-area-container{
+    padding: 3rem 0 7.6rem 0;
+}
 .service-title-area{
     display: flex;
     justify-content: space-between;
