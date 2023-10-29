@@ -3,7 +3,8 @@ import './ArticleAreaCard.css'
 import ArticleAreaPic1 from '../../Images/Article-area-pic-1.png'
 import calender_month from '../../Images/calendar_month.svg'
 import arrow from '../../Images/arrow.svg'
-const ArticleAreaCard = ({img, date, title, body}) => {
+import { Link } from 'react-router-dom';
+const ArticleAreaCard = ({img, date, title, body,id}) => {
     return (
         <div className="ArticleAreaCardContainer card">
             <div className="article-area-top">
@@ -28,8 +29,14 @@ const ArticleAreaCard = ({img, date, title, body}) => {
                 </div>
                 
             </div>
+            
             <div className="article-area-card-button">
-                    <button style={{border: "none", backgroundColor: "transparent"}}>Read More <img style={{width: "1.5rem",height: "0.5rem"}} src={arrow}></img></button>
+                <Link to={`/blog/${id}`}>
+                <button onClick={()=>{
+                        
+                    }} style={{border: "none", backgroundColor: "transparent"}}>Read More <img style={{width: "1.5rem",height: "0.5rem"}} src={arrow}></img></button>
+                </Link>
+                    
                 </div>
         </div>
     );

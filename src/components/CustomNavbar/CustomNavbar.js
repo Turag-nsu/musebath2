@@ -33,7 +33,7 @@ const CustomNavbar = () => {
             <Link to="/blog" onClick={() => scrollToSection('blog')}>Blog</Link>
           </Nav>
 
-          <Link to="/project-sub-page">
+          <Link to="/contact-us">
           <CustomButton 
             // onClick={handelContactUsClick}
             text="Contact Us" 

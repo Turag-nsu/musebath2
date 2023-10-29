@@ -42,7 +42,7 @@ const ArticleArea = () => {
                         {data.map(article => (
 
                             <Col key={article.id} md={4} xs={12}>
-                                <ArticleAreaCard img={article.img} date={article.date} title={article.title} body={article.body} />
+                                <ArticleAreaCard id={article.id} img={article.img} date={article.date} title={article.title} body={article.body} />
                             </Col>
                         ))
                         }

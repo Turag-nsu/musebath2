@@ -1,0 +1,141 @@
+.form-map-area {
+    display: flex;
+    height: 100%;
+    position: relative;
+    top: -3.5rem;
+}
+
+.message-form {
+    width: 50%;
+    background-color: var(--essential-white, #ffffff);
+    height: 100%;
+    /* Add this line to ensure it takes the full height */
+    padding: 4.63rem 3rem;
+}
+
+.input-map-area {
+    width: 50%;
+    height: 100%;
+}
+
+
+.message-area-title {
+    color: var(--essential-black, #000A1A);
+
+    /* Heading/H 3 */
+    font-family: DM Sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 2.4rem */
+    text-transform: capitalize;
+}
+
+.message-area-subtitle {
+    color: var(--greyscale-shade-1, #52637A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+    /* 1.6rem */
+
+}
+
+.message-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-input-title {
+    color: var(--essential-black, #000A1A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin-bottom: 0.5rem;
+    padding-bottom: 2.75rem;
+    /* 1.6rem */
+}
+
+.message-input input:focus {
+    outline: none;
+}
+
+.message-input input {
+    border: none;
+    border-bottom: 1px solid var(--greyscale-shade-2, #A8B1BC);
+    width: 80%;
+    margin-bottom: 2.5rem;
+}
+
+.message-input .project-description-input {
+    margin: 0 0 1rem 0;
+}
+
+.message-area-radio-group-title {
+    margin: .5rem 0 0.5rem 0;
+}
+
+.message-area-radio-group-title p {
+    color: var(--essential-black, #000A1A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 25.6px */
+    text-align: left;
+}
+
+.message-area-radio-group {
+    width: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.radio-label {
+    margin-right: 2rem;
+}
+
+.message-area-button {
+    border-radius: 6px;
+    background: var(--primary-shade-1, #FFD700);
+    border: none;
+    padding: 0.7rem 6.5rem;
+    margin: 2.5rem 0 0 0;
+    color: var(--essential-black, #000A1A);
+    text-align: center;
+
+    /* Button/B 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 1.6rem */
+    text-transform: capitalize;
+    /* 22.4px */
+}
+
+::placeholder {
+    color: var(--essential-black, #000A1A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 1.6rem */
+}

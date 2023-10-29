@@ -1,0 +1,242 @@
+.blog-full-area {
+    margin: 0rem 0 1.76rem 0;
+    border-radius: 0.75rem;
+    background: var(--essential-white, #FFF);
+}
+
+.blog-area-col{
+    margin: 9rem 0 3.87rem 0;
+}
+
+.blog-title-area {
+    padding: 4rem 3rem 3rem 3rem;
+}
+
+.blog-title-area p {
+    color: var(--essential-black, #000A1A);
+
+    /* Heading/H 3 */
+    font-family: DM Sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 2.4rem */
+    text-transform: capitalize;
+}
+
+.blog-title-img {
+    height: 25rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.blog-title-img img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.upload-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.75rem 3rem 0rem 3rem;
+}
+
+.blog-uploader-name-date {
+    color: var(--essential-black, #000A1A);
+
+    /* Button/B 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 1.6rem */
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    background: var(--greyscale-shade-4, #F8F9FA);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.blog-category {
+    color: var(--greyscale-shade-1, #52637A);
+    text-align: right;
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 1.6rem */
+    border-radius: 0.5rem;
+    background: var(--greyscale-shade-4, #F8F9FA);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+
+.blog-main-body {
+    color: var(--greyscale-shade-1, #52637A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    padding: 3rem 3rem 2.5rem 3rem;
+    /* 1.6rem */
+}
+
+.blog-content-area {}
+
+.blog-content-title {
+    color: var(--essential-black, #000A1A);
+
+    /* Title/T 1 */
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    padding: 2.5rem 3rem 0rem 3rem;
+    /* 2.1rem */
+}
+
+.blog-content-body {
+    color: var(--greyscale-shade-1, #52637A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    padding: 1.25rem 3rem 0rem 3rem;
+    /* 1.6rem */
+}
+
+.blog-content-sub-body {
+    color: var(--greyscale-shade-1, #52637A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    padding: 0.75rem 3rem 2.5rem 3rem;
+    /* 1.6rem */
+}
+
+.blog-content-pic {
+    padding: 2.5rem 3rem 0rem 3rem;
+    height: 16.25rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-content-pic img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.blog-content-list {
+    padding: 0.75rem 3rem 0rem 4rem;
+}
+
+.blog-content-list ol {
+    padding: 0;
+    color: var(--greyscale-shade-1, #52637A);
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 1.6rem */
+}
+
+.blog-tag-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+}
+
+.blog-tag-area p {
+    color: var(--essential-black, #000A1A);
+
+    /* Title/T 3 */
+    font-family: DM Sans;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 1.575rem */
+}
+
+.blog-tag-area button {
+    color: var(--greyscale-shade-1, #52637A);
+    text-align: right;
+
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 1.6rem */
+
+    border-radius: 0.5rem;
+    background: var(--essential-white, #FFF);
+    border: 0;
+    padding: 0.5rem 1rem;
+}
+
+.related-blog-title-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3.75rem;
+}
+
+.testimonial-prev-button {
+    margin-left: 2rem;
+}
+.testimonial-next-button{
+    height: 2.5rem;
+    width: 2.5rem
+}
+.testimonial-prev-button{
+    height: 2.5rem;
+    width: 2.5rem
+}
+
+.related-blog-area-title {
+    color: var(--essential-black, #000A1A);
+
+    /* Heading/H 2 */
+    font-family: DM Sans;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 3.15rem */
+    text-transform: capitalize;
+}
+
+.related-blog-card-group {
+    margin: 3.75rem 0 7rem 0;
+}
+
+@media (max-width: 767px) {
+    .related-blog-area-title {
+        font-size: 1.5rem;
+    }
+
+
+}
