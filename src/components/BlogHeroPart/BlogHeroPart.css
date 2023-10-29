@@ -9,7 +9,7 @@
     /* margin-bottom: 2rem; */
     background-color: (--greyscale-shade-4, #F8F9FA);
     position: relative;
-    z-index: 0;
+    z-index: 1;
 }
 
 .blog-hero-overlay{
@@ -102,7 +102,7 @@
     left: 8.5rem;
     width: 31.5rem;
     height: 100%;
-    z-index: 1;
+    z-index: 10;
     display: flex;
     align-items: center;
     

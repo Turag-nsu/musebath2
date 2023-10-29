@@ -17,7 +17,7 @@ const ProjectPage = () => {
             <div>
                 <ProjectTabs />
             </div>
-            <div style={{position: "relative", zIndex: "-1"}}>
+            <div style={{position: "relative", zIndex: "0"}}>
                 <ProjectArea />
             </div>
             <div>

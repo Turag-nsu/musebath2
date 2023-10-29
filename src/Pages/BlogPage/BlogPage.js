@@ -10,21 +10,21 @@ import Blogs from '../../components/Blogs/Blogs';
 import ConsultationForm from '../../components/ConsultationForm/ConsultationForm';
 import BlogHeroPart from '../../components/BlogHeroPart/BlogHeroPart';
 import blogBG from '../../Images/Blog/blog_bg.png'
-const BlogPage=()=> {
+const BlogPage = () => {
   return (
     <div>
-        <div style={{ backgroundColor: '#FFF' }}>
-            <BlogHeroPart text="Our Blogs" bg={blogBG}/>
-        </div>
-      <div style={{ backgroundColor: '#F8F9FA', position: "relative", zIndex: "-1"}}>
-        <Blogs /> 
+      <div style={{ backgroundColor: '#FFF' }}>
+        <BlogHeroPart text="Our Blogs" bg={blogBG} />
+      </div>
+      <div style={{ backgroundColor: '#F8F9FA', position: "relative", zIndex: "0" }}>
+        <Blogs />
       </div>
       <div style={{ backgroundColor: '#FFF' }}>
-        <ConsultationForm showForm={true}/>
-      <div style={{ backgroundColor: '#F8F9FA' }}>
-        <TrustedArea />
-      </div>
-      {/* <FooterArea /> */}
+        <ConsultationForm showForm={true} />
+        <div style={{ backgroundColor: '#F8F9FA' }}>
+          <TrustedArea />
+        </div>
+        {/* <FooterArea /> */}
       </div>
     </div>
   );
