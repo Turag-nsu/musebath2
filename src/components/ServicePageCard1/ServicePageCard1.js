@@ -4,7 +4,7 @@ import serviceCardPic1 from '../../Images/service-area-1-pic-1'
 import { Container } from 'react-bootstrap';
 const ServicePageCard1 = ({image, title, body1, body2}) => {
     return (
-        <div className='service-page-card-1'>
+        <div className='service-page-card-1' style={{position:"relative", zIndex:"-1"}}>
             <Container>
                 <div className='service-page-card-1-container'>
                     <div className="service-page-card-1-pic-container">

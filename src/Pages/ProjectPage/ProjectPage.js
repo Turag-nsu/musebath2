@@ -5,18 +5,19 @@ import ProjectTabs from '../../components/ProjectTabs/ProjectTabs';
 import ConsultationForm from '../../components/ConsultationForm/ConsultationForm';
 import TrustedArea from '../../components/TrustedArea/TrustedArea';
 import SingleProjectPage from './SingleProjectPage/SingleProjectPage';
+import BlogHeroPart from '../../components/BlogHeroPart/BlogHeroPart';
+import projectBg from '../../Images/Project/project-hero-bg.jpeg';
 
 const ProjectPage = () => {
-    // Your component code goes here
     return (
         <div>
-            <div>
-                <ProjectsHeroPart />
-            </div>
+            {/* <div > */}
+                <BlogHeroPart text="Our Projects" bg={projectBg} />
+            {/* </div> */}
             <div>
                 <ProjectTabs />
             </div>
-            <div>
+            <div style={{position: "relative", zIndex: "-1"}}>
                 <ProjectArea />
             </div>
             <div>
