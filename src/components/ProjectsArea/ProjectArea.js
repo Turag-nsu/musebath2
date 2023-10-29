@@ -21,6 +21,7 @@ import project14 from '../../Images/Project/project-14.jpeg';
 import project15 from '../../Images/Project/project-15.jpeg';
 import project16 from '../../Images/Project/project-16.jpeg';
 import project17 from '../../Images/Project/project-17.jpeg';
+import { Link } from 'react-router-dom';
 
 const projectImages = [
     project1, project2, project3, project4, project5, project6,
@@ -36,8 +37,10 @@ const ProjectArea = () => {
         for (let i = start; i <= end; i++) {
             rows.push(
                 <Row key={i}>
-                    <div className={`${imgClass}`}>
+                    <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200+i*100}>
+                        <Link to={`/projects/${i}`}>
                         <img src={projectImages[i - 1]} alt={`Project ${i}`} />
+                        </Link>
                     </div>
                 </Row>
             );

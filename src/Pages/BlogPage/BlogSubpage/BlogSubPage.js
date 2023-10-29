@@ -1,19 +1,27 @@
 import React from 'react';
 import './BlogSubPage.css'
 import { Container, Row, Col } from 'react-bootstrap';
-import blogData from '../../Database/Data'
+import blogData from '../../../Database/Data'
 import { useParams } from 'react-router-dom';
 
-import callMade2 from '../../Images/call-made2.svg'
-import callMade3 from '../../Images/call-made3.svg'
+import callMade2 from '../../../Images/call-made2.svg'
+import callMade3 from '../../../Images/call-made3.svg'
 
-import ArticleImage1 from '../../Images/Article-area-pic-1.png'
-import ArticleImage2 from '../../Images/Article-area-pic-2.png'
-import ArticleImage3 from '../../Images/Article-area-pic-3.jpeg'
-import ArticleAreaCard from '../../components/ArticleAreaCard/ArticleAreaCard';
+import ArticleImage1 from '../../../Images/Article-area-pic-1.png'
+import ArticleImage2 from '../../../Images/Article-area-pic-2.png'
+import ArticleImage3 from '../../../Images/Article-area-pic-3.jpeg'
+// import ArticleImage3 from '../../../Images/Article-area-pic-3.jpeg'
+import ArticleAreaCard from '../../../components/ArticleAreaCard/ArticleAreaCard';
+import ConsultationForm from '../../../components/ConsultationForm/ConsultationForm';
+import TrustedArea from '../../../components/TrustedArea/TrustedArea';
+import ContactUs from '../../ContactUs';
+import ContactUsForm from '../../../components/ContactUsForm/ContactUsForm';
+// import ArticleAreaCard from '../../../ArticleAreaCard/ArticleAreaCard';
 
-import ConsultationForm from '../../components/ConsultationForm/ConsultationForm';
-import TrustedArea from '../../components/TrustedArea/TrustedArea';
+// import ConsultationForm from '../../../ConsultationForm/ConsultationForm';
+// import TrustedArea from '../../../components/TrustedArea/TrustedArea';
+// import TrustedArea from '../../../TrustedArea/TrustedArea';
+
 
 const data = [
     {
@@ -46,7 +54,7 @@ const BlogSubPage = () => {
     return (
         <div>
             <Container>
-                <Row>
+                <Row style={{ position: "relative", overflow: "hidden" }}>
                     <Col xs={8} className='blog-area-col'>
                         <div className='blog-full-area'>
 
@@ -104,6 +112,11 @@ const BlogSubPage = () => {
                             <button>Senior friendly bathroom</button>
                         </div>
                     </Col>
+                    <Col xs={4} style={{paddingLeft:"0.3rem"}}>
+                        <div className='blog-contact-us-form'>
+                            <ContactUsForm />
+                        </div>
+                    </Col>
                 </Row>
                 <div className='related-blog-title-btn'>
                     <p className='related-blog-area-title'>Related articles</p>
@@ -126,6 +139,7 @@ const BlogSubPage = () => {
                         {data.map(article => (
 
                             <Col key={article.id} md={4} xs={12}>
+                                {/* <ArticleAreaCard */}
                                 <ArticleAreaCard img={article.img} date={article.date} title={article.title} body={article.body} />
                             </Col>
                         ))
@@ -134,9 +148,11 @@ const BlogSubPage = () => {
                 </div>
             </Container>
             <div className='blog-consultation-form'>
+                {/* <ConsultationForm */}
                 <ConsultationForm showForm={true} />
             </div>
             <div className='blog-trusted-area'>
+                {/* <TrustedArea */}
                 <TrustedArea />
             </div>
         </div>

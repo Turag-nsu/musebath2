@@ -6,6 +6,7 @@
 
 .blog-area-col{
     margin: 9rem 0 3.87rem 0;
+    padding: 0;
 }
 
 .blog-title-area {
@@ -232,7 +233,23 @@
 .related-blog-card-group {
     margin: 3.75rem 0 7rem 0;
 }
+.blog-contact-us-form{
 
+    position: absolute;
+    top: 5.5rem;
+}
+.blog-contact-us-form .contact-us-form-container{
+    padding: 3.5rem 4rem;
+}
+
+.blog-contact-us-form .contact-us-form-body .form-control {
+    height: 3rem;
+    border: var(--greyscale-shade-1, #52637A) 1px solid;
+}
+
+.blog-contact-us-form .contact-us-form-body .message-area{
+    height: 6rem;
+}
 @media (max-width: 767px) {
     .related-blog-area-title {
         font-size: 1.5rem;

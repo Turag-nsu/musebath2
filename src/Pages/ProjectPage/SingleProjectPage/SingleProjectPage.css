@@ -1,0 +1,29 @@
+.single-projext-page-details-container{
+    padding: 3rem;
+    background-color: var(--essential-white, #FFF);
+    border-radius: .75rem;
+}
+
+.single-projext-page-details-title p{
+    color: var(--essential-black, #000A1A);
+
+/* Title/T 1 */
+font-family: DM Sans;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 2.1rem */
+margin-bottom: 1.5rem;
+
+}
+.single-projext-page-details-body p{
+    margin-bottom: 1rem;
+    color: var(--greyscale-shade-1, #52637A);
+
+/* Paragraph/P 1 */
+font-family: DM Sans;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 1.6rem */
+}
