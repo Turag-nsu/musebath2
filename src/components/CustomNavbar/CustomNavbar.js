@@ -1,25 +1,12 @@
-import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './CustomNavbar.css';
 import CustomButton from '../CustomButton/CustomButton';
-import { Link, useNavigate } from 'react-router-dom';
-
+import { useState } from 'react';
 const CustomNavbar = () => {
-  const navigator = useNavigate()
   const [selected, setSelected] = useState(null);
-  const handelContactUsClick = () => {
-    console.log('clicked');
-    navigator('/contact-us')
-  }
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ block:"center", behavior: 'smooth' });
-    }
-  };
-
+  
   return (
     <Navbar expand="lg" className="customnav fixed-top">
       <Container>
@@ -27,22 +14,18 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto navlinks">
-            <Link to="/" onClick={() => scrollToSection('home')}>Home</Link>
-            <Link to="/" onClick={() => scrollToSection('services')}>Services</Link>
-            <Link to="/projects" onClick={() => scrollToSection('projects')}>Projects</Link>
-            <Link to="/blog" onClick={() => scrollToSection('blog')}>Blog</Link>
+            <a href="#home">Design</a>
+            <a href="#link">Service</a>
+            <a href="#home">Process</a>
+            <a href="#link">About</a>
+            <a href="#home">Career</a>
           </Nav>
-
-          <Link to="/contact-us">
-          <CustomButton 
-            // onClick={handelContactUsClick}
-            text="Contact Us" 
-          />
-          </Link>
+          <CustomButton text="Free consultation" />
         </Navbar.Collapse>
+        
       </Container>
     </Navbar>
   );
-};
+}
 
 export default CustomNavbar;

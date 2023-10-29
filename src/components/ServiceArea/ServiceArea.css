@@ -1,8 +1,7 @@
 .service-area{
-    margin-top: 10%;
+    /* padding: 4rem 0 4rem 0; */
    /* max-width: 80%;*/
    /* overflow: hidden;  */
-   padding: 6rem 0 6rem 0;
 }
 .service-title-area{
     display: flex;
