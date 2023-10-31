@@ -6,6 +6,7 @@ import service3 from '../../Images/service-3.jpeg';
 import Card2 from '../Card2/Card2';
 import CustomButton from '../CustomButton/CustomButton';
 import { Row, Col, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const servicesData = [
     {
         id: 1,
@@ -32,7 +33,7 @@ const ServiceArea = () => {
             <div className="service-area-container">
                 <div className="service-title-area" data-aos="zoom-in-down">
                     <p className="service-title-text">services We Provide</p>
-                    <CustomButton text="Free Consultation" className="service-button" />
+                    <Link to="/contact-us"><CustomButton text="Free Consultation" className="service-button" /></Link>
                 </div>
 
                 <div className="service-cards-area">

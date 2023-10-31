@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './CTAArea.css';
 import CustomButton from '../CustomButton/CustomButton';
+import { Link } from 'react-router-dom';
 
 const CTAArea = () => {
     return (
@@ -23,7 +24,9 @@ const CTAArea = () => {
                                         </p>
                                     </div>
                                     <div className="cta-area-button">
+                                        <Link to='/contact-us'>
                                         <CustomButton text="Get Free Consultation" color='white' />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

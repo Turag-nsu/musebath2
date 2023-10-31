@@ -3,6 +3,7 @@
     height: 100%;
     position: relative;
     top: -3.5rem;
+    z-index: 2;
 }
 
 .message-form {

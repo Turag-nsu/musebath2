@@ -6,6 +6,7 @@ import Mymap from '../MyMap/MyMap';
 import CustomButton from '../CustomButton/CustomButton';
 import locationMarker from "../../Images/Location-marker.png";
 import SingleLocation from './SingleLocation/SingleLocation';
+import { Link } from 'react-router-dom';
 const serviceLocations = [
     { "id": 1, "city": "Richmond Heights, MO" },
     { "id": 2, "city": "Des Peres, MO" },
@@ -50,7 +51,7 @@ const ServiceArea2 = () => {
                 <Row>
                     <Col md={6} >
                         <div className='map-area'>
-                        <Mymap />
+                            <Mymap />
                         </div>
                     </Col>
                     <Col md={6}>
@@ -76,7 +77,9 @@ const ServiceArea2 = () => {
                     </Col>
                 </Row>
                 <div className="option-area-button mx-auto">
-                    <CustomButton text="Free Consultation" />
+                    <Link to="/contact-us">
+                        <CustomButton text="Free Consultation" />
+                    </Link>
                 </div>
             </Container>
         </div>

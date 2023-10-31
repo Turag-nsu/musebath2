@@ -119,3 +119,12 @@
     border: none;
     margin: 1rem;
 }
+
+@media (max-width: 768px) {
+    .blog-post-area-body form {
+        width: 100%;
+    }
+    .blog-post-area{
+        padding: 2rem 1rem;
+    }
+}

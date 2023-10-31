@@ -91,7 +91,9 @@
 .service-testimonial-next-btn button{
     text-decoration: none;
     border: 0.5rem solid var(--greyscale-shade-4, #F8F9FA);
-
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    /* transition-delay: 0.2s; */
     border-radius: 50%;
     padding: 1.79rem;
     background-color: var(--essential-white, #FFF);
@@ -105,7 +107,9 @@
 .service-testimonial-previous-btn button{
     text-decoration: none;
     border: 0.5rem solid var(--greyscale-shade-4, #F8F9FA);
+    transform: scale(1);
 
+    transition: transform 0.5s ease;
     border-radius: 50%;
     padding: 1.79rem;
     background-color: var(--essential-white, #FFF);
@@ -115,7 +119,13 @@
     top: 50%;
     left:-3.1rem;
 }
-
+.service-testimonial-next-btn button:hover, .service-testimonial-previous-btn button:hover{
+    background-color: var(--greyscale-shade-3, #CDD4E0);
+}
+.service-testimonial-next-btn button:active, .service-testimonial-previous-btn button:active{
+    background-color: var(--greyscale-shade-4, #F8F9FA);
+    transform: scale(0);
+}
 @media (max-width: 767px) {
     .service-testimonial-area-card {
         padding: 3.75rem 2.5rem;

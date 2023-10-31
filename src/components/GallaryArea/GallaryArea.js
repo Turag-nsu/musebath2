@@ -4,6 +4,7 @@ import './GallaryArea.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import CustomButton from '../CustomButton/CustomButton';
+import { Link } from 'react-router-dom';
 
 const GallaryArea = ({ images, title }) => {
     return (
@@ -62,7 +63,7 @@ const GallaryArea = ({ images, title }) => {
                     </Col>
                 </Row>
                 <div className="gallary-btn">
-                    <CustomButton text="View All Projects" />
+                    <Link to='/projects'><CustomButton text="View All Projects" /></Link>
                 </div>
             </Container>
 
