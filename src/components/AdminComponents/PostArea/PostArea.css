@@ -1,0 +1,97 @@
+.welcome-area {
+    padding: 11rem 0;
+
+    background-image: url('../../../Images/Blog/blog_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.welcome-area-title p {
+    color: var(--essential-white, #FFF);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    text-transform: capitalize;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.welcome-area-body p {
+    margin-top: 3rem;
+    color: var(--essential-white, #FFF);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.post-nav-container{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    /* width: 80%; */
+}
+.post-nav-area{
+    width: 85%;
+}
+.post-nav-area .nav-link{
+    background-color: var(--grayscale-shade-2, #A8B1BC);
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--essential-black, #000A1A);
+}
+.post-nav-area .nav-link:hover{
+    background-color: var(--grayscale-shade-3, #CDD4E0);
+    /* color: var(--essential-white, #FFF); */
+}
+.post-nav-area .nav-link:active{
+    background-color: var(--grayscale-shade-1, #52637A);
+    /* color: var(--essential-white, #FFF); */
+}
+.post-nav-area .nav-link:focus{
+    background-color: var(--grayscale-shade-1, #52637A);
+    color: var(--essential-white, #FFF);
+}
+.post-nav-area .nav-tabs .nav-link{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.log-out-container{
+    /* padding: 2rem; */
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    /* background-color: yellow; */
+    
+}
+.log-out-container button{
+    border-radius: 50%;
+    background-color: var(--grayscale-shade-3, #CDD4E0);
+    border: none;
+    outline: none;
+    padding: 2rem;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+.log-out-container button:hover{
+    background-color: var(--grayscale-shade-2, #A8B1BC);
+    transform: scale(1.1);
+    /* cursor: pointer; */
+}
+.log-out-container img{
+    height: 5rem;
+    width: 5rem;
+    /* border-radius: 50%; */
+    /* padding: 1rem; */
+    
+}

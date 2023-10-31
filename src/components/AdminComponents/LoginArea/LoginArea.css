@@ -1,0 +1,104 @@
+.login-area-container {
+    background-image: url('../../../Images/hero-bg.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.login-area-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--essential-white, #FFF);
+    font-family: DM Sans;
+}
+
+.login-area-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    min-width: 20rem;
+}
+
+.login-area-body form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    
+}
+
+.login-area-body input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 3px solid var(--greyscale-shade-1, #52637A);
+    border-radius: 0.25rem;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+    background-color: transparent;
+}
+.login-area-body input:focus {
+    outline: none;
+}
+.login-area-body input::placeholder {
+    color: var(--greyscale-shade-1, #52637A);
+}
+.login-area-body button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--praimary-shade-1, #ffd700);
+    color: var(--essential-black, #000A1A);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.login-area-body button:hover {
+    background-color: var(--praimary-shade-2, #ffc400);
+}
+
+.login-area-footer {
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.login-area-footer a{
+    text-decoration: none;
+    color: var(--essential-black, #000A1A);
+    font-family: DM Sans;
+}
+.login-area-footer a:hover{
+    color: var(--greyscale-shade-1, #52637A);
+}
+
+@media screen and (max-width: 768px) {
+
+    .login-area-title {
+        font-size: 3rem;
+    }
+    .login-area-body {
+        width: 80%;
+    }
+    .login-area-footer {
+        flex-direction: column;
+    }
+}

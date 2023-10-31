@@ -1,0 +1,121 @@
+.PostArea-container {
+    background-color: var(--greyscale-shade-4, #F8F9FA);
+
+}
+
+
+
+.blog-post-area {
+    background-color: var(--essential-white, #FFF);
+    border-radius: 0.5rem;
+    padding: 3rem 3rem;
+    margin: 3.5rem 0;
+}
+
+.blog-post-area-title p {
+    color: var(--essential-black, #000A1A);
+
+    /* Heading/H 2 */
+    font-family: DM Sans;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 3.15rem */
+    text-transform: capitalize;
+}
+
+.blog-post-area-body form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    min-width: 20rem;
+}
+
+.blog-post-area-body form input,
+.blog-post-area-body form textarea,
+.blog-post-area-body form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 3px solid var(--greyscale-shade-1, #52637A);
+    border-radius: 0.25rem;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+    background-color: transparent;
+    font-family: DM Sans;
+}
+
+.blog-post-area-body form input::placeholder,
+.blog-post-area-body form textarea::placeholder,
+.blog-post-area-body form select::placeholder {
+    color: var(--greyscale-shade-1, #52637A);
+    font-family: DM Sans;
+}
+
+.blog-post-area-body form input:focus,
+.blog-post-area-body form textarea:focus,
+.blog-post-area-body form select:focus {
+    outline: none;
+}
+
+.blog-post-area-body form input[type="file"] {
+    border-bottom: none;
+}
+
+.blog-post-area-body form input::-webkit-file-upload-button {
+    border: none;
+    background-color: var(--praimary-shade-1, #ffd700);
+    padding: .5rem 1rem;
+    border-radius: 0.25rem;
+    font-family: DM Sans;
+}
+/* .blog-post-area-body{ */
+    
+/* } */
+.blog-post-area-body p {
+    align-self: flex-start;
+    margin: 3rem 0 1rem 0;
+    color: var(--essential-black, #000A1A);
+    /* text-align: right; */
+    /* Title/T 1 */
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 2.1rem */
+}
+.add-list-item-btn{
+    background-color: blueviolet;
+    padding: .5rem 1rem;
+    border-radius: 0.25rem;
+    font-family: DM Sans;
+    border: none;
+    margin-bottom: 1rem;
+}
+.add-body-part-btn{
+    background-color: forestgreen;
+    padding: .5rem 1rem;
+    border-radius: 0.25rem;
+    font-family: DM Sans;
+    border: none;
+    margin-bottom: 1rem;
+}
+.single-body-part{
+    background-color: var(--greyscale-shade-4, #F8F9FA);
+    padding: 0 3rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.post-submit-button{
+    background-color: var(--praimary-shade-1, #ffd700);
+    padding: .5rem 1rem;
+    border-radius: 0.25rem;
+    font-family: DM Sans;
+    border: none;
+    margin: 1rem;
+}
