@@ -3,6 +3,7 @@ import './OptionsArea.css'
 import optionAreaImg from '../../Images/optionAreaImg.png';
 import CustomButton from '../CustomButton/CustomButton';
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const OptionsArea = () => {
     return (
         <div className='option-area'  >
@@ -19,7 +20,7 @@ const OptionsArea = () => {
             <p className="option-area-title2">Effortless, Cost-Effective Total Bathroom Transformation.</p>
             <p className="option-area-subtitle2 mx-auto">Whether you're seeking a contemporary revitalization, increased storage capacity, enhanced safety features, or all of these aspects combined, our team of comprehensive bathroom remodeling experts is committed to bringing your dream bathroom to life effortlessly. We prioritize delivering the desired style within your designated budget and ensure that functionality seamlessly complements the beauty of the design, eliminating any hassle</p>
             <div className="option-area-button mx-auto">
-            <CustomButton text="Contact Us Now"  />
+            <Link to="/contact-us"><CustomButton text="Contact Us Now"  /></Link>
             </div>
             </Container>
         </div>

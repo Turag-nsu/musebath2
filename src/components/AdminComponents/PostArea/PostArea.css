@@ -95,3 +95,11 @@
     /* padding: 1rem; */
     
 }
+
+@media (max-width: 767px) {
+    .log-out-container{
+        transform: scale(0.5);
+        bottom: -1rem;
+        right: -1rem;
+    }
+}

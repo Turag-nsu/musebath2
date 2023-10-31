@@ -64,11 +64,7 @@ const ServicePage = () => {
         body2={service.complementaryService.body2}
         image={service.complementaryService.image}
       />
-      <ServiceTestimonial
-        text={service.testimonial.body}
-        img={service.testimonial.reviewer.image}
-        name={service.testimonial.reviewer.name}
-        title={service.testimonial.reviewer.title}/>
+      <ServiceTestimonial/>
       <TrustedArea />
     </div>
   );

@@ -23,7 +23,7 @@ const CustomNavbar = () => {
   return (
     <Navbar expand="lg" className="customnav fixed-top">
       <Container>
-        <Navbar.Brand href="#home" className="logo my-auto">Muse bath</Navbar.Brand>
+        <Navbar.Brand href="/" className="logo my-auto">Muse bath</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto navlinks">

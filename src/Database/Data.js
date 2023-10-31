@@ -17,6 +17,7 @@ import service2pic5 from '../Images/Service/service-2-pic-5.jpeg'
 import service2buildImage from '../Images/Service/service-2-build-service.jpeg'
 import service2complementarypic from '../Images/Service/service-2-complementary.jpeg'
 import reviewer1 from '../Images/profile-1.png'
+import reviewer2 from '../Images/profile-2.png'
 import serviceBg3 from '../Images/Service/service-3-heroBG.jpeg'
 import serviceCardPic3 from '../Images/Service/service-3-renovation.jpeg'
 import service3pic1 from '../Images/Service/service-3-pic-1.jpeg'
@@ -100,7 +101,7 @@ const data = [
                 reviewer: {
                     name: "Theresa Webb",
                     title: "Product designer",
-                    image: reviewer1,
+                    image: reviewer2,
                 }
             }
         },
