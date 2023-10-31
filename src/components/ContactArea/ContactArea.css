@@ -102,3 +102,50 @@
 .social-media-icons {
 
 }
+
+@media (max-width: 992px) {
+    .contact-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .get-in-touch {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        /* padding-left: 2.5rem; */
+    }
+
+    .get-in-touch-title {
+        padding-left: 0rem;
+    }
+
+    .get-in-touch-content p {
+        padding-left: 0.5rem;
+    }
+
+    .social-media-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        /* padding-left: 2.5rem; */
+    }
+
+    .social-media-sub-title {
+        padding:  1rem 2rem 1rem 2rem;
+    }
+    .divide-line {
+        height: 100%;
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: rotate(90deg);
+        margin: -6rem 0 -6rem 0;
+
+    }
+}
