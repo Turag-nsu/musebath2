@@ -20,10 +20,16 @@ const PostArea = () => {
                 <div className="post-nav-area">
                     <Nav fill variant="tabs" defaultActiveKey="/admin/blog-post">
                         <Nav.Item>
-                            <Nav.Link as={Link} to="/admin/blog-post">Blog Post</Nav.Link>
+                            <Nav.Link as={Link} to="/admin/blog-post">Post Blogs</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link as={Link} to="/admin/project-post">Project Post</Nav.Link>
+                            <Nav.Link as={Link} to="/admin/view-blogs">View Blogs</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={Link} to="/admin/project-post">Post Projects</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={Link} to="/admin/view-project">View Projects</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </div>

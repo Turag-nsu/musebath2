@@ -95,17 +95,17 @@ const ServiceTestimonial = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='service-testimonial-next-btn'>
+                    <div className='service-testimonial-next-btn' onClick={handelClickNext}>
                         <button
-                            onClick={handelClickNext}
+                            
                             // style={{ border: 'none' }}
                         >
                             <img src={nextbtn} alt="" />
                         </button>
                     </div>
-                    <div className='service-testimonial-previous-btn'>
+                    <div className='service-testimonial-previous-btn' onClick={handelClickPrev}>
                         <button
-                            onClick={handelClickPrev}
+                            
                         >
                             <img src={prevbtn} alt="" />
                         </button>

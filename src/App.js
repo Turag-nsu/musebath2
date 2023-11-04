@@ -17,6 +17,7 @@ import BlogSubPage from './Pages/BlogPage/BlogSubpage/BlogSubPage'; import Singl
 import AdminPage from './Pages/AdminPage/AdminPage';
 import BlogPostArea from './components/AdminComponents/BlogPostArea/BlogPostArea';
 import ProjectPostArea from './components/AdminComponents/ProjectPostArea/ProjectPostArea';
+import ViewPosts from './components/AdminComponents/ViewPosts/ViewPosts';
 const projects = {
   description: [
     {
@@ -99,6 +100,8 @@ function App() {
             <Route path="" element={<BlogPostArea />} />
             <Route path="blog-post" element={<BlogPostArea />} />
             <Route path="project-post" element={<ProjectPostArea />} />
+            <Route path='view-blogs' element = {<ViewPosts />} />
+            {/* <Route path='view-projects' element = {<ViewProjects />} /> */}
           </Route>
           <Route path="/projects/:projectID" element={<SingleProjectPage project={projects} />} />
           {/* <Route path="/admin/blog-post" element={<BlogPostArea />} /> */}
