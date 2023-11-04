@@ -26,7 +26,11 @@ const ServicePageComplementary = ({title, body1, body2, image}) => {
                         <div className="complementary-pic-container">
                             <img src={image} alt="" />
                         </div>
-                        <button className="complementary-btn2">COST VS VALUE</button>
+                        <button className="complementary-btn2">
+                            <a href='https://www.remodeling.hw.net/cost-vs-value/2023/' target='_blank'>
+
+                            
+                            COST VS VALUE</a></button>
                     </Col>
                 </Row>
             </Container>

@@ -76,3 +76,36 @@
 .build-area-btn {
     padding-top: 2.5rem;
 }
+
+@media screen and (max-width: 768px) {
+    .build-area {
+        padding: 3rem 0;
+    }
+    .build-area-logo {
+        padding-right: 0;
+    }
+
+    .build-area-logo {
+        /* padding-right: 0; */
+        justify-content: center;
+        padding-bottom: 3rem;
+    }
+    .build-area-logo img {
+        max-width: 15.625rem;
+        max-height: 15.625rem;
+    }
+    .build-area-text-title p {
+        font-size: 1.625rem;
+    }
+    .build-area-text-body p {
+        font-size: 0.875rem;
+    }
+    .build-area-btn {
+        padding-top: 1.5rem;
+    }
+
+    .build-area-text-btn{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

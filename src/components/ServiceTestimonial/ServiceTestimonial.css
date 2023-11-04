@@ -127,12 +127,40 @@
     transform: scale(0);
 }
 @media (max-width: 767px) {
-    .service-testimonial-area-card {
-        padding: 3.75rem 2.5rem;
 
+    .service-container {
+        padding: 4rem 0;
     }
 
+    .service-testimonial-area-title {
+        font-size: 1.8rem;
+        padding: 0 2rem 1rem 2rem;
+    }
+
+    .service-testimonial-area-card {
+        padding: 2rem 2rem;
+        margin:0 1rem;
+
+    }
     .service-testimonial-area-card-text{
         text-align: justify;
+    }
+
+    .service-testimonial-previous-btn button{
+        border: 0.3rem solid var(--greyscale-shade-4, #F8F9FA);
+        padding: 0.79rem;
+    }
+
+    .service-testimonial-previous-btn{
+        left:-0.8rem;
+    }
+
+    .service-testimonial-next-btn button{
+        border: 0.3rem solid var(--greyscale-shade-4, #F8F9FA);
+        padding: 0.79rem;
+    }
+
+    .service-testimonial-next-btn{
+        right:-0.8rem;
     }
 }

@@ -1,8 +1,3 @@
-.service-area{
-    /* padding: 4rem 0 4rem 0; */
-   /* max-width: 80%;*/
-   /* overflow: hidden;  */
-}
 .service-area-container{
     padding: 3rem 0 7.6rem 0;
 }
@@ -31,6 +26,11 @@
     
 }
 @media (max-width: 767px) {
+
+    .service-area-container{
+        padding: 4rem 0 4rem 0;
+    }
+
     .service-cards-area{
         flex-direction: column;
         align-items: center;
@@ -39,8 +39,7 @@
     .service-title-area {
         flex-direction: column;
         align-items: center;
-        margin-top: 50%;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
     .service-title-area p{
         font-size: 1.5rem;

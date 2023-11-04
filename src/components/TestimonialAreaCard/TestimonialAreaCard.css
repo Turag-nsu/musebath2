@@ -111,8 +111,21 @@ flex-wrap: nowrap;
         /* text-align: center; */
     }
 
+    .testimonial-area-card-text{
+        margin-bottom: 3rem;
+    }
+
 }
 @media (max-width: 767px) {
+
+    .testimonial-area{
+        padding: 4rem 0;
+    }
+
+    .testimonial-area-title p{
+        padding-left: 1.5rem;
+    }
+
     .testimonial-area-card-full{
         margin-bottom: 4rem;
     }
@@ -121,11 +134,11 @@ flex-wrap: nowrap;
         margin-top: 0;
         min-height: 100%;
     }
-    .testimonial-area-card-text{
-        /* font-size: 0.75rem; */
-        /* min-height: 20rem; */
-        
+
+    .testimonial-prev-button {
+        margin-left: 1rem;
     }
+
     .reviewer-profile{
         margin-top: 2rem;
         bottom: -2.9rem;
