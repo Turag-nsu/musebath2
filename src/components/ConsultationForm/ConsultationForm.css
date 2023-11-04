@@ -65,14 +65,16 @@
     width: 80%;
     margin-bottom: 2.5rem;
 }
+
 .consultation-input .project-description-input {
     margin: 0 0 1rem 0;
 }
-.consultation-area-radio-group-title{
+
+.consultation-area-radio-group-title {
     margin: .5rem 0 0.5rem 0;
 }
 
-.consultation-area-radio-group-title p{
+.consultation-area-radio-group-title p {
     color: var(--essential-black, #000A1A);
 
     /* Paragraph/P 1 */
@@ -112,28 +114,54 @@
     /* 22.4px */
 }
 
-::placeholder{
+::placeholder {
     color: var(--essential-black, #000A1A);
 
-/* Paragraph/P 1 */
-font-family: DM Sans;
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-line-height: 160%; /* 1.6rem */
+    /* Paragraph/P 1 */
+    font-family: DM Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 1.6rem */
 }
-.consultation-form-close-btn button{
+
+.consultation-form-close-btn button {
     border: none;
     background-color: transparent;
     padding: 0;
     margin: 0;
 }
-.consultation-form-close-btn{
+
+.consultation-form-close-btn {
     position: absolute;
     right: 1rem;
     top: 1rem;
     display: none;
 }
-.close.btn{
-    
+
+@media (max-width: 768px) {
+    .consultation-form {
+        padding: 4rem 2rem 4rem 2rem;
+    }
+
+    .consultation-area-title {
+        font-size: 1.5rem;
+    }
+
+    .consultation-area-subtitle {
+        font-size: 1rem;
+    }
+
+    .consultation-area-button {
+        /* margin-top: 0; */
+    }
+
+    .consultation-area-button .customBtn {
+        /* margin: 0; */
+    }
+
+    .consultation-form-close-btn {
+        /* display: block; */
+    }
 }

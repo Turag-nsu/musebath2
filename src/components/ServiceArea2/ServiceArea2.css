@@ -64,10 +64,14 @@
 }
 
 @media (max-width: 767px) {
+    .service-area-2{
+        padding: 4rem 0 4rem 0;
+    }
     .service-area-text {
         font-size: 1rem;
         text-align: center;
         margin-top: 1rem;
+        padding: 2rem;
     }
     .Service-area-2-title {
         font-size: 1.5rem;
@@ -80,6 +84,9 @@
     .single-location-text {
         text-align: center;
     } */
+    .service-locations{
+        padding:  0.5rem;
+    }
     .Location-title {
         text-align: center;
     }

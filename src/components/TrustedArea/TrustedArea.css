@@ -53,6 +53,11 @@
     justify-content:center;
 }
 @media (max-width: 767px) {
+
+    .trusted-area {
+        padding: 4rem 0 4rem 0;
+    }
+
     .trusted-area-logos {
         /* flex-direction: column; */
         align-items: center;
@@ -60,18 +65,20 @@
         width: 70%;
         padding: 1rem 2rem;
     }
-    /* .trusted-area-logos::before {
-        transform: skew(5deg);
-    } */
+
     .trusted-area-title {
-        font-size: 1rem;
-        /* text-align: center; */
+        font-size: 1.5rem;
+        padding: 0 2rem 2rem 2rem;
     }
     .trust-single-logo{
         margin: 1rem 0;
     }
     .trust-single-logo{
-        /* width: 50%; */
         margin-right: 0.5rem;
+        /* transform: scaleX(.8); */
+    }
+
+    .logo-area{
+        /* transform: scaleX(1.2); */
     }
 }

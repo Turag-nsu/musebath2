@@ -80,7 +80,7 @@
 
 @media screen and (max-width: 768px) {
     .option-area{
-        margin-top: 5rem;
+        padding: 4rem 0 4rem 0;
     }
     .option-area-title {
         font-size: 1.5rem;

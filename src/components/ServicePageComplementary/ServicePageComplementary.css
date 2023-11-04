@@ -1,3 +1,8 @@
+.complementary-btn2 a{
+    text-decoration: none;
+    color: var(--essential-black, #000A1A);
+}
+
 .Service-page-complementary {
     padding: 7.5rem 0;
 }
@@ -97,12 +102,16 @@
     display: none;
 }
 @media (max-width: 768px){
+    .Service-page-complementary {
+        padding: 4rem 0;
+    }
     .complementary-btn{
         display: none;
     }
     .complementary-btn2{
         margin: 0 1rem;
         display: block;
+        padding: 0.5rem 2rem;
     }
     .complementary-body{
         padding: 0 1rem;
