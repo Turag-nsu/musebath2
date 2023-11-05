@@ -5,10 +5,11 @@
     padding: 1rem;
     margin-bottom: 1rem;
     transition: all .3s ease-in-out;
+    /* height: 13rem; */
 }
 .admin-blog-card-image{
-    background-color: aqua;
-    height: 100%;
+    /* background-color: aqua; */
+    height: 13rem;
     overflow: hidden;
     border-radius: .5rem;
     padding: .5rem;

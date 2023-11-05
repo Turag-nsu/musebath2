@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import { handleGetPost } from '../../../services/blogServices';
+// import { handleGetPost } from '../../../services/blogServices';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
-import { handleGetPosts } from '../../../services/blogServices';
-import { handleDeletePost } from '../../../services/blogServices';
+// import { handleGetPosts } from '../../../services/blogServices';
+import {handleGetProjects, handleDeletePost } from '../../../services/projectServices';
 
 const ViewProject = () => {
     const [posts, setPosts] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
     useEffect(() => {
         const fetchData = async () => {
-            const { data } = await handleGetPosts();
+            const { data } = await handleGetProjects();
             setPosts(data);
             setLoading(false);
         };
@@ -18,11 +18,10 @@ const ViewProject = () => {
     }, []);
     const adminCard = document.querySelector('.admin-blog-card');
     const handleDeletePost = async (id) => {
-        // const { data } = await handleDeletePost(id);
+        const { data } = await handleDeletePost(id);
         // console.log(data);
     }
-
-
+    if (loading) return <div>Loading...</div>;
     return (
         <div>
             <Container>
@@ -32,7 +31,7 @@ const ViewProject = () => {
                             <Row>
                                 <Col xs={6} md={3}>
                                     <div className='admin-blog-card-image'>
-                                        <img src={post.tileImage} alt='' />
+                                        <img src={post.images[0]} alt='' />
                                     </div>
                                 </Col>
                                 <Col xs={6} md={7}>
@@ -40,7 +39,7 @@ const ViewProject = () => {
                                         <p>{post.title}</p>
                                     </div>
                                     <div className='admin-blog-card-body'>
-                                        <p>{post.mainBody.slice(0, 30)}</p>
+                                        <p>{post.description.slice(0, 30)}</p>
                                     </div>
                                 </Col>
                                 <Col xs={12} md={2}>
