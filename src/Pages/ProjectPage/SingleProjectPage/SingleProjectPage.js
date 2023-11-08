@@ -5,8 +5,27 @@ import ContactUsForm from '../../../components/ContactUsForm/ContactUsForm';
 import ImageSlider from '../../../components/ImageSlider/ImageSlider';
 import ConsultationForm from '../../../components/ConsultationForm/ConsultationForm';
 import TrustedArea from '../../../components/TrustedArea/TrustedArea';
-const SingleProjectPage = ({ project }) => {
-    console.log(project.description);
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import PageLoading from '../../../components/PageLoading/PageLoading';
+
+const SingleProjectPage = () => {
+    const [project, setProject] = React.useState();
+    const [isLoading, setIsLoading] = React.useState(true);
+    const {projectID} = useParams();
+    // console.log("projectID", projectID);
+    const fetchProject = async () => {
+        const response = await axios.get(`http://localhost:3000/api/project-posts/${projectID}`);
+        setProject(response.data);
+        if(response.status === 200) setIsLoading(false);
+        console.log("response is: ",response);
+        console.log("project is: ",project);
+    }
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        fetchProject();
+    }, []);
+    if(isLoading) return <PageLoading />
     return (
         <div style={{ overflow: 'hidden' }}>
             
@@ -28,10 +47,9 @@ const SingleProjectPage = ({ project }) => {
                                 {
                                     project.description.map((item, index) => {
                                         return (
-                                            <p key={index}>{item.text}</p>
+                                            <p key={index}>{item}</p>
                                         )
-                                    }
-                                    )
+                                    })
                                 }
                             </div>
                         </div>

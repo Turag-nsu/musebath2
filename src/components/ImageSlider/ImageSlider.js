@@ -8,15 +8,18 @@ import arrowRight from '../../Images/Project/arrow-right.svg';
 
 
 const ImageSlider = ({images}) => {
-    const [selectedImage, setSelectedImage] = useState(images.image1);
+    const image1 = images[0];
+    const image2 = images[1];
+    const image3 = images[2];
+    const image4 = images[3];
+    const [selectedImage, setSelectedImage] = useState(image1);
     const [selected, setSelected] = useState(null);
     const thumbnailsContainerRef = useRef(null);
     const scrollBarThumbRef = useRef(null);
-    const { image1, image2, image3, image4 } = images;
+    
     const handleImageClick = (newImage, moveDirection, moveAmount) => {
         setSelected(newImage);
         const thumbnailsContainer = thumbnailsContainerRef.current;
-
         if (thumbnailsContainer) {
             const currentTranslateX =
                 parseInt(
@@ -115,28 +118,28 @@ const ImageSlider = ({images}) => {
                 <div className="image-slider-thumbnails" ref={thumbnailsContainerRef}>
                     {/* Replace the following lines with your thumbnail elements */}
                     <img
-                        onClick={() => handleImageClick(images.image1, 'left', images.image1.id * 30)}
+                        onClick={() => handleImageClick(image1, 'left', image1.id * 30)}
                         src={image1.img}
                         alt=""
-                        className={selectedImage === images.image1 ? 'selected' : selected === images.image1 ? 'hide' : ''}
+                        className={selectedImage === image1 ? 'selected' : selected === image1 ? 'hide' : ''}
                     />
                     <img
-                        onClick={() => handleImageClick(images.image2, 'left', images.image1.id * 30)}
+                        onClick={() => handleImageClick(image2, 'left', image1.id * 30)}
                         src={image2.img}
                         alt=""
-                        className={selectedImage === images.image2 ? 'selected' : selected === images.image2 ? 'hide' : ''}
+                        className={selectedImage === image2 ? 'selected' : selected === image2 ? 'hide' : ''}
                     />
                     <img
-                        onClick={() => handleImageClick(images.image3, 'left', images.image1.id * 30)}
+                        onClick={() => handleImageClick(image3, 'left', image1.id * 30)}
                         src={image3.img}
                         alt=""
-                        className={selectedImage === images.image3 ? 'selected' : selected === images.image3 ? 'hide' : ''}
+                        className={selectedImage === image3 ? 'selected' : selected === image3 ? 'hide' : ''}
                     />
                     <img
-                        onClick={() => handleImageClick(images.image4, 'left', images.image1.id * 30)}
+                        onClick={() => handleImageClick(image4, 'left', image1.id * 30)}
                         src={image4.img}
                         alt=""
-                        className={selectedImage === images.image4 ? 'selected' : selected === images.image4 ? 'hide' : ''}
+                        className={selectedImage === image4 ? 'selected' : selected === image4 ? 'hide' : ''}
                     />
                 </div>
                 <div className="scrollbar-container">

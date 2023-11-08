@@ -27,9 +27,10 @@
 .image-slider-thumbnails {
     display: flex;
     justify-content: space-between;
+    white-space: nowrap;
     margin-top: 1.5rem;
     width: 80%;
-    overflow-y: visible;
+    /* overflow-y: visible; */
     margin-left: 9vmax;
     /* position: absolute; */
     /* overflow: auto; */

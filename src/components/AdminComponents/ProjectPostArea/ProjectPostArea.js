@@ -5,11 +5,12 @@ import { handlePost } from '../../../services/projectServices';
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { fireBaseService } from '../../../services/blogServices';
 
+
 const ProjectPostArea = () => {
     const [descriptionInput, setDescriptionInput] = React.useState([]);
+    // const [showAlert, setShowAlert] = React.useState(false);
     const handlePostClick = async (e) => {
         e.preventDefault();
-        
         const selectedImages = [];
     
         for (let i = 1; i <= 4; i++) {
@@ -44,6 +45,7 @@ const ProjectPostArea = () => {
         const allDescriptions = descriptionInput.map((item, index) => e.target.elements[`description${index}`].value);
         const formData = {
             title: e.target.elements.title.value,
+            subtitle: e.target.elements.subtitle.value,
             description: allDescriptions,
             // tileImage: e.target.elements.tileImage.files[0],
             images: imageUrlsArray,
@@ -76,12 +78,13 @@ const ProjectPostArea = () => {
                         onSubmit={handlePostClick}
                     >
                         <p>Add Title Area</p>
-                        <input type="text" placeholder="Title" name='title'/>
+                        <input type="text" placeholder="Title" name='title' required/>
+                        <input type="text" placeholder="Subtitle" name='subtitle' required/>
                         <p>Upload Images</p>
-                        <input type="file" placeholder="Tile Image" name='image1'/>
-                        <input type="file" placeholder="Tile Image" name='image2'/>
-                        <input type="file" placeholder="Tile Image" name='image3'/>
-                        <input type="file" placeholder="Tile Image" name='image4'/>
+                        <input type="file" placeholder="Tile Image" name='image1' required/>
+                        <input type="file" placeholder="Tile Image" name='image2' required/>
+                        <input type="file" placeholder="Tile Image" name='image3' required/>
+                        <input type="file" placeholder="Tile Image" name='image4' required/>
                         <p>Add Description Area</p>
                         {
                             descriptionInput.map((item, index) => {
