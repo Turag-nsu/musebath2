@@ -108,9 +108,9 @@ const PostArea = () => {
                             {
                                 singleBodyParts.map((part, index) => (
                                     <div key={index} className="single-body-part">
-                                        <input type="text" name={`title${index}`} placeholder={part.title} />
-                                        <textarea placeholder={part.content} name={`content${index}`} />
-                                        <input type="file" placeholder="Image" name={`image${index}`} />
+                                        <input type="text" name={`title${index}`} placeholder={part.title} required/>
+                                        <textarea placeholder={part.content} name={`content${index}`} required/>
+                                        <input type="file" placeholder="Image" name={`image${index}`} required/>
                                         
                                         {
                                             part.listItems.map((item, itemIndex) => (

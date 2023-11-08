@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import {handleGetProjects, handleDeleteProject } from '../../../services/projectServices';
+import PageLoading from '../../PageLoading/PageLoading';
 
 const ViewProject = () => {
     const [posts, setPosts] = React.useState([]);
@@ -19,7 +20,7 @@ const ViewProject = () => {
         const { data } = await handleDeleteProject(id);
         // console.log(data);
     }
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <PageLoading />;
     return (
         <div>
             <Container>
@@ -29,7 +30,7 @@ const ViewProject = () => {
                             <Row>
                                 <Col xs={6} md={3}>
                                     <div className='admin-blog-card-image'>
-                                        <img src={post.images[0]} alt='' />
+                                        <img src={post.images[0].img} alt='' />
                                     </div>
                                 </Col>
                                 <Col xs={6} md={7}>
@@ -37,7 +38,7 @@ const ViewProject = () => {
                                         <p>{post.title}</p>
                                     </div>
                                     <div className='admin-blog-card-body'>
-                                        <p>{post.description.slice(0, 30)}</p>
+                                        <p>{post.description[0].slice(0, 30)}</p>
                                     </div>
                                 </Col>
                                 <Col xs={12} md={2}>

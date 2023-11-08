@@ -1,12 +1,10 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./PageLoading.css";
 import { Spinner } from "react-bootstrap";
 
 const PageLoading = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+   
 
     const sprinnerVarients = [
         "primary",

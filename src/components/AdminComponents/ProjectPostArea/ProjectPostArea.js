@@ -7,9 +7,12 @@ import { fireBaseService } from '../../../services/blogServices';
 
 
 const ProjectPostArea = () => {
+    
     const [descriptionInput, setDescriptionInput] = React.useState([]);
     // const [showAlert, setShowAlert] = React.useState(false);
     const handlePostClick = async (e) => {
+        //disable submit button
+        e.target.elements.submit.disabled = true;
         e.preventDefault();
         const selectedImages = [];
     
@@ -41,7 +44,7 @@ const ProjectPostArea = () => {
             }
         }
         imgUrlArrayToJson(imageUrlsArray);
-        console.log("imageUrlsArray: ", imageUrlsArray);
+        // console.log("imageUrlsArray: ", imageUrlsArray);
         const allDescriptions = descriptionInput.map((item, index) => e.target.elements[`description${index}`].value);
         const formData = {
             title: e.target.elements.title.value,
@@ -51,9 +54,16 @@ const ProjectPostArea = () => {
             images: imageUrlsArray,
         };
     
-        console.log("project form data: ", formData);
+        // console.log("project form data: ", formData);
     
-        await handlePost(formData);
+        const response = await handlePost(formData);
+        if (response.status === 200) {
+            //reload window
+            window.location.reload();
+        }
+        else {
+            alert("Something went wrong. please contact the developer");
+        }
     }
     const addDescriptionInputBox = () => {
         const newDescriptionInput = {

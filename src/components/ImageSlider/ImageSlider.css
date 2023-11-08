@@ -116,10 +116,13 @@
 }
 @media (max-width: 767px) {
     .image-slider-thumbnails{
-        height: 10rem;
+        height: 13rem;
         width: 100%;
         margin-left: 5%;
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: visible;
+        /* padding: 1rem; */
+        padding-right: 5rem;
     }
     .image-slider-thumbnails::-webkit-scrollbar{
         display: none;
@@ -127,6 +130,7 @@
     }
     .image-slider-thumbnails img{
         height: 100%;
+        margin-bottom: 0;
     }
     .selected-image-show-area{
         height: 20rem;

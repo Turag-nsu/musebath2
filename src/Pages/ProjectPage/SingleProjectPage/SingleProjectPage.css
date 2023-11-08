@@ -72,4 +72,7 @@ line-height: 160%; /* 1.6rem */
     .single-projext-page-details-body p{
         font-size: 1rem;
     }
+    .single-project-page-container .contact-us-form-container{
+        margin-top: 3rem;
+    }
 }

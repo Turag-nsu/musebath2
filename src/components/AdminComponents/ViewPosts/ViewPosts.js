@@ -4,33 +4,23 @@ import { handleGetPosts } from '../../../services/blogServices';
 import './ViewPosts.css';
 import { handleDeletePost } from '../../../services/blogServices';
 import { Link } from 'react-router-dom';
+import PageLoading from '../../PageLoading/PageLoading';
 
 const ViewPosts = () => {
     const [posts, setPosts] = React.useState([]);
-
+    const [loading, setLoading] = React.useState(true);
     useEffect(() => {
         const fetchData = async () => {
             const { data } = await handleGetPosts();
+            setLoading(false);
             setPosts(data);
         };
         fetchData();
     }, []);
 
-    console.log(posts);
-
-    const decodeImage = (imageString) => {
-        if (!imageString) return null;
-        return new Promise((resolve) => {
-            const image = new Image();
-            image.onload = () => {
-                resolve(image);
-            };
-            image.src = imageString;
-        });
-    };
 
     const adminCard = document.querySelector('.admin-blog-card');
-
+    if (loading) return <PageLoading />;
     return (
         <div>
             <Container>
