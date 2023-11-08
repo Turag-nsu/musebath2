@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProjectsHeroPart from '../../components/ProjectsHeroPart/ProjectsHeroPart';
 import ProjectArea from '../../components/ProjectsArea/ProjectArea';
 import ProjectTabs from '../../components/ProjectTabs/ProjectTabs';
@@ -9,15 +9,20 @@ import BlogHeroPart from '../../components/BlogHeroPart/BlogHeroPart';
 import projectBg from '../../Images/Project/project-hero-bg.jpeg';
 
 const ProjectPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }
+        , []);
+
     return (
         <div>
             {/* <div > */}
-                <BlogHeroPart text="Our Projects" bg={projectBg} />
+            <BlogHeroPart text="Our Projects" bg={projectBg} />
             {/* </div> */}
             <div>
                 <ProjectTabs />
             </div>
-            <div style={{position: "relative", zIndex: "0"}}>
+            <div style={{ position: "relative", zIndex: "0" }}>
                 <ProjectArea />
             </div>
             <div>

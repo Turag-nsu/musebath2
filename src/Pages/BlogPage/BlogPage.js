@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import './App.css';
 import CustomNavbar from '../../components/CustomNavbar/CustomNavbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,6 +11,9 @@ import ConsultationForm from '../../components/ConsultationForm/ConsultationForm
 import BlogHeroPart from '../../components/BlogHeroPart/BlogHeroPart';
 import blogBG from '../../Images/Blog/blog_bg.png'
 const BlogPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div style={{ backgroundColor: '#FFF' }}>

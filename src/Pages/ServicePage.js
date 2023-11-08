@@ -18,11 +18,15 @@ import reviewer1 from '../Images/profile-1.png'
 import { useParams } from 'react-router-dom';
 import data from '../Database/Data';
 import { Container } from 'react-bootstrap';
+import { useEffect } from 'react';
 const images = [pic1, pic2, pic3, pic4, pic5];
 
 
 const ServicePage = () => {
-  console.log(data);
+  // console.log(data);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
   const params = useParams();
   const serviceID = params.serviceID;
   if(serviceID >3 || serviceID <1){

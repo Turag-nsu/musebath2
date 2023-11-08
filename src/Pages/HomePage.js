@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -20,6 +20,9 @@ import gallaryPic4 from '../Images/Gallery-pic-4.png';
 import gallaryPic5 from '../Images/Gallery-pic-5.png';
 const images = [gallaryPic1, gallaryPic2, gallaryPic3, gallaryPic4, gallaryPic5];
 const HomePage=()=> {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       {/* <CustomNavbar /> */}

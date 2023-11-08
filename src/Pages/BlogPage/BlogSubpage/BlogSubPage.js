@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './BlogSubPage.css'
 import { Container, Row, Col } from 'react-bootstrap';
 import blogData from '../../../Database/Data'
@@ -40,6 +40,11 @@ const data = [
 ]
 
 const BlogSubPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    
     const { id } = useParams();
     const { mainTitle, mainImage, uploaderName, uploadDate, category, mainBody, contents } = blogData[0].blog1;
     const handleNextClick = () => {
