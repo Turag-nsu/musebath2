@@ -31,6 +31,16 @@ const ProjectPostArea = () => {
             const imageUrl = await uploadImage(image, index);
             return imageUrl;
         }));
+        const imgUrlArrayToJson = (imgUrlArray) => {
+            for (let i = 0; i < imgUrlArray.length; i++) {
+                imgUrlArray[i] = {
+                    id: i+1,
+                    img: imgUrlArray[i]
+                };
+            }
+        }
+        imgUrlArrayToJson(imageUrlsArray);
+        console.log("imageUrlsArray: ", imageUrlsArray);
         const allDescriptions = descriptionInput.map((item, index) => e.target.elements[`description${index}`].value);
         const formData = {
             title: e.target.elements.title.value,
