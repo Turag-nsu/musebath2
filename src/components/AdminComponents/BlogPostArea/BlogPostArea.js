@@ -55,6 +55,7 @@ const PostArea = () => {
         const formData = {
             title: e.target.elements.title.value,
             uploadDate: e.target.elements.uploadDate.value,
+            uploaderName: e.target.elements.uploaderName.value,
             tileImage: await uploadImage(e.target.elements.tileImage.files[0]),
             category: e.target.elements.category.value,
             mainBody: e.target.elements.mainBody.value,
@@ -94,6 +95,7 @@ const PostArea = () => {
                             <p>Add Title Area</p>
                             <input type="text" placeholder="Title" name="title" />
                             <input type="text" placeholder="Upload Date(Ex. 2 July, 2023)" name="uploadDate" />
+                            <input type="text" placeholder="Uploader Name" name="uploaderName" />
                             {/* <label for="file">Upload Tile Image</label> */}
                             <input type="file" placeholder="Tile Image" name="tileImage" />
                             <select name="category" id="category">

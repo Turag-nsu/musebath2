@@ -22,6 +22,8 @@ import image1 from './Images/Project/1/pic-1.jpeg';
 import image2 from './Images/Project/1/pic-2.jpeg';
 import image3 from './Images/Project/1/pic-3.jpeg';
 import image4 from './Images/Project/1/pic-4.jpeg';
+import PageLoading from './components/PageLoading/PageLoading';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 const projects = {
   images: {
     image1: {
@@ -46,7 +48,7 @@ const projects = {
   description: [
     {
       id: 1,
-     
+
       text: "When it comes to remodeling a 3-bedroom house bathroom, the choices made for the fixtures and design can greatly impact the overall aesthetic and functionality of the space. In this particular case, the homeowners have opted for a bathtub in the hallway bath and a shower in the master bath. Additionally, they have expressed their preference for green tiles in the master bath."
     },
     {
@@ -123,6 +125,7 @@ function App() {
         <CustomNavbar />
 
         <Routes>
+          <Route path="/test" element={<PageLoading />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/blog" element={<BlogPage />}>
 
@@ -141,6 +144,7 @@ function App() {
             <Route path='view-project' element={<ViewProject />} />
           </Route>
           <Route path="/projects/:projectID" element={<SingleProjectPage project={projects} />} />
+          <Route path="/:any" element={<ErrorPage />} />
           {/* <Route path="/admin/blog-post" element={<BlogPostArea />} /> */}
         </Routes>
       </BrowserRouter>

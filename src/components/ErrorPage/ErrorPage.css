@@ -1,0 +1,13 @@
+.error-page-container{
+    padding: 6rem 0 120vh 0;
+    height: 100vh;
+
+}
+.error-page-container .error-text{
+    color: rgb(170, 61, 61);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: DM Sans;
+}
+

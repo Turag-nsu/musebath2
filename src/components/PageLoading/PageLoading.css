@@ -1,0 +1,18 @@
+.page-loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    /* margin: 10rem 0; */
+}
+.page-loading p{
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: DM Sans;
+}
+.page-loading .spinner-border{
+    width: 5rem;
+    height: 5rem;
+    --bs-spinner-border-width: 1rem;
+}

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import './BlogSubPage.css'
 import { Container, Row, Col } from 'react-bootstrap';
-import blogData from '../../../Database/Data'
+// import blogData from '../../../Database/Data'
 import { useParams } from 'react-router-dom';
-
+import { useState } from 'react';
 import callMade2 from '../../../Images/call-made2.svg'
 import callMade3 from '../../../Images/call-made3.svg'
 
@@ -14,39 +14,67 @@ import ArticleAreaCard from '../../../components/ArticleAreaCard/ArticleAreaCard
 import ConsultationForm from '../../../components/ConsultationForm/ConsultationForm';
 import TrustedArea from '../../../components/TrustedArea/TrustedArea';
 import ContactUsForm from '../../../components/ContactUsForm/ContactUsForm';
+import axios from 'axios';
+import PageLoading from '../../../components/PageLoading/PageLoading';
+import ErrorPage from '../../../components/ErrorPage/ErrorPage';
 
-const data = [
-    {
-        id: 1,
-        img: ArticleImage1,
-        title: "Elevate Your Space: Top Bathroom Remodeling Trends",
-        body: "Transform your bathroom into a stylish and functional haven with the latest remodeling trends...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 2,
-        img: ArticleImage2,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 3,
-        img: ArticleImage3,
-        title: "A Step-by-Step Guide to Planning Your Dream Bathroom Remodel",
-        body: "Embark on your bathroom remodeling journey with confidence using our comprehensive step-by-step...",
-        date: "12 July, 2023",
-    }
-]
 
 const BlogSubPage = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    const {blogID} = useParams();
+    const [blogData, setBlogData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(false);
+    const fetchBlogData = async () => {
+        try {
+            const response = await axios.get(`http://localhost:3000/api/blog-posts/${blogID}`);
+            console.log(response);
+            if (response.status !== 200) {
+                throw new Error('Failed to fetch blog data');
+            } else {
+                setBlogData(response.data);
+                // console.log(response.status);
+                setIsLoading(false);
+            }
+        } catch (error) {
+            setError(true);
+            setIsLoading(false);
+            // return <ErrorPage />;
+        }
+    };
 
-    
-    const { id } = useParams();
-    const { mainTitle, mainImage, uploaderName, uploadDate, category, mainBody, contents } = blogData[0].blog1;
+    useEffect(() => {
+        fetchBlogData();
+        window.scrollTo(0, 0);
+    },[]);
+
+    if (error) {
+        return <ErrorPage text = "Blog not found"/>;
+    }
+    const data = [
+        {
+            id: 1,
+            img: ArticleImage1,
+            title: "Elevate Your Space: Top Bathroom Remodeling Trends",
+            body: "Transform your bathroom into a stylish and functional haven with the latest remodeling trends...",
+            date: "12 July, 2023",
+        },
+        {
+            id: 2,
+            img: ArticleImage2,
+            title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+            body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+            date: "12 July, 2023",
+        },
+        {
+            id: 3,
+            img: ArticleImage3,
+            title: "A Step-by-Step Guide to Planning Your Dream Bathroom Remodel",
+            body: "Embark on your bathroom remodeling journey with confidence using our comprehensive step-by-step...",
+            date: "12 July, 2023",
+        }
+    ]
+
+    const { title, tileImage, uploaderName, uploadDate, category, mainBody, bodyParts } = blogData;
     const handleNextClick = () => {
         const relatedBlogCards = document.querySelector('.related-blog-card-group');
         relatedBlogCards.style.transform = 'translateX(-100%)';
@@ -78,6 +106,13 @@ const BlogSubPage = () => {
         data.unshift(lastCard);
 
     }
+    if (isLoading) {
+        return (
+            <div>
+                <PageLoading />
+            </div>
+        )
+    }
     return (
         <div>
             <Container>
@@ -86,11 +121,11 @@ const BlogSubPage = () => {
                         <div className='blog-full-area'>
 
                             <div className='blog-title-area'>
-                                <p>{mainTitle}</p>
+                                <p>{title}</p>
                             </div>
 
                             <div className='blog-title-img'>
-                                <img src={mainImage} alt='blog-img' />
+                                <img src={tileImage} alt='blog-img' />
                             </div>
                             <div className='upload-details'>
                                 <p className='blog-uploader-name-date'>{`By ${uploaderName} ${uploadDate}`}</p>
@@ -99,17 +134,17 @@ const BlogSubPage = () => {
                             </div>
                             <p className='blog-main-body'>{mainBody}</p>
                             {
-                                contents.map(content => {
+                                bodyParts.map(content => {
                                     return (
                                         <div className='blog-content-area'>
                                             <p className='blog-content-title'>{content.title}</p>
-                                            <p className='blog-content-body'>{content.body}</p>
+                                            <p className='blog-content-body'>{content.content}</p>
                                             {
-                                                content.list ? (
+                                                content.listItem ? (
                                                     <div className='blog-content-list'>
                                                         <ol>
                                                             {
-                                                                content.list.map(listItem => <li>{listItem}</li>)
+                                                                content.listItem.map(listItem => <li>{listItem}</li>)
                                                             }
                                                         </ol>
                                                     </div>
