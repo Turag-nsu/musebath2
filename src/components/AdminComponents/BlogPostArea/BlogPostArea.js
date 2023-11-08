@@ -70,7 +70,7 @@ const PostArea = () => {
             // postBtn.disabled = true;
             postBtn.style.transition = "all 0.5s ease-in-out";
             setTimeout(() => {
-                // window.location.reload();
+                window.location.reload();
             }, 2000);
         }
         else {
