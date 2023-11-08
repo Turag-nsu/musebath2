@@ -8,22 +8,22 @@ const BlogHeroPart = ({ text, bg }) => {
     const [showForm, setShowForm] = useState(false);
     
     
-    useEffect(() => {
-        const handleResize = () => {
-            const overlay = document.querySelector('.blog-hero-overlay');
-            if (overlay) {
-                overlay.style.height = `${document.querySelector('.blog-hero-part').offsetHeight}px`;
-            }
-        };
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         const overlay = document.querySelector('.blog-hero-overlay');
+    //         if (overlay) {
+    //             overlay.style.height = `${document.querySelector('.blog-hero-part').offsetHeight}px`;
+    //         }
+    //     };
 
-        // Add the resize event listener when the component is mounted
-        window.addEventListener('resize', handleResize);
+    //     // Add the resize event listener when the component is mounted
+    //     window.addEventListener('resize', handleResize);
         
-        // Remove the event listener when the component is unmounted
-        return () => {
-            // window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    //     // Remove the event listener when the component is unmounted
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize);
+    //     };
+    // }, []);
     return (
         <>
         
