@@ -4,7 +4,6 @@ import { Row, Col, Container } from 'react-bootstrap';
 // import Mymap from './MyMap/Mymap';
 import Mymap from '../MyMap/MyMap';
 import CustomButton from '../CustomButton/CustomButton';
-import locationMarker from "../../Images/Location-marker.png";
 import SingleLocation from './SingleLocation/SingleLocation';
 import { Link } from 'react-router-dom';
 const serviceLocations = [

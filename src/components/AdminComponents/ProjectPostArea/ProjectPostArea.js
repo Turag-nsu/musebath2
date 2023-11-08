@@ -6,9 +6,10 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { fireBaseService } from '../../../services/blogServices';
 
 const ProjectPostArea = () => {
+    const [descriptionInput, setDescriptionInput] = React.useState([]);
     const handlePostClick = async (e) => {
         e.preventDefault();
-    
+        
         const selectedImages = [];
     
         for (let i = 1; i <= 4; i++) {
@@ -30,10 +31,10 @@ const ProjectPostArea = () => {
             const imageUrl = await uploadImage(image, index);
             return imageUrl;
         }));
-    
+        const allDescriptions = descriptionInput.map((item, index) => e.target.elements[`description${index}`].value);
         const formData = {
             title: e.target.elements.title.value,
-            description: e.target.elements.description.value,
+            description: allDescriptions,
             // tileImage: e.target.elements.tileImage.files[0],
             images: imageUrlsArray,
         };
@@ -42,8 +43,17 @@ const ProjectPostArea = () => {
     
         await handlePost(formData);
     }
-    
-    
+    const addDescriptionInputBox = () => {
+        const newDescriptionInput = {
+            text: `Description ${descriptionInput.length + 1}`,
+        };
+        setDescriptionInput([...descriptionInput, newDescriptionInput]);
+    }
+    const handleAddDescriptionClick = (e) => {
+        e.preventDefault();
+        addDescriptionInputBox();
+
+    }
     return (
         <Container>
             <div>
@@ -62,7 +72,20 @@ const ProjectPostArea = () => {
                         <input type="file" placeholder="Tile Image" name='image2'/>
                         <input type="file" placeholder="Tile Image" name='image3'/>
                         <input type="file" placeholder="Tile Image" name='image4'/>
-                        <textarea placeholder="Project Description" name='description'/>
+                        <p>Add Description Area</p>
+                        {
+                            descriptionInput.map((item, index) => {
+                                return (
+                                    <div key={index}  style={{width: "100%"}}>
+                                        <textarea type="text" placeholder={item.text} name={`description${index}`} />
+                                    </div>
+                                )
+                            })
+                        }
+                        <button
+                        className='add-body-part-btn'
+                        onClick={handleAddDescriptionClick}
+                        >Add description</button>
                         <button 
                         // onClick={handlePostClick}
                         className='post-submit-button' type="submit" value="submit">Submit</button>

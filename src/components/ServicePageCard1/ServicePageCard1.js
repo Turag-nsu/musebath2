@@ -1,6 +1,5 @@
 import React from 'react';
 import './ServicePageCard1.css'
-import serviceCardPic1 from '../../Images/service-area-1-pic-1'
 import { Container } from 'react-bootstrap';
 const ServicePageCard1 = ({image, title, body1, body2}) => {
     return (

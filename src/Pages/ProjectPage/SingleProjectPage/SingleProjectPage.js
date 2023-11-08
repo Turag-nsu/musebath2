@@ -9,7 +9,14 @@ const SingleProjectPage = ({ project }) => {
     console.log(project.description);
     return (
         <div style={{ overflow: 'hidden' }}>
-            <ImageSlider />
+            
+            <Container>
+            <div className="single-project-header">
+                <p className='title'>{project.title}</p>
+                <p className='subtitle'>{project.subtitle}</p>
+            </div>
+            </Container>
+            <ImageSlider images={project.images} />
             <Container>
                 <Row>
                     <Col md={8}>

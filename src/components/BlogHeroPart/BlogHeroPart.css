@@ -1,5 +1,4 @@
 .blog-hero-part {
-    background-image: url('../../Images/Blog/blog_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     /* margin-bottom: 2rem; */
-    background-color: (--greyscale-shade-4, #F8F9FA);
+    /* background-color: (--greyscale-shade-4, #F8F9FA); */
     position: relative;
     z-index: 1;
 }
@@ -16,14 +15,13 @@
     background-color: #00000033;
     /* opacity: 0.2; */
     position: absolute;
-    
-    width: 100%;
     height: 100%;
-    z-index: 1;
+    width: 100%;
+    z-index: 2;
 }
 .blog-hero-text-area {
     position: relative;
-    z-index: -1;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,13 +56,14 @@
     top: 40%;
     left: 0;
     width: 8.75rem;
-    z-index: -1;
+    z-index: 5;
 }
 .estimate-btn-text{
     position: absolute;
     top: 31.5%;
     left: 0;
     padding-left: .7rem;
+   
     /* padding-bottom: 7rem; */
 }
 .free-text{

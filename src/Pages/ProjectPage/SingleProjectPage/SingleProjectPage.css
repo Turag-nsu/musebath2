@@ -1,3 +1,28 @@
+.single-project-header{
+    margin: 10rem 0 2.62rem 0;
+}
+.single-project-header .title{
+    color: var(--essential-black, #000A1A);
+
+/* Heading/H 2 */
+font-family: DM Sans;
+font-size: 2.625rem;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 3.15rem */
+text-transform: capitalize;
+}
+
+.single-project-header .subtitle{
+    color: var(--greyscale-shade-1, #52637A);
+
+    /* Title/T 1 */
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 2.1rem */
+}
 .single-projext-page-details-container{
     padding: 3rem;
     background-color: var(--essential-white, #FFF);

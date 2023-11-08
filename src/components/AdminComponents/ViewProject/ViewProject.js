@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-// import { handleGetPost } from '../../../services/blogServices';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
-// import { handleGetPosts } from '../../../services/blogServices';
-import {handleGetProjects, handleDeletePost } from '../../../services/projectServices';
+import {handleGetProjects, handleDeleteProject } from '../../../services/projectServices';
 
 const ViewProject = () => {
     const [posts, setPosts] = React.useState([]);
@@ -17,8 +15,8 @@ const ViewProject = () => {
         fetchData();
     }, []);
     const adminCard = document.querySelector('.admin-blog-card');
-    const handleDeletePost = async (id) => {
-        const { data } = await handleDeletePost(id);
+    const handleDeletePostClick = async (id) => {
+        const { data } = await handleDeleteProject(id);
         // console.log(data);
     }
     if (loading) return <div>Loading...</div>;
@@ -55,13 +53,12 @@ const ViewProject = () => {
                                         <button
                                             onClick={(e) => {
                                                 e.preventDefault();
-                                                //ask for confirmation
                                                 if (!window.confirm(`Are you sure you want to delete ${post.title}?\nThis can not be undone`))
                                                     return;
-                                                handleDeletePost(post.id);
+                                                handleDeletePostClick(post.id);
                                                 adminCard.style.opacity = 0;
                                                 setTimeout(() => {
-                                                    // window.location.reload();
+                                                    window.location.reload();
                                                 }, 1000);
                                             }}
                                             style={{ backgroundColor: 'red' }}

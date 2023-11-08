@@ -10,18 +10,10 @@ import callMade3 from '../../../Images/call-made3.svg'
 import ArticleImage1 from '../../../Images/Article-area-pic-1.png'
 import ArticleImage2 from '../../../Images/Article-area-pic-2.png'
 import ArticleImage3 from '../../../Images/Article-area-pic-3.jpeg'
-// import ArticleImage3 from '../../../Images/Article-area-pic-3.jpeg'
 import ArticleAreaCard from '../../../components/ArticleAreaCard/ArticleAreaCard';
 import ConsultationForm from '../../../components/ConsultationForm/ConsultationForm';
 import TrustedArea from '../../../components/TrustedArea/TrustedArea';
-import ContactUs from '../../ContactUs';
 import ContactUsForm from '../../../components/ContactUsForm/ContactUsForm';
-// import ArticleAreaCard from '../../../ArticleAreaCard/ArticleAreaCard';
-
-// import ConsultationForm from '../../../ConsultationForm/ConsultationForm';
-// import TrustedArea from '../../../components/TrustedArea/TrustedArea';
-// import TrustedArea from '../../../TrustedArea/TrustedArea';
-
 
 const data = [
     {
@@ -50,7 +42,37 @@ const data = [
 const BlogSubPage = () => {
     const { id } = useParams();
     const { mainTitle, mainImage, uploaderName, uploadDate, category, mainBody, contents } = blogData[0].blog1;
+    const handleNextClick = () => {
+        const relatedBlogCards = document.querySelector('.related-blog-card-group');
+        relatedBlogCards.style.transform = 'translateX(-100%)';
+        relatedBlogCards.style.opacity = '0';
+        relatedBlogCards.style.transition = 'all 0.5s ease-in-out';
+        setTimeout(() => {
+            relatedBlogCards.style.transform = 'translateX(0%)';
+            relatedBlogCards.style.opacity = '1';
+            relatedBlogCards.style.transition = 'opacity 0.5s ease-in-out';
 
+        }, 500);
+        const firstCard = data.shift();
+        data.push(firstCard);
+        
+
+    }
+    const handlePrevClick = () => {
+        const relatedBlogCards = document.querySelector('.related-blog-card-group');
+        relatedBlogCards.style.transform = 'translateX(100%)';
+        relatedBlogCards.style.opacity = '0';
+        relatedBlogCards.style.transition = 'all 0.5s ease-in-out';
+        setTimeout(() => {
+            relatedBlogCards.style.transform = 'translateX(0%)';
+            relatedBlogCards.style.opacity = '1';
+            relatedBlogCards.style.transition = 'opacity 0.5s ease-in-out';
+
+        }, 500);
+        const lastCard = data.pop();
+        data.unshift(lastCard);
+
+    }
     return (
         <div>
             <Container>
@@ -121,12 +143,16 @@ const BlogSubPage = () => {
                 <div className='related-blog-title-btn'>
                     <p className='related-blog-area-title'>Related articles</p>
                     <div className='testimonial-area-title-buttons'>
-                        <button style={{ border: 'none' }}>
+                        <button
+                        onClick={handlePrevClick}
+                        style={{ border: 'none' }}>
                             <div className="testimonial-prev-button">
                                 <img src={callMade3} alt="" />
                             </div>
                         </button>
-                        <button style={{ border: 'none' }}>
+                        <button 
+                        onClick={handleNextClick}
+                        style={{ border: 'none' }}>
                             <div className="testimonial-next-button">
                                 <img src={callMade2} alt="" />
 

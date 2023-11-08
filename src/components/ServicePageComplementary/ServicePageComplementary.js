@@ -1,7 +1,6 @@
 import React from 'react';
 import './ServicePageComplementary.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import pic from '../../Images/Service/service-1-complementary-pic.jpeg'
 const ServicePageComplementary = ({title, body1, body2, image}) => {
     return (
         <div className='Service-page-complementary'>
@@ -27,7 +26,7 @@ const ServicePageComplementary = ({title, body1, body2, image}) => {
                             <img src={image} alt="" />
                         </div>
                         <button className="complementary-btn2">
-                            <a href='https://www.remodeling.hw.net/cost-vs-value/2023/' target='_blank'>
+                            <a href='https://www.remodeling.hw.net/cost-vs-value/2023/' target='_blank' rel="noreferrer">
 
                             
                             COST VS VALUE</a></button>

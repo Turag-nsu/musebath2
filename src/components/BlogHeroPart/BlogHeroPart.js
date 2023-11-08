@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './BlogHeroPart.css';
 import overlayBtn from '../../Images/Service/estimate-btn.svg';
 import overlayBoder from '../../Images/Service/estimate-btn-border.svg';
@@ -6,12 +6,31 @@ import ConsultationForm from './../ConsultationForm/ConsultationForm';
 
 const BlogHeroPart = ({ text, bg }) => {
     const [showForm, setShowForm] = useState(false);
+    
+    
+    useEffect(() => {
+        const handleResize = () => {
+            const overlay = document.querySelector('.blog-hero-overlay');
+            if (overlay) {
+                overlay.style.height = `${document.querySelector('.blog-hero-part').offsetHeight}px`;
+            }
+        };
 
+        // Add the resize event listener when the component is mounted
+        window.addEventListener('resize', handleResize);
+        
+        // Remove the event listener when the component is unmounted
+        return () => {
+            // window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <>
-        {/* <div className="blog-hero-overlay"></div> */}
-        <div className="blog-hero-part" style={{ backgroundImage: `url(${bg})` }}>
-            
+        
+        <div className="blog-hero-part" style={{ 
+            backgroundImage: `url(${bg})`,
+         }}>
+            <div className="blog-hero-overlay"></div>
             <div className="blog-hero-text-area" data-aos="zoom-in" >
                 <p>{text}</p>
             </div>

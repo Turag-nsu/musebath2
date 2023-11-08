@@ -2,8 +2,7 @@ import React from 'react';
 import './ServiceTestimonial.css';
 import star from '../../Images/stars.svg'
 import { useState } from 'react';
-import { Button, Container } from 'react-bootstrap';
-// import { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import data from '../../Database/Data'
 import nextbtn from '../../Images/arrow.svg'
 import prevbtn from '../../Images/Service/previous-arrow.svg'

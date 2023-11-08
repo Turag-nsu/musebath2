@@ -2,37 +2,17 @@ import React, { useState, useEffect, useRef } from 'react';
 import './ImageSlider.css';
 
 // Import your images (image1, image2, image3, image4).
-import image1 from '../../Images/Project/1/pic-1.jpeg';
-import image2 from '../../Images/Project/1/pic-2.jpeg';
-import image3 from '../../Images/Project/1/pic-3.jpeg';
-import image4 from '../../Images/Project/1/pic-4.jpeg';
+
 import arrowLeft from '../../Images/Project/arrow-left.svg';
 import arrowRight from '../../Images/Project/arrow-right.svg';
-const images = {
-    image1: {
-        id: 1,
-        img: image1,
-    },
-    image2: {
-        id: 2,
-        img: image2,
-    },
-    image3: {
-        id: 3,
-        img: image3,
-    },
-    image4: {
-        id: 4,
-        img: image4,
-    },
-};
 
-const ImageSlider = () => {
+
+const ImageSlider = ({images}) => {
     const [selectedImage, setSelectedImage] = useState(images.image1);
     const [selected, setSelected] = useState(null);
     const thumbnailsContainerRef = useRef(null);
     const scrollBarThumbRef = useRef(null);
-
+    const { image1, image2, image3, image4 } = images;
     const handleImageClick = (newImage, moveDirection, moveAmount) => {
         setSelected(newImage);
         const thumbnailsContainer = thumbnailsContainerRef.current;
@@ -136,25 +116,25 @@ const ImageSlider = () => {
                     {/* Replace the following lines with your thumbnail elements */}
                     <img
                         onClick={() => handleImageClick(images.image1, 'left', images.image1.id * 30)}
-                        src={image1}
+                        src={image1.img}
                         alt=""
                         className={selectedImage === images.image1 ? 'selected' : selected === images.image1 ? 'hide' : ''}
                     />
                     <img
                         onClick={() => handleImageClick(images.image2, 'left', images.image1.id * 30)}
-                        src={image2}
+                        src={image2.img}
                         alt=""
                         className={selectedImage === images.image2 ? 'selected' : selected === images.image2 ? 'hide' : ''}
                     />
                     <img
                         onClick={() => handleImageClick(images.image3, 'left', images.image1.id * 30)}
-                        src={image3}
+                        src={image3.img}
                         alt=""
                         className={selectedImage === images.image3 ? 'selected' : selected === images.image3 ? 'hide' : ''}
                     />
                     <img
                         onClick={() => handleImageClick(images.image4, 'left', images.image1.id * 30)}
-                        src={image4}
+                        src={image4.img}
                         alt=""
                         className={selectedImage === images.image4 ? 'selected' : selected === images.image4 ? 'hide' : ''}
                     />

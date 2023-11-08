@@ -120,7 +120,7 @@ const PostArea = () => {
                                     </div>
                                 ))
                             }
-                            <button type="button" onClick={addBodyPart}>Add Body Part</button>
+                            <button type="button" className='add-body-part-btn' onClick={addBodyPart}>Add Body Part</button>
                             <button type="submit" className="post-submit-button" onClick={startLoading}>Post</button>
                         </form>
                     </div>

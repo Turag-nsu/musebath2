@@ -1,10 +1,8 @@
 import React from 'react';
 import './TestimonialAreaCard.css'
 import stars from '../../Images/stars.svg';
-
 import dotdot from '../../Images/dotdot.svg'
 
-import { Row, Col, Container } from 'react-bootstrap';
 const TestimonialAreaCard = ({ img, text, name, title }) => {
     return (
         <div className='testimonial-area-card-full'>
