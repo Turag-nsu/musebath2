@@ -106,17 +106,18 @@ const PostArea = () => {
                             {
                                 singleBodyParts.map((part, index) => (
                                     <div key={index} className="single-body-part">
-                                        <input type="text" placeholder="Title" name={`title${index}`} defaultValue={part.title} />
-                                        <textarea placeholder="Content" name={`content${index}`} defaultValue={part.content} />
+                                        <input type="text" name={`title${index}`} placeholder={part.title} />
+                                        <textarea placeholder={part.content} name={`content${index}`} />
                                         <input type="file" placeholder="Image" name={`image${index}`} />
-                                        <button type="button" onClick={() => addListItem(index)}>Add List Item</button>
+                                        
                                         {
                                             part.listItems.map((item, itemIndex) => (
                                                 <div key={itemIndex}>
-                                                    <input type="text" placeholder="List Item" name={`listItem${index}-${itemIndex}`} defaultValue={item} />
+                                                    <input type="text" placeholder={item} name={`listItem${index}-${itemIndex}`} />
                                                 </div>
                                             ))
                                         }
+                                        <button type="button" className='add-list-item-btn' onClick={() => addListItem(index)}>Add List Item</button>
                                     </div>
                                 ))
                             }
