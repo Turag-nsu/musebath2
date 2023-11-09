@@ -60,10 +60,20 @@ const handleDeleteProject = async (id) => {
     }
 }
 
+const hanleGetPostByCategory = async (category) => {
+    try {
+        const res = await axios.get(`${baseUrl}?=${category}`);
+        console.log(res);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 export {
     handlePost,
     handleGetProjects,
     handleGetProject,
     handleUpdateProject,
     handleDeleteProject,
+    hanleGetPostByCategory,
 };

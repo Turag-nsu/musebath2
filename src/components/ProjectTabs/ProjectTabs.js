@@ -3,28 +3,39 @@ import "./ProjectTabs.css";
 import Nav from 'react-bootstrap/Nav';
 import { Container } from "react-bootstrap";
 
-const ProjectTabs = () => {
-    return (
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import Nav from 'react-bootstrap/Nav';
+// import { Container } from "react-bootstrap";
 
+const ProjectTabs = () => {
+    const [activeKey, setActiveKey] = useState("link-1");
+    const navigate = useNavigate();
+
+    const handleSelect = (selectedKey) => {
+        setActiveKey(selectedKey);
+        navigate(`/projects?category=${selectedKey}`);
+    };
+
+    return (
         <Container>
             <div className="project-tabs">
-                <Nav defaultActiveKey="link-1" as="ul" variant="underline">
+                <Nav defaultActiveKey="all" activeKey={activeKey} onSelect={handleSelect} as="ul" variant="underline">
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="link-1">All</Nav.Link>
+                        <Nav.Link eventKey="all">All</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="link-2">Full bathroom remodeling</Nav.Link>
+                        <Nav.Link eventKey="Full bathroom remodeling">Full bathroom remodeling</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="link-3">Bathtub-shower conversions</Nav.Link>
+                        <Nav.Link eventKey="Bathtub-shower conversions">Bathtub-shower conversions</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="link-4">Senior friendly bathroom</Nav.Link>
+                        <Nav.Link eventKey="Senior friendly bathroom">Senior friendly bathroom</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </div>
         </Container >
-
     );
 };
 export default ProjectTabs;
