@@ -37,7 +37,7 @@ const ProjectArea = () => {
         for (let i = start; i <= end; i++) {
             rows.push(
                 <Row key={i}>
-                    <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200+i*100}>
+                    <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200}>
                         <Link to={`/projects/${i}`}>
                         <img src={projectImages[i - 1]} alt={`Project ${i}`} />
                         </Link>
