@@ -17,17 +17,22 @@ import ContactUsForm from '../../../components/ContactUsForm/ContactUsForm';
 import axios from 'axios';
 import PageLoading from '../../../components/PageLoading/PageLoading';
 import ErrorPage from '../../../components/ErrorPage/ErrorPage';
+// import { set } from 'mongoose';
 
 
 const BlogSubPage = () => {
     const {blogID} = useParams();
+    const [blogID2, setBlogID2] = useState(blogID);
     const [blogData, setBlogData] = useState([]);
+    const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(false);
+    
     const fetchBlogData = async () => {
+        setBlogID2(blogID);
         try {
-            const response = await axios.get(`http://localhost:3000/api/blog-posts/${blogID}`);
-            console.log(response);
+            const response = await axios.get(`https://musebath.onrender.com/api/blog-posts/${blogID}`);
+            // console.log(response);
             if (response.status !== 200) {
                 throw new Error('Failed to fetch blog data');
             } else {
@@ -35,75 +40,88 @@ const BlogSubPage = () => {
                 // console.log(response.status);
                 setIsLoading(false);
             }
+            
         } catch (error) {
             setError(true);
             setIsLoading(false);
             // return <ErrorPage />;
         }
     };
-
+    const fetchRelatedBlogs = async () => {
+        try {
+            const response2 = await axios.get(`https://musebath.onrender.com/api/blog-posts`);
+            const data = response2.data;
+            const shuffledData = data.sort(() => Math.random() - 0.5);
+            setData(shuffledData);
+            setIsLoading(false);
+        } catch (error) {
+            setError(true);
+            setIsLoading(false);
+            // return <ErrorPage />;
+        }
+    };
+    if (blogID2 !== blogID) {
+        setIsLoading(true);
+        fetchBlogData();
+        fetchRelatedBlogs();
+    }
     useEffect(() => {
         fetchBlogData();
+        fetchRelatedBlogs();
+        const interval = setInterval(() => {
+            handleNextClick();
+        }, 15000); // fetch related blogs every minute
         window.scrollTo(0, 0);
+        return () => clearInterval(interval);
     },[]);
 
     if (error) {
         return <ErrorPage text = "Blog not found"/>;
     }
-    const data = [
-        {
-            id: 1,
-            img: ArticleImage1,
-            title: "Elevate Your Space: Top Bathroom Remodeling Trends",
-            body: "Transform your bathroom into a stylish and functional haven with the latest remodeling trends...",
-            date: "12 July, 2023",
-        },
-        {
-            id: 2,
-            img: ArticleImage2,
-            title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-            body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-            date: "12 July, 2023",
-        },
-        {
-            id: 3,
-            img: ArticleImage3,
-            title: "A Step-by-Step Guide to Planning Your Dream Bathroom Remodel",
-            body: "Embark on your bathroom remodeling journey with confidence using our comprehensive step-by-step...",
-            date: "12 July, 2023",
-        }
-    ]
+    
 
     const { title, tileImage, uploaderName, uploadDate, category, mainBody, bodyParts } = blogData;
-    const handleNextClick = () => {
+    const handleNextClick = async () => {
+        
         const relatedBlogCards = document.querySelector('.related-blog-card-group');
         relatedBlogCards.style.transform = 'translateX(-100%)';
         relatedBlogCards.style.opacity = '0';
         relatedBlogCards.style.transition = 'all 0.5s ease-in-out';
+        fetchRelatedBlogs()
         setTimeout(() => {
+            
+        }, 500);
+        setTimeout(() => {
+            
             relatedBlogCards.style.transform = 'translateX(0%)';
             relatedBlogCards.style.opacity = '1';
             relatedBlogCards.style.transition = 'opacity 0.5s ease-in-out';
 
         }, 500);
-        const firstCard = data.shift();
-        data.push(firstCard);
+        // const firstCard = data.shift();
+        // data.push(firstCard);
         
 
     }
-    const handlePrevClick = () => {
+    const handlePrevClick = async () => {
+        
         const relatedBlogCards = document.querySelector('.related-blog-card-group');
         relatedBlogCards.style.transform = 'translateX(100%)';
         relatedBlogCards.style.opacity = '0';
         relatedBlogCards.style.transition = 'all 0.5s ease-in-out';
+        fetchRelatedBlogs()
         setTimeout(() => {
+            
+        }, 500);
+        setTimeout(() => {
+            
             relatedBlogCards.style.transform = 'translateX(0%)';
             relatedBlogCards.style.opacity = '1';
             relatedBlogCards.style.transition = 'opacity 0.5s ease-in-out';
 
         }, 500);
-        const lastCard = data.pop();
-        data.unshift(lastCard);
+        // const lastCard = data.pop();
+        // data.unshift(lastCard);
 
     }
     if (isLoading) {
@@ -113,6 +131,7 @@ const BlogSubPage = () => {
             </div>
         )
     }
+    // console.log("data is: ",data);
     return (
         <div>
             <Container>
@@ -140,11 +159,11 @@ const BlogSubPage = () => {
                                             <p className='blog-content-title'>{content.title}</p>
                                             <p className='blog-content-body'>{content.content}</p>
                                             {
-                                                content.listItem ? (
+                                                content.listItems ? (
                                                     <div className='blog-content-list'>
                                                         <ol>
                                                             {
-                                                                content.listItem.map(listItem => <li>{listItem}</li>)
+                                                                content.listItems.map(listItem => <li>{listItem}</li>)
                                                             }
                                                         </ol>
                                                     </div>
@@ -203,10 +222,9 @@ const BlogSubPage = () => {
                 <div className="related-blog-cards">
                     <Row className='related-blog-card-group'>
                         {data.map(article => (
-
                             <Col key={article.id} md={4} xs={12}>
                                 {/* <ArticleAreaCard */}
-                                <ArticleAreaCard img={article.img} date={article.date} title={article.title} body={article.body} />
+                                <ArticleAreaCard img={article.tileImage} date={article.uploadDate} title={article.title} body={article.mainBody} id={article.id} />
                             </Col>
                         ))
                         }

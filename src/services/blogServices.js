@@ -1,8 +1,9 @@
 //post the blog to backend
-import { initializeApp } from "firebase/app";
+
 
 import axios from 'axios';
-import { getStorage } from "firebase/storage";
+import { initializeApp } from "firebase/app";
+import { getStorage, deleteObject } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBsdoz5ju3arNc1fok2MwSffwrXYJYx2Wk",
@@ -16,7 +17,7 @@ const firebaseConfig = {
 
 const fireBaseApp = initializeApp(firebaseConfig);
 
-const baseUrl = 'http://localhost:3000/api/blog-posts';
+const baseUrl = 'https://musebath.onrender.com/api/blog-posts';
 
 const handlePost = async (formData) => {
     const config = {
@@ -26,7 +27,7 @@ const handlePost = async (formData) => {
     };
     try {
         const res = await axios.post(`${baseUrl}`, formData, config);
-        console.log(res);
+        // console.log(res);
         return res;
     } catch (err) {
         console.log(err);
@@ -66,8 +67,24 @@ const handleUpdatePost = async (id, formData) => {
 }
 
 const handleDeletePost = async (id) => {
+    //also delete images from firebase
+    const post = await handleGetPost(id);
+    const data = post.data;
+    const images = [];
+    images.push(data.tileImage);
+    data.bodyParts && data.bodyParts.forEach(bodyPart => {
+        images.push(bodyPart.image);
+    });
+    const deleteImagesFromFirebaseByLink = async (images) => {
+        images.forEach(async (image) => {
+            const imageRef = await fireBaseService.refFromURL(image);
+            await deleteObject(imageRef);
+        });
+    }
+
     try {
         const res = await axios.delete(`${baseUrl}/${id}`);
+        await deleteImagesFromFirebaseByLink(images);
         console.log(res);
     } catch (err) {
         console.log(err);

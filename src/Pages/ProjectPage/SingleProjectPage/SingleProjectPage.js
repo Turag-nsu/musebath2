@@ -15,30 +15,11 @@ const SingleProjectPage = () => {
     const [isLoading, setIsLoading] = React.useState(true);
     const [error, setError] = React.useState(false);
     const {projectID} = useParams();
-    // console.log("projectID", projectID);
-//     try {
-//         const response = await axios.get(`http://localhost:3000/api/blog-posts/${blogID}`);
-//         console.log(response);
-//         if (response.status !== 200) {
-//             throw new Error('Failed to fetch blog data');
-//         } else {
-//             setBlogData(response.data);
-//             // console.log(response.status);
-//             setIsLoading(false);
-//         }
-//     } catch (error) {
-//         setError(true);
-//         setIsLoading(false);
-//         // return <ErrorPage />;
-//     }
-// };
+    
     const fetchProject = async () => {
-        // const response = await axios.get(`http://localhost:3000/api/project-posts/${projectID}`);
-        // setProject(response.data);
-        // if(response.status === 200) setIsLoading(false);
-        // else {setError(true); setIsLoading(false)};
+        
         try {
-            const response = await axios.get(`http://localhost:3000/api/project-posts/${projectID}`);
+            const response = await axios.get(`https://musebath.onrender.com/api/project-posts/${projectID}`);
             console.log(response);
             if (response.status !== 200) {
                 throw new Error('Failed to fetch blog data');

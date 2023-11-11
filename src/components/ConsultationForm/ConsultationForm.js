@@ -1,10 +1,81 @@
 import React from "react";
 import "./ConsultationForm.css";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import CustomButton2 from "../CustomButton/CustomButton";
+import  emailjs  from "@emailjs/browser";
 import closeBtn from "../../Images/closeButton.svg";
-
+// const handleSubmit = (e) => {
+        
+//   e.preventDefault();
+  
+//   const contactUsBtn = document.querySelector(".contact-us-submit-btn");
+//   contactUsBtn.innerHTML = "Sending...";
+//   contactUsBtn.style.backgroundColor = "#4986c4";
+//   const params = {
+//       from_name: e.target.elements.name.value,
+//       from_email: e.target.elements.email.value,
+//       from_phone: e.target.elements.phone.value,
+//       from_zip: "none",
+//       message: e.target.elements.message.value,
+//       from_time: "anytime",
+//   }
+//   emailjs.send("service_v5gzagl", "template_3nqje5k", params , "Ru3OjwteMUPoUY34t").then((result) => {
+//       console.log(result.text);
+//       contactUsBtn.innerHTML = "Sent";
+//       contactUsBtn.style.backgroundColor = "green";
+//       contactUsBtn.style.color = "white";
+//   }, (error) => {
+//       console.log(error.text);
+//       contactUsBtn.innerHTML = "Failed";
+//       contactUsBtn.style.backgroundColor = "red";
+//       contactUsBtn.style.color = "white";
+//   }); 
+// }
 const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
+  const handleFormSubmit = () => {
+    const getFormData = () => {
+      const formData = {
+        name: document.querySelector('input[name="name"]').value,
+        email: document.querySelector('input[name="email"]').value,
+        phone: document.querySelector('input[name="phone"]').value,
+        zip: document.querySelector('input[name="zip"]').value,
+        message: document.querySelector('input[name="message"]').value,
+        preferredTime: document.querySelector('input[name="preferredTime"]').ariaLabel,
+      };
+      return formData;
+    };
+    const formData = getFormData();
+    // console.log(formData);
+    const contactUsBtn = document.querySelector(".contact-us-submit-btn");
+    contactUsBtn.innerHTML = "Sending...";
+    contactUsBtn.style.backgroundColor = "#4986c4";
+    const params = {
+      from_name: formData.name,
+      from_email: formData.email,
+      from_phone: formData.phone,
+      from_zip: formData.zip,
+      message: formData.message,
+      from_time: formData.preferredTime,
+    };
+    // console.log(params);
+    emailjs
+      .send("service_v5gzagl", "template_3nqje5k", params, "Ru3OjwteMUPoUY34t")
+      .then(
+        (result) => {
+          console.log(result.text);
+          contactUsBtn.innerHTML = "Sent";
+          contactUsBtn.style.backgroundColor = "green";
+          contactUsBtn.style.color = "white";
+        },
+        (error) => {
+          console.log(error.text);
+          contactUsBtn.innerHTML = "Failed";
+          contactUsBtn.style.backgroundColor = "red";
+          contactUsBtn.style.color = "white";
+        }
+      );
+
+
+  }
   return showForm && (
     <div className="consultation-form">
       <div className="consultation-form-close-btn">
@@ -20,17 +91,17 @@ const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
           <Row xs={1} md={colCount || 2}>
             <Col>
               <div className="consultation-input">
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Email" />
-                <input type="text" placeholder="Phone" />
-                <input type="text" placeholder="Zip Code" />
+                <input type="text" placeholder="Name" name="name" />
+                <input type="text" placeholder="Email" name="email" />
+                <input type="text" placeholder="Phone" name="phone" />
+                <input type="text" placeholder="Zip Code" name="zip" />
               </div>
             </Col>
             <Col>
               <div className="consultation-col">
                 <div className="consultation-input">
                   <p className="consultation-input-title">Describe your project</p>
-                  <input className="project-description-input" type="text" placeholder="" />
+                  <input className="project-description-input" type="text" placeholder="" name="message" />
                 </div>
                 <div className="consultation-area-radio-group-title" >
                   <p >Preferred Time to Talk</p>
@@ -67,7 +138,9 @@ const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
                   </Form.Group>
                 </div>
                 <div>
-                  <button className="consultation-area-button">GET A FREE ESTIMATE NOW</button>
+                  <button
+                  onClick={handleFormSubmit}
+                  className="consultation-area-button">GET A FREE ESTIMATE NOW</button>
                 </div>
               </div>
             </Col>

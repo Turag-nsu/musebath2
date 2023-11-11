@@ -4,7 +4,8 @@ import ArticleAreaPic1 from '../../Images/Article-area-pic-1.png'
 import calender_month from '../../Images/calendar_month.svg'
 import arrow from '../../Images/arrow.svg'
 import { Link } from 'react-router-dom';
-const ArticleAreaCard = ({img, date, title, body,id}) => {
+const ArticleAreaCard = ({ img, date, title, body, id }) => {
+    // console.log(img)
     return (
         <div className="ArticleAreaCardContainer card">
             <div className="article-area-top">
@@ -25,19 +26,23 @@ const ArticleAreaCard = ({img, date, title, body,id}) => {
                     <p>{title}</p>
                 </div>
                 <div className="article-area-card-text">
-                    <p>{body}</p>
+                    <p>{body.slice(0, 100)}</p>
                 </div>
-                
+
             </div>
-            
+
             <div className="article-area-card-button">
                 <Link to={`/blog/${id}`}>
-                <button onClick={()=>{
-                        
-                    }} style={{border: "none", backgroundColor: "transparent"}}>Read More <img style={{width: "1.5rem",height: "0.5rem"}} src={arrow}></img></button>
+                    <button onClick={() => {
+                        window.scrollTo(0, 0);
+
+                    }} style={{ border: "none", backgroundColor: "transparent" }}>
+                        Read More 
+                        <img style={{ width: "1.5rem", height: "0.5rem" }} alt='click to read more' src={arrow}/>
+                    </button>
                 </Link>
-                    
-                </div>
+
+            </div>
         </div>
     );
 };

@@ -1,5 +1,9 @@
+.project-tabs{
+    margin: 0 0 4rem 0;
+    padding: 0;
+}
 .project-area{
-    padding: 4rem 0 7.5rem 0;
+    padding: 6.25rem 0 4rem 0;
     /* background-color: var(--essential-white, #ffffff); */
 }
 

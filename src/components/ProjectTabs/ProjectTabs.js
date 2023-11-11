@@ -25,13 +25,13 @@ const ProjectTabs = () => {
                         <Nav.Link eventKey="all">All</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="Full bathroom remodeling">Full bathroom remodeling</Nav.Link>
+                        <Nav.Link eventKey="Full-bathroom-remodeling">Full bathroom remodeling</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="Bathtub-shower conversions">Bathtub-shower conversions</Nav.Link>
+                        <Nav.Link eventKey="Bathtub-shower-conversions">Bathtub-shower conversions</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="Senior friendly bathroom">Senior friendly bathroom</Nav.Link>
+                        <Nav.Link eventKey="Senior-friendly-bathroom">Senior friendly bathroom</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </div>

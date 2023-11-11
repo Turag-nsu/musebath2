@@ -3,10 +3,13 @@ import './BlogPostArea.css';
 import { Container } from 'react-bootstrap';
 import { handlePost, fireBaseService } from '../../../services/blogServices';
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import PageLoading from '../../PageLoading/PageLoading';
+
+
 const PostArea = () => {
     const [bodyPartCount, setBodyPartCount] = React.useState(1);
     const [singleBodyParts, setSingleBodyParts] = React.useState([]);
-
+    const [isLoading, setIsLoading] = React.useState(false);
     const addBodyPart = () => {
         const newBodyPart = {
             title: `Body part ${bodyPartCount} title`,
@@ -31,6 +34,8 @@ const PostArea = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        //get confirmation
+        setIsLoading(true);
         const uploadImage = async (image, index) => {
             const storage = ref(fireBaseService, `blog-images/${Date.now()}-${index}-${image.name}`);
             await uploadBytes(storage, image);
@@ -61,9 +66,10 @@ const PostArea = () => {
             mainBody: e.target.elements.mainBody.value,
             bodyParts,
         };
-        console.log("formdata is: ",formData);
+        // console.log("formdata is: ",formData);
         const rs = handlePost(formData);
-        if (rs) {
+        if (rs.status === 200 ) {
+            setIsLoading(false);
             const postBtn = document.querySelector(".post-submit-button")
             postBtn.innerHTML = "Posted";
             postBtn.style.backgroundColor = "green";
@@ -75,13 +81,12 @@ const PostArea = () => {
             }, 2000);
         }
         else {
-            alert("Something went wrong when posting the blog");
+            alert("Something went wrong when posting the blog, check connection or contact the developer");
+            setIsLoading(false);
         }
         console.log(formData);
     }
-    const startLoading = () => {
-        document.querySelector(".post-submit-button").innerHTML = "Loading...";
-    }
+    if (isLoading) return <PageLoading />;
     return (
         <div className="PostArea-container">
 
@@ -93,7 +98,7 @@ const PostArea = () => {
                     <div className="blog-post-area-body">
                         <form onSubmit={handleSubmit}>
                             <p>Add Title Area</p>
-                            <input type="text" placeholder="Title" name="title" />
+                            <input type="text" placeholder="Title" name="title" required/>
                             <input type="text" placeholder="Upload Date(Ex. 2 July, 2023)" name="uploadDate" />
                             <input type="text" placeholder="Uploader Name" name="uploaderName" />
                             {/* <label for="file">Upload Tile Image</label> */}
@@ -108,9 +113,9 @@ const PostArea = () => {
                             {
                                 singleBodyParts.map((part, index) => (
                                     <div key={index} className="single-body-part">
-                                        <input type="text" name={`title${index}`} placeholder={part.title} required/>
-                                        <textarea placeholder={part.content} name={`content${index}`} required/>
-                                        <input type="file" placeholder="Image" name={`image${index}`} required/>
+                                        <input type="text" name={`title${index}`} placeholder={part.title} />
+                                        <textarea placeholder={part.content} name={`content${index}`} />
+                                        <input type="file" placeholder="Image" name={`image${index}`} />
                                         
                                         {
                                             part.listItems.map((item, itemIndex) => (
@@ -124,7 +129,7 @@ const PostArea = () => {
                                 ))
                             }
                             <button type="button" className='add-body-part-btn' onClick={addBodyPart}>Add Body Part</button>
-                            <button type="submit" className="post-submit-button" onClick={startLoading}>Post</button>
+                            <button type="submit" className="post-submit-button">Post</button>
                         </form>
                     </div>
                 </div>
