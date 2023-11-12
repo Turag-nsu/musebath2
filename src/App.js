@@ -124,8 +124,8 @@ function App() {
       <BrowserRouter>
         <CustomNavbar />
 
-        <Routes basename="/">
-          <Route path="/test" element={<PageLoading />} />
+        <Routes >
+          {/* <Route path="/test" element={<PageLoading />} /> */}
           <Route path="/" element={<HomePage />} />
           <Route path="/blog" element={<BlogPage />}>
 
