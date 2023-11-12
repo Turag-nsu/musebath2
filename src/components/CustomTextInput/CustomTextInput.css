@@ -54,6 +54,7 @@
 
 .custom-text-input input:focus {
     outline: none;
+    background-color: transparent;
 }
 
 .custom-text-input input::placeholder {

@@ -20,7 +20,7 @@ const ProjectPage = () => {
             <BlogHeroPart text="Our Projects" bg={projectBg} />
             {/* </div> */}
             <div>
-                <ProjectTabs />
+                {/* <ProjectTabs /> */}
             </div>
             <div style={{ position: "relative", zIndex: "0" }}>
                 <ProjectArea />

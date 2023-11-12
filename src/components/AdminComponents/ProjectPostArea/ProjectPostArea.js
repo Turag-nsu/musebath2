@@ -11,8 +11,8 @@ const ProjectPostArea = () => {
     const [descriptionInput, setDescriptionInput] = React.useState([]);
     // const [showAlert, setShowAlert] = React.useState(false);
     const handlePostClick = async (e) => {
-        //disable submit button
-        e.target.elements.submit.disabled = true;
+        const submitButton = document.querySelector('.post-submit-button');
+        submitButton.disabled = true;
         e.preventDefault();
         const selectedImages = [];
 
@@ -51,16 +51,19 @@ const ProjectPostArea = () => {
             subtitle: e.target.elements.subtitle.value,
             category: e.target.elements.category.value,
             description: allDescriptions,
-            // tileImage: e.target.elements.tileImage.files[0],
             images: imageUrlsArray,
         };
 
-        // console.log("project form data: ", formData);
+        console.log("project form data: ", formData);
 
         const response = await handlePost(formData);
         if (response.status === 200) {
-            //reload window
-            window.location.reload();
+            submitButton.innerHTML = "Project Posted";
+            submitButton.style.backgroundColor = "green";
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+            // window.location.reload();
         }
         else {
             alert("Something went wrong. please contact the developer");

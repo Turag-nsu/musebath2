@@ -16,93 +16,109 @@ import Blog_pic_10 from "../../Images/Blog/Blog_pic_10.png";
 import Blog_pic_11 from "../../Images/Blog/Blog_pic_11.png";
 import Blog_pic_12 from "../../Images/Blog/Blog_pic_12.png";
 // import blogg from '../../Images/Article-area-pic-1.png'
-const data = [
-    {
-        id: 1,
-        img: Blog_pic_1,
-        title: "Elevate Your Space: Top Bathroom Remodeling Trends",
-        body: "Transform your bathroom into a stylish and functional haven with the latest remodeling trends...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 2,
-        img: Blog_pic_2,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 3,
-        img: Blog_pic_3,
-        title: "A Step-by-Step Guide to Planning Your Dream Bathroom Remodel",
-        body: "Embark on your bathroom remodeling journey with confidence using our comprehensive step-by-step...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 4,
-        img: Blog_pic_4,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 5,
-        img: Blog_pic_5,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 6,
-        img: Blog_pic_6,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 7,
-        img: Blog_pic_7,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 8,
-        img: Blog_pic_8,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 9,
-        img: Blog_pic_9,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 10,
-        img: Blog_pic_10,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 11,
-        img: Blog_pic_11,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-    {
-        id: 12,
-        img: Blog_pic_12,
-        title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
-        body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
-        date: "12 July, 2023",
-    },
-]
+import axios from "axios";
+import PageLoading from "../PageLoading/PageLoading";
+// const data = [
+//     {
+//         id: 1,
+//         img: Blog_pic_1,
+//         title: "Elevate Your Space: Top Bathroom Remodeling Trends",
+//         body: "Transform your bathroom into a stylish and functional haven with the latest remodeling trends...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 2,
+//         img: Blog_pic_2,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 3,
+//         img: Blog_pic_3,
+//         title: "A Step-by-Step Guide to Planning Your Dream Bathroom Remodel",
+//         body: "Embark on your bathroom remodeling journey with confidence using our comprehensive step-by-step...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 4,
+//         img: Blog_pic_4,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 5,
+//         img: Blog_pic_5,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 6,
+//         img: Blog_pic_6,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 7,
+//         img: Blog_pic_7,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 8,
+//         img: Blog_pic_8,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 9,
+//         img: Blog_pic_9,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 10,
+//         img: Blog_pic_10,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 11,
+//         img: Blog_pic_11,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+//     {
+//         id: 12,
+//         img: Blog_pic_12,
+//         title: "Small Bathroom, Big Impact: Space-Saving Remodeling Ideas",
+//         body: "Don't let a small bathroom limit your creativity! Explore ingenious space-saving ideas that maximize your...",
+//         date: "12 July, 2023",
+//     },
+// ]
 const Blogs = () => {
+    const [data, setData] = React.useState([]);
+    const [isLoading, setIsLoading] = React.useState(true);
+    const fetchBlogs = async () => {
+        const response = await axios.get(`https://musebath.onrender.com/api/blog-posts`);
+        setData(response.data);
+        if (response.status === 200) setIsLoading(false);
+        else { setIsLoading(false) };
+    }
+    React.useEffect(() => {
+        fetchBlogs();
+        // console.log(data);
+    }, []);
+    if (isLoading) return <PageLoading />;
+
     return (
         <div className='Blogs-area'>
             <Container>
@@ -111,7 +127,7 @@ const Blogs = () => {
                         {data.map(article => (
                             <div className="blogs-row">
                                 <Col key={article.id}>
-                                    <ArticleAreaCard img={article.img} date={article.date} title={article.title} body={article.body} />
+                                    <ArticleAreaCard img={article.tileImage} date={article.date} title={article.title} body={article.mainBody} id={article.id}/>
                                 </Col>
                             </div>
                         ))
