@@ -23,20 +23,20 @@ const TestimonialArea = () => {
             title: "Product designer",
             text: "Muse Bath stands out as a beacon of tranquility in the world of self-care products. Their bath soaks, infused with natural essences and botanicals, turn ordinary baths into sublime escapes from the daily hustle. With each use, I am transported to a state of calmness and balance, thanks to the harmonious blend of scents and the thoughtfully designed packaging. Muse Bath has undeniably mastered the art of crafting products that nourish both the body and the soul."
         },
-        {
-            id: 3,
-            img: profile1,
-            name: "Theresa Webb",
-            title: "Product designer",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quia sit blanditiis nihil corporis est. Blanditiis recusandae ea quasi, cum quas officiis, laudantium illum error, sit earum amet aliquid porro?"
-        },
-        {
-            id: 4,
-            img: profile2,
-            name: "Guy Hawkins",
-            title: "Product designer",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quia sit blanditiis nihil corporis est. Blanditiis recusandae ea quasi, cum quas officiis, laudantium illum error, sit earum amet aliquid porro?"
-        }
+        // {
+        //     id: 3,
+        //     img: profile1,
+        //     name: "Theresa Webb",
+        //     title: "Product designer",
+        //     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quia sit blanditiis nihil corporis est. Blanditiis recusandae ea quasi, cum quas officiis, laudantium illum error, sit earum amet aliquid porro?"
+        // },
+        // {
+        //     id: 4,
+        //     img: profile2,
+        //     name: "Guy Hawkins",
+        //     title: "Product designer",
+        //     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quia sit blanditiis nihil corporis est. Blanditiis recusandae ea quasi, cum quas officiis, laudantium illum error, sit earum amet aliquid porro?"
+        // }
     ]);
 
     const handelClickNext = () => {

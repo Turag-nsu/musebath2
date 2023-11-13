@@ -117,7 +117,7 @@
 
 /* Responsive adjustments for phones */
 @media (max-width: 767px) {
-    .cta-area-col2::before {
+    .cta-area-col2::after {
         transform: translateX(50%) skew(35deg);
     }
     .cta-area-col2{
@@ -126,10 +126,11 @@
         padding: 0;
     }
     .cta-container {
-        /* margin-bottom: 3rem; */
+        /* padding-right: 2rem; */
     }
-    .cta-container::before {
-        /* border-radius: 1rem; */
+    .cta-container::after {
+        border-radius: 1rem;
+        margin-right: 2rem;
     }
     .cta-area-content {
         padding: 1rem 0rem 14rem 0rem;
