@@ -52,7 +52,7 @@ const BlogSubPage = () => {
             const response2 = await axios.get(`https://musebath.onrender.com/api/blog-posts`);
             const data = response2.data;
             const shuffledData = data.sort(() => Math.random() - 0.5);
-            setData(shuffledData);
+            setData(shuffledData.splice(0, 3));
             setIsLoading(false);
         } catch (error) {
             setError(true);
