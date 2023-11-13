@@ -18,12 +18,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    object-fit: cover;
     /* border-radius: o.5rem; */
 }
 
 .article-area-pic-container img {
     width: 100%;
-    height: 15rem;
+    min-height: 15rem;
 }
 
 .article-area-date {
@@ -115,5 +116,12 @@
 
     .article-area-btn .customBtn {
         margin: 0;
+    }
+}
+@media (max-width: 992px) {
+    .article-area-date {
+        bottom: 0.5rem;
+        left: 0.5rem;
+        font-size: 0.8rem;
     }
 }

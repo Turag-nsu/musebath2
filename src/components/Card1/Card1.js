@@ -6,7 +6,7 @@ const Card1 = ({imageLink, title, text, id}) => {
     <div className="box" data-aos="flip-up" data-aos-delay={200+id*100}>
       <div className="photo-container">
         <div className="photo-box">
-        <img src={imageLink} alt="Image" className="photo" />
+        <img src={imageLink} alt={title}/>
         </div>
       </div>
 
