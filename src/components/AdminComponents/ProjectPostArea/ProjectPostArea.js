@@ -4,15 +4,18 @@ import { Container } from 'react-bootstrap';
 import { handlePost } from '../../../services/projectServices';
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { fireBaseService } from '../../../services/blogServices';
+import PageLoading from '../../PageLoading/PageLoading';
 
 
 const ProjectPostArea = () => {
 
     const [descriptionInput, setDescriptionInput] = React.useState([]);
+    const [isLoading, setIsLoading] = React.useState(false);
     // const [showAlert, setShowAlert] = React.useState(false);
     const handlePostClick = async (e) => {
-        const submitButton = document.querySelector('.post-submit-button');
-        submitButton.disabled = true;
+        setIsLoading(true);
+        // const submitButton = document.querySelector('.post-submit-button');
+        // submitButton.disabled = true;
         e.preventDefault();
         const selectedImages = [];
 
@@ -57,12 +60,9 @@ const ProjectPostArea = () => {
         console.log("project form data: ", formData);
 
         const response = await handlePost(formData);
-        if (response.status === 200) {
-            submitButton.innerHTML = "Project Posted";
-            submitButton.style.backgroundColor = "green";
-            setTimeout(() => {
-                window.location.reload();
-            }, 1000);
+        if (response.status === 200 || response.status === 201) {
+            setIsLoading(false);
+            alert("Project posted successfully");
             // window.location.reload();
         }
         else {
@@ -80,6 +80,7 @@ const ProjectPostArea = () => {
         addDescriptionInputBox();
 
     }
+    if (isLoading) return <PageLoading />
     return (
         <Container>
             <div>

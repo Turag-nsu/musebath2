@@ -17,7 +17,7 @@ const ViewProject = () => {
     }, []);
     const adminCard = document.querySelector('.admin-blog-card');
     const handleDeletePostClick = async (id) => {
-        const { data } = await handleDeleteProject(id);
+        await handleDeleteProject(id);
         // console.log(data);
     }
     if (loading) return <PageLoading />;
@@ -38,7 +38,7 @@ const ViewProject = () => {
                                         <p>{post.title}</p>
                                     </div>
                                     <div className='admin-blog-card-body'>
-                                        <p>{post.description[0].slice(0, 30)}</p>
+                                        <p>{post.description[0] ? post.description[0].slice(0, 30) : " "}</p>
                                     </div>
                                 </Col>
                                 <Col xs={12} md={2}>
