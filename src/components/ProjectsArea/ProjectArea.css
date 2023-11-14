@@ -66,7 +66,7 @@
 }
 @media (max-width: 767px) {
     .project-area{
-        padding: 4rem 0 4rem 0;
+        padding: 0rem 0 4rem 0;
     }
     .project-area-btn{
         display: none;
@@ -75,5 +75,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .project-area-pic-small{
+        /* padding: .75rem; */
+        /* margin-left: 0; */
+        margin:0 0rem 1rem 0;
+        /* background-color: aqua; */
+    }
+    .project-area-pic-large{
+        /* padding: .75rem; */
+        /* margin-left: 0; */
+        margin-bottom: 1rem;
+        /* background-color: aqua; */
     }
 }

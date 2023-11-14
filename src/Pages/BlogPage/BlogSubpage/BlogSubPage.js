@@ -136,7 +136,7 @@ const BlogSubPage = () => {
         <div>
             <Container>
                 <Row style={{ position: "relative", overflow: "hidden" }}>
-                    <Col xs={8} className='blog-area-col'>
+                    <Col lg={8} xs={12} className='blog-area-col'>
                         <div className='blog-full-area'>
 
                             <div className='blog-title-area'>

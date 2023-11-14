@@ -53,6 +53,11 @@ font-weight: 400;
 line-height: 160%; /* 1.6rem */
 }
 
+.project-consultation-form{
+    background-color: #FFF;
+    margin-top: 7rem;
+}
+
 @media screen and (max-width: 768px){
     .single-project-header{
         margin: 5rem 0 2.62rem 0;
@@ -74,5 +79,10 @@ line-height: 160%; /* 1.6rem */
     }
     .single-project-page-container .contact-us-form-container{
         margin-top: 3rem;
+    }
+
+    .project-consultation-form{
+        background-color: #FFF;
+        margin-top: 4rem;
     }
 }

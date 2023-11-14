@@ -148,4 +148,8 @@
         display: none;
         /* top: 49%; */
     }
+
+    .image-slider-container{
+        padding: 0 0 3rem 0;
+    }
 }

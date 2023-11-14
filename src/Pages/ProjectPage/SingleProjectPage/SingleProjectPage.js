@@ -73,7 +73,7 @@ const SingleProjectPage = () => {
                     </Col>
                 </Row>
             </Container>
-            <div style={{ backgroundColor: "#fff", marginTop: "7.5rem"}}>
+            <div className='project-consultation-form'>
                 <Container><ConsultationForm showForm={true} /></Container>
             </div>
 
