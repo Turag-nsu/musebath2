@@ -15,7 +15,7 @@ const Blogs = () => {
     const [limitOfData, setLimitOfData] = React.useState(12);
     const fetchBlogs = async () => {
         const response = await axios.get(`https://musebath.onrender.com/api/blog-posts`);
-        setData(response.data);
+        await setData(response.data);
         setShowData(response.data.slice(0, limitOfData));
         if (response.status === 200) setIsLoading(false);
         else { setIsLoading(false) };
