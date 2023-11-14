@@ -12,17 +12,17 @@ const Blogs = () => {
     const [data, setData] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
     const [showData, setShowData] = React.useState([]);
-    const linitOfData = 12;
+    const [limitOfData, setLimitOfData] = React.useState(12);
     const fetchBlogs = async () => {
         const response = await axios.get(`https://musebath.onrender.com/api/blog-posts`);
-        setData(response.data);
-        setShowData(data.slice(0, linitOfData));
+        await setData(response.data);
+        setShowData(response.data.slice(0, limitOfData));
         if (response.status === 200) setIsLoading(false);
         else { setIsLoading(false) };
     }
     React.useEffect(() => {
+        setLimitOfData(12);
         fetchBlogs();
-        
         // console.log(data);
     }, []);
     if (isLoading) return <PageLoading />;
@@ -41,11 +41,11 @@ const Blogs = () => {
                         }
                     </Row>
                 </div>
-                {data.length>linitOfData&&<div className="Blogs-area-btn">
+                {data.length>limitOfData&&<div className="Blogs-area-btn">
                     <CustomButton
                         onClick={() => {
                             console.log(showData.length);
-                            setShowData(data.slice(0, showData.length + linitOfData));
+                            setShowData(data.slice(0, showData.length + limitOfData));
                         }}
                     text='View More' />
                 </div>}
