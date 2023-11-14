@@ -58,10 +58,10 @@ const ViewPosts = () => {
                                                 if (!window.confirm(`Are you sure you want to delete ${post.title}?\nThis can not be undone`))
                                                     return;
                                                 handleDeletePost(post.id);
-                                                adminCard.style.opacity = 0;
+                                                // adminCard.style.opacity = 0;
                                                 setTimeout(() => {
-                                                    // window.location.reload();
-                                                }, 1000);
+                                                    window.location.reload();
+                                                }, 2000);
                                             }}
                                             style={{ backgroundColor: 'red' }}
                                         >

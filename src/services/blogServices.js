@@ -3,7 +3,7 @@
 
 import axios from 'axios';
 import { initializeApp } from "firebase/app";
-import { getStorage, deleteObject } from "firebase/storage";
+import { getStorage, deleteObject, ref } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBsdoz5ju3arNc1fok2MwSffwrXYJYx2Wk",
@@ -60,26 +60,44 @@ const handleUpdatePost = async (id, formData) => {
     };
     try {
         const res = await axios.put(`${baseUrl}/${id}`, formData, config);
-        console.log(res);
+        return res;
+        // console.log(res);
     } catch (err) {
         console.log(err);
     }
 }
+// import { getStorage, ref, deleteObject } from "firebase/storage";
 
+// const storage = getStorage();
+
+// // Create a reference to the file to delete
+// const desertRef = ref(storage, 'images/desert.jpg');
+
+// // Delete the file
+// deleteObject(desertRef).then(() => {
+//   // File deleted successfully
+// }).catch((error) => {
+//   // Uh-oh, an error occurred!
+// });
 const handleDeletePost = async (id) => {
     //also delete images from firebase
     const post = await handleGetPost(id);
-    const data = post.data;
-    console.log("data is: ",data);
+    const data = post.data
+    console.log("{data} is: -----",data);
     const images = [];
     images.push(data.tileImage);
     data.bodyParts && data.bodyParts.forEach(bodyPart => {
         images.push(bodyPart.image);
     });
     const deleteImagesFromFirebaseByLink = async (images) => {
-        images.forEach(async (image) => {
-            const imageRef = fireBaseService.refFromURL(image);
-            await deleteObject(imageRef);
+        const storage = getStorage(fireBaseApp);
+        images.forEach(image => {
+            const imageRef = ref(storage, image);
+            deleteObject(imageRef).then(() => {
+                console.log("image deleted successfully");
+            }).catch((error) => {
+                console.log("firebase error: ",error);
+            });
         });
     }
 
@@ -87,7 +105,8 @@ const handleDeletePost = async (id) => {
         
         await deleteImagesFromFirebaseByLink(images);
         const res = await axios.delete(`${baseUrl}/${id}`);
-        console.log(res);
+        await deleteImagesFromFirebaseByLink(images);
+        // console.log(res);
     } catch (err) {
         console.log(err);
     }

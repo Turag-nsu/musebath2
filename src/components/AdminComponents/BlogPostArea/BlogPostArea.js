@@ -31,7 +31,8 @@ const PostArea = () => {
         updatedBodyParts[index] = updatedBodyPart;
         setSingleBodyParts(updatedBodyParts);
     }
-
+    const postBtn = document.querySelector(".post-submit-button")
+        // console.log("postBtn is: ",postBtn);
     const handleSubmit = async (e) => {
         e.preventDefault();
         //get confirmation
@@ -67,15 +68,12 @@ const PostArea = () => {
             bodyParts,
         };
         // console.log("formdata is: ",formData);
-        const rs = handlePost(formData);
-        if (rs.status === 200 ) {
+        const rs = await handlePost(formData);
+        
+        // console.log("rs is: ",rs);
+        if (rs.status === 200 || rs.status === 201 ) {
             setIsLoading(false);
-            const postBtn = document.querySelector(".post-submit-button")
-            postBtn.innerHTML = "Posted";
-            postBtn.style.backgroundColor = "green";
-            postBtn.style.color = "white";
-            // postBtn.disabled = true;
-            postBtn.style.transition = "all 0.5s ease-in-out";
+            alert("Blog posted successfully");
             setTimeout(() => {
                 window.location.reload();
             }, 2000);
@@ -84,7 +82,7 @@ const PostArea = () => {
             alert("Something went wrong when posting the blog, check connection or contact the developer");
             setIsLoading(false);
         }
-        console.log(formData);
+        // console.log(formData);
     }
     if (isLoading) return <PageLoading />;
     return (
