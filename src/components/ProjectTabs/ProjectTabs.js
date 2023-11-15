@@ -5,8 +5,6 @@ import { Container } from "react-bootstrap";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import Nav from 'react-bootstrap/Nav';
-// import { Container } from "react-bootstrap";
 
 const ProjectTabs = () => {
     const [activeKey, setActiveKey] = useState("link-1");

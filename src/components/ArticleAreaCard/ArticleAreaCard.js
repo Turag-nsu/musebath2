@@ -1,6 +1,5 @@
 import React from 'react';
 import './ArticleAreaCard.css'
-import ArticleAreaPic1 from '../../Images/Article-area-pic-1.png'
 import calender_month from '../../Images/calendar_month.svg'
 import arrow from '../../Images/arrow.svg'
 import { Link } from 'react-router-dom';
@@ -23,7 +22,7 @@ const ArticleAreaCard = ({ img, date, title, body, id }) => {
             </div>
             <div className="article-area-card-body ">
                 <div className="article-area-card-title">
-                    <p>{title}</p>
+                    <p>{title.slice(0, 60)}</p>
                 </div>
                 <div className="article-area-card-text">
                     <p>{body.slice(0, 100)}</p>

@@ -6,10 +6,6 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import callMade2 from '../../../Images/call-made2.svg'
 import callMade3 from '../../../Images/call-made3.svg'
-
-import ArticleImage1 from '../../../Images/Article-area-pic-1.png'
-import ArticleImage2 from '../../../Images/Article-area-pic-2.png'
-import ArticleImage3 from '../../../Images/Article-area-pic-3.jpeg'
 import ArticleAreaCard from '../../../components/ArticleAreaCard/ArticleAreaCard';
 import ConsultationForm from '../../../components/ConsultationForm/ConsultationForm';
 import TrustedArea from '../../../components/TrustedArea/TrustedArea';

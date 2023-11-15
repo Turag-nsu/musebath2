@@ -17,70 +17,9 @@ import ProjectPostArea from './components/AdminComponents/ProjectPostArea/Projec
 import ViewPosts from './components/AdminComponents/ViewPosts/ViewPosts';
 import ViewProject from './components/AdminComponents/ViewProject/ViewProject';
 
-
-import image1 from './Images/Project/1/pic-1.jpeg';
-import image2 from './Images/Project/1/pic-2.jpeg';
-import image3 from './Images/Project/1/pic-3.jpeg';
-import image4 from './Images/Project/1/pic-4.jpeg';
 import TestArea from './components/TestArea/TestArea';
 import ErrorPage from './components/ErrorPage/ErrorPage';
-const projects = {
-  images: {
-    image1: {
-      id: 1,
-      img: image1,
-    },
-    image2: {
-      id: 2,
-      img: image2,
-    },
-    image3: {
-      id: 3,
-      img: image3,
-    },
-    image4: {
-      id: 4,
-      img: image4,
-    },
-  },
-  title: "Elegant 3-Bedroom Family Home",
-  subtitle: "123 Main Street, Central New Jersey",
-  description: [
-    {
-      id: 1,
 
-      text: "When it comes to remodeling a 3-bedroom house bathroom, the choices made for the fixtures and design can greatly impact the overall aesthetic and functionality of the space. In this particular case, the homeowners have opted for a bathtub in the hallway bath and a shower in the master bath. Additionally, they have expressed their preference for green tiles in the master bath."
-    },
-    {
-      id: 2,
-
-      title: "Elegant 3-Bedroom Family Home",
-      subtitle: "123 Main Street, Central New Jersey",
-      text: "The decision to choose a bathtub for the hallway bath suggests that the homeowners value relaxation and comfort. A bathtub provides an opportunity to unwind after a long day and create a spa-like experience within the confines of their own home. This choice also caters to any potential future guests who may utilize this bathroom."
-    },
-    {
-      id: 3,
-
-      title: "Elegant 3-Bedroom Family Home",
-      subtitle: "123 Main Street, Central New Jersey",
-      text: "On the other hand, selecting a shower for the master bath indicates that practicality and efficiency are key considerations. Showers are often preferred by individuals with busy lifestyles as they offer quick and convenient bathing options. The presence of a shower in this space suggests that functionality was prioritized without compromising on style."
-    },
-    {
-      id: 4,
-
-      title: "Elegant 3-Bedroom Family Home",
-      subtitle: "123 Main Street, Central New Jersey",
-      text: "In terms of design preferences, green tiles in the master bath indicate an affinity towards nature-inspired elements or an intention to create a calming ambiance. Green is often associated with tranquility, renewal, and harmony - qualities that can enhance one's bathing experience. The use of these tiles can add depth and character to the space while infusing it with a touch of freshness."
-    },
-    {
-      id: 5,
-
-      title: "Elegant 3-Bedroom Family Home",
-      subtitle: "123 Main Street, Central New Jersey",
-      text: "By carefully considering their choices for fixtures such as bathtubs versus showers and incorporating green tiles into their design scheme, these homeowners have demonstrated their desire for both comfort and style in their bathroom remodeling project."
-    }
-  ]
-}
 function App() {
   const admin = {
     details: {
@@ -143,7 +82,7 @@ function App() {
             <Route path='view-blogs' element={<ViewPosts />} />
             <Route path='view-project' element={<ViewProject />} />
           </Route>
-          <Route path="/projects/:projectID" element={<SingleProjectPage project={projects} />} />
+          <Route path="/projects/:projectID" element={<SingleProjectPage />} />
           <Route path="/:any" element={<ErrorPage />} />
           {/* <Route path="/admin/blog-post" element={<BlogPostArea />} /> */}
         </Routes>

@@ -3,36 +3,16 @@ import './ProjectArea.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import CustomButton from '../CustomButton/CustomButton';
 import Nav from 'react-bootstrap/Nav';
-// Import your project images here
-import project1 from '../../Images/Project/project-1.jpeg';
-import project2 from '../../Images/Project/project-2.jpeg';
-import project3 from '../../Images/Project/project-3.jpeg';
-import project4 from '../../Images/Project/project-4.jpeg';
-import project5 from '../../Images/Project/project-5.jpeg';
-import project6 from '../../Images/Project/project-6.jpeg';
-import project7 from '../../Images/Project/project-7.jpeg';
-import project8 from '../../Images/Project/project-8.jpeg';
-import project9 from '../../Images/Project/project-9.jpeg';
-import project10 from '../../Images/Project/project-10.jpeg';
-import project11 from '../../Images/Project/project-11.jpeg';
-import project12 from '../../Images/Project/project-12.jpeg';
-import project13 from '../../Images/Project/project-13.jpeg';
-import project14 from '../../Images/Project/project-14.jpeg';
-import project15 from '../../Images/Project/project-15.jpeg';
-import project16 from '../../Images/Project/project-16.jpeg';
-import project17 from '../../Images/Project/project-17.jpeg';
+
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import PageLoading from '../PageLoading/PageLoading';
-// const projectImages = [
-//     project1, project2, project3, project4, project5, project6, project7, project8, project9, project10, project11, project12, project13, project14, project15, project16, project17
 
-// ];
 
 const ProjectArea = () => {
     const navigate = useNavigate();
-    const [projects, setProjects] = React.useState([]);
+    
     const [activeKey, setActiveKey] = React.useState("");
     const [projectImages, setProjectImages] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
@@ -54,7 +34,7 @@ const ProjectArea = () => {
         
         if (cat==="") {
             const response = await axios.get(`https://musebath.onrender.com/api/project-posts`);
-            setProjects(response.data);
+            
             // setShowData(response.data.slice(0, limitOfData));
             setProjectImages(projectsToProjectImagesArray(response.data));
             setShowImages(projectsToProjectImagesArray(response.data).slice(0, limit));
@@ -63,7 +43,7 @@ const ProjectArea = () => {
         } else {
             const response = await axios.get(`https://musebath.onrender.com/api/project-posts?category=${cat}`);
             // console.log(`http://localhost:3000/api/project-posts?category=${cat}`);
-            setProjects(response.data);
+            
             // setShowData(response.data.slice(0, limitOfData));
             setProjectImages(projectsToProjectImagesArray(response.data));
             setShowImages(projectsToProjectImagesArray(response.data).slice(0, limit));
@@ -101,7 +81,8 @@ const ProjectArea = () => {
                 <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200}>
                 {/* <p>{start}</p> */}
                     <Link to={`/projects/${showImages[start-1].id}`}>
-                        <img src={showImages[start - 1].img} alt={`Project ${start}`} loading='lazy' />
+                        <img 
+                        loading="lazy" src={showImages[start - 1].img} alt={`Project ${start}`} />
                     </Link>
                 </div>
             </Row>
@@ -111,7 +92,9 @@ const ProjectArea = () => {
                 <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200}>
                     {/* <p>{end}</p> */}
                     <Link to={`/projects/${showImages[end-1].id}`}>
-                        <img src={showImages[end - 1].img} alt={`Project ${end}`} loading='lazy'/>
+                        <img 
+                        
+                        loading="lazy" src={showImages[end - 1].img} alt={`Project ${end}`}/>
                     </Link>
                 </div>
             </Row>

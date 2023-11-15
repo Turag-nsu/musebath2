@@ -36,6 +36,7 @@
     max-width: 100%;
     object-fit: cover;
     border-radius: 0.5rem;
+    
 }
 .project-area-pic-small img{
     min-height: 100%;

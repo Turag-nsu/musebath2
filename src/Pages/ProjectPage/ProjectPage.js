@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
-import ProjectsHeroPart from '../../components/ProjectsHeroPart/ProjectsHeroPart';
 import ProjectArea from '../../components/ProjectsArea/ProjectArea';
-import ProjectTabs from '../../components/ProjectTabs/ProjectTabs';
 import ConsultationForm from '../../components/ConsultationForm/ConsultationForm';
 import TrustedArea from '../../components/TrustedArea/TrustedArea';
-import SingleProjectPage from './SingleProjectPage/SingleProjectPage';
 import BlogHeroPart from '../../components/BlogHeroPart/BlogHeroPart';
 import projectBg from '../../Images/Project/project-hero-bg.jpeg';
 import './ProjectPage.css'

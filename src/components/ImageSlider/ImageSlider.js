@@ -1,17 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ImageSlider.css';
 
-// Import your images (image1, image2, image3, image4).
-
 import arrowLeft from '../../Images/Project/arrow-left.svg';
 import arrowRight from '../../Images/Project/arrow-right.svg';
 
 
 const ImageSlider = ({images}) => {
-    const image1 = images[0];
-    const image2 = images[1];
-    const image3 = images[2];
-    const image4 = images[3];
+    const [image1, image2, image3, image4] = images.map((image) => image);
     const [selectedImage, setSelectedImage] = useState(image1);
     const [selected, setSelected] = useState(null);
     const thumbnailsContainerRef = useRef(null);
@@ -46,10 +41,10 @@ const ImageSlider = ({images}) => {
         if (thumbnailsContainer && scrollBarThumb) {
             const thumbnailsWidth = Math.min(thumbnailsContainer.offsetWidth, 3000);
             const scrollBarThumbWidth = Math.min(scrollBarThumb.offsetWidth, 1080);
-            console.log(scrollBarThumbWidth);
+            // console.log(scrollBarThumbWidth);
 
             const scrollBarWidth = thumbnailsWidth - scrollBarThumbWidth;
-            console.log(scrollBarWidth);
+            // console.log(scrollBarWidth);
             const handleThumbDrag = (event) => {
                 event.preventDefault();
                 const initialX = event.clientX;
@@ -67,11 +62,11 @@ const ImageSlider = ({images}) => {
                     // Calculate the translateX for the thumbnailsContainer based on the newThumbX.
                     const translateX =
                         (-newThumbX / scrollBarWidth * Math.max(thumbnailsWidth - thumbnailsContainer.offsetWidth, 378) * 2);
-                    console.log("newThumbX", newThumbX);
-                    console.log("scrollBarWidth", scrollBarWidth);
-                    console.log("thumbnailsWidth", thumbnailsWidth);
-                    console.log("thumbnailsWidth - thumbnailsContainer.offsetWidth", thumbnailsWidth - thumbnailsContainer.offsetWidth);
-                    console.log("translateX", translateX);
+                    // console.log("newThumbX", newThumbX);
+                    // console.log("scrollBarWidth", scrollBarWidth);
+                    // console.log("thumbnailsWidth", thumbnailsWidth);
+                    // console.log("thumbnailsWidth - thumbnailsContainer.offsetWidth", thumbnailsWidth - thumbnailsContainer.offsetWidth);
+                    // console.log("translateX", translateX);
 
                     thumbnailsContainer.style.transform = `translateX(${translateX}px)`;
 
