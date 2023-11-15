@@ -12,12 +12,12 @@ const ContactArea = () => {
     return (
         <div className='contact-area'>
             <div
-            data-aos="fade-right"
-            data-aos-delay={200}
-            data-aos-duration="1000"
-            data-aos-ofset="200"
-            data-aos-anchor-placement="top-center"
-            className='get-in-touch'>
+                data-aos="fade-right"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                data-aos-anchor-placement="top-center"
+                className='get-in-touch'>
                 <p className='get-in-touch-title'>Get in Touch</p>
                 <div className='get-in-touch-content'>
                     <div className='phone-area'>
@@ -35,29 +35,29 @@ const ContactArea = () => {
                 </div>
             </div>
             <div
-            data-aos="zoom-in"
-            data-aos-delay={200}
-            data-aos-duration="1000"
-            data-aos-ofset="200"
-            data-aos-anchor-placement="top-center"
-            className='divide-line'>
+                data-aos="zoom-in"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                data-aos-anchor-placement="top-center"
+                className='divide-line'>
                 <img src={line} alt="" />
             </div>
             <div
-            data-aos="fade-left"
-            data-aos-delay={200}
-            data-aos-duration="1000"
-            data-aos-ofset="200"
-            data-aos-anchor-placement="top-center"
-            className='social-media-area'>
+                data-aos="fade-left"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                data-aos-anchor-placement="top-center"
+                className='social-media-area'>
                 <p className='social-media-title'>Social Media</p>
                 <p className='social-media-sub-title'>Follow us on Social Media for Updates, News, and Insights</p>
                 <div className='social-media-icons'>
                     <div className="social-logo">
                         <a href="https://www.facebook.com/musebath.us/" target="_blank" >
-                            <img style={{border:"1px solid gray"}} src={fbLogo} alt="" />
+                            <img style={{ border: "1px solid gray" }} src={fbLogo} alt="" />
                         </a>
-                        <img style={{border:"1px solid gray"}} src={instaLogo} alt="" />
+                        <img style={{ border: "1px solid gray" }} src={instaLogo} alt="" />
                     </div>
 
                 </div>

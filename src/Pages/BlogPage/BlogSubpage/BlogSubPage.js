@@ -17,13 +17,13 @@ import ErrorPage from '../../../components/ErrorPage/ErrorPage';
 
 
 const BlogSubPage = () => {
-    const {blogID} = useParams();
+    const { blogID } = useParams();
     const [blogID2, setBlogID2] = useState(1);
     const [blogData, setBlogData] = useState();
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(false);
-    
+
     const fetchBlogData = async () => {
         setBlogID2(blogID);
         try {
@@ -36,7 +36,7 @@ const BlogSubPage = () => {
                 // console.log(response.status);
                 setIsLoading(false);
             }
-            
+
         } catch (error) {
             setError(true);
             setIsLoading(false);
@@ -56,7 +56,7 @@ const BlogSubPage = () => {
             // return <ErrorPage />;
         }
     };
-    
+
     setTimeout(() => {
         if (blogID2 !== blogID) {
             setIsLoading(true);
@@ -65,7 +65,7 @@ const BlogSubPage = () => {
         }
     }, 500);
     useEffect(() => {
-        console.log("blogID is: ",blogID);
+        console.log("blogID is: ", blogID);
         fetchBlogData();
         fetchRelatedBlogs();
         const interval = setInterval(() => {
@@ -73,26 +73,26 @@ const BlogSubPage = () => {
         }, 15000); // fetch related blogs every minute
         window.scrollTo(0, 0);
         return () => clearInterval(interval);
-    },[]);
+    }, []);
 
     if (error) {
-        return <ErrorPage text = "Blog not found"/>;
+        return <ErrorPage text="Blog not found" />;
     }
-    
+
 
     // const { title, tileImage, uploaderName, uploadDate, category, mainBody, bodyParts } = blogData;
     const handleNextClick = async () => {
-        
+
         const relatedBlogCards = document.querySelector('.related-blog-card-group');
         relatedBlogCards.style.transform = 'translateX(-100%)';
         relatedBlogCards.style.opacity = '0';
         relatedBlogCards.style.transition = 'all 0.5s ease-in-out';
         fetchRelatedBlogs()
         setTimeout(() => {
-            
+
         }, 500);
         setTimeout(() => {
-            
+
             relatedBlogCards.style.transform = 'translateX(0%)';
             relatedBlogCards.style.opacity = '1';
             relatedBlogCards.style.transition = 'opacity 0.5s ease-in-out';
@@ -100,21 +100,21 @@ const BlogSubPage = () => {
         }, 500);
         // const firstCard = data.shift();
         // data.push(firstCard);
-        
+
 
     }
     const handlePrevClick = async () => {
-        
+
         const relatedBlogCards = document.querySelector('.related-blog-card-group');
         relatedBlogCards.style.transform = 'translateX(100%)';
         relatedBlogCards.style.opacity = '0';
         relatedBlogCards.style.transition = 'all 0.5s ease-in-out';
         fetchRelatedBlogs()
         setTimeout(() => {
-            
+
         }, 500);
         setTimeout(() => {
-            
+
             relatedBlogCards.style.transform = 'translateX(0%)';
             relatedBlogCards.style.opacity = '1';
             relatedBlogCards.style.transition = 'opacity 0.5s ease-in-out';
@@ -131,7 +131,7 @@ const BlogSubPage = () => {
             </div>
         )
     }
-    
+
     return (
         <div>
             <Container>
@@ -140,43 +140,48 @@ const BlogSubPage = () => {
                         <div className='blog-full-area'>
 
                             <div
-                            data-aos="zoom-in"
-                            data-aos-delay={400}
-                            data-aos-duration="1000"
-                            data-aos-ofset="200"
-                            className='blog-title-area'>
+                                data-aos="zoom-in"
+                                data-aos-delay={400}
+                                data-aos-duration="1000"
+                                data-aos-ofset="200"
+                                className='blog-title-area'>
                                 <p>{blogData.title}</p>
                             </div>
 
                             <div
-                            data-aos="zoom-in"
-                            data-aos-delay={200}
-                            data-aos-duration="1000"
-                            data-aos-ofset="200"
-                            className='blog-title-img'>
+                                data-aos="zoom-in"
+                                data-aos-delay={200}
+                                data-aos-duration="1000"
+                                data-aos-ofset="200"
+                                className='blog-title-img'>
                                 <img src={blogData.tileImage} alt='blog-img' />
                             </div>
                             <div
-                            data-aos="fade-in"
-                            data-aos-delay={200}
-                            data-aos-duration="1000"
-                            data-aos-ofset="200"
-                            className='upload-details'>
+                                data-aos="fade-in"
+                                data-aos-delay={200}
+                                data-aos-duration="1000"
+                                data-aos-ofset="200"
+                                className='upload-details'>
                                 <p className='blog-uploader-name-date'>{`By ${blogData.uploaderName} ${blogData.uploadDate}`}</p>
                                 {/* <p className='blog-upload-date'>{uploadDate}</p> */}
                                 <p className='blog-category'>{`Category: ${blogData.category}`}</p>
                             </div>
                             <p
-                            data-aos="fade-in"
-                            data-aos-delay={200}
-                            data-aos-duration="1000"
-                            data-aos-ofset="200"
-                            className='blog-main-body'>{blogData.mainBody}</p>
+                                data-aos="fade-up"
+                                data-aos-delay={200}
+                                data-aos-duration="1000"
+                                data-aos-ofset="200"
+                                className='blog-main-body'>{blogData.mainBody}</p>
                             {
                                 blogData.bodyParts.map(content => {
                                     return (
                                         <div className='blog-content-area'>
-                                            <p className='blog-content-title'>{content.title}</p>
+                                            <p 
+                                            data-aos="fade-in"
+                                            data-aos-delay={200}
+                                            data-aos-duration="1000"
+                                            
+                                            className='blog-content-title'>{content.title}</p>
                                             <p className='blog-content-body'>{content.content}</p>
                                             {
                                                 content.listItems ? (
@@ -185,8 +190,13 @@ const BlogSubPage = () => {
                                                             {
                                                                 content.listItems.map(
                                                                     (item, index) => (
-                                                                    //    { if (item !== '') return <li key={index}>{item}</li> } 
-                                                                    item !== '' ? <li key={index}>{item}</li> : null
+                                                                        //    { if (item !== '') return <li key={index}>{item}</li> } 
+                                                                        item !== '' ? <li
+                                                                        data-aos="fade-up"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                                                                        key={index}>{item}</li> : null
                                                                     )
 
                                                                 )
@@ -197,14 +207,24 @@ const BlogSubPage = () => {
                                             }
                                             {
                                                 content.image ? (
-                                                    <div className='blog-content-pic'>
+                                                    <div
+                                                        data-aos="zoom-in"
+                                                        data-aos-delay={200}
+                                                        data-aos-duration="1000"
+                                                        data-aos-ofset="200"
+                                                        className='blog-content-pic'>
                                                         <img src={content.image} alt='blog-img' />
                                                     </div>
                                                 ) : null
                                             }
                                             {
                                                 content.subBody ? (
-                                                    <p className='blog-content-sub-body'>{content.subBody}</p>
+                                                    <p
+                                                    data-aos="fade-up"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                                                    className='blog-content-sub-body'>{content.subBody}</p>
                                                 ) : null
                                             }
                                         </div>
@@ -213,41 +233,41 @@ const BlogSubPage = () => {
                             }
                         </div>
                         <div
-                        data-aos="fade-in"
-                        data-aos-delay={200}
-                        data-aos-duration="1000"
-                        data-aos-ofset="200"
-                        className='blog-tag-area'>
+                            data-aos="fade-up"
+                            data-aos-delay={200}
+                            data-aos-duration="1000"
+                            data-aos-ofset="200"
+                            className='blog-tag-area'>
                             <p>Tag: </p>
                             <button>Full Bathroom remodeling</button>
                             <button>Bathtub-shower conversions</button>
                             <button>Senior friendly bathroom</button>
                         </div>
                     </Col>
-                    <Col xs={4} style={{paddingLeft:"0.3rem"}}>
+                    <Col xs={4} style={{ paddingLeft: "0.3rem" }}>
                         <div className='blog-contact-us-form'>
                             <ContactUsForm />
                         </div>
                     </Col>
                 </Row>
                 <div
-                data-aos="zoom-in"
-                data-aos-delay={200}
-                data-aos-duration="1000"
-                data-aos-ofset="200"
-                className='related-blog-title-btn'>
+                    data-aos="zoom-in"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
+                    className='related-blog-title-btn'>
                     <p className='related-blog-area-title'>Related articles</p>
                     <div className='testimonial-area-title-buttons'>
                         <button
-                        onClick={handlePrevClick}
-                        style={{ border: 'none' }}>
+                            onClick={handlePrevClick}
+                            style={{ border: 'none' }}>
                             <div className="testimonial-prev-button">
                                 <img src={callMade3} alt="" />
                             </div>
                         </button>
-                        <button 
-                        onClick={handleNextClick}
-                        style={{ border: 'none' }}>
+                        <button
+                            onClick={handleNextClick}
+                            style={{ border: 'none' }}>
                             <div className="testimonial-next-button">
                                 <img src={callMade2} alt="" />
 
