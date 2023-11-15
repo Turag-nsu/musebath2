@@ -22,8 +22,8 @@ import ErrorPage from '../../../components/ErrorPage/ErrorPage';
 
 const BlogSubPage = () => {
     const {blogID} = useParams();
-    const [blogID2, setBlogID2] = useState(blogID);
-    const [blogData, setBlogData] = useState([]);
+    const [blogID2, setBlogID2] = useState(1);
+    const [blogData, setBlogData] = useState();
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(false);
@@ -60,12 +60,16 @@ const BlogSubPage = () => {
             // return <ErrorPage />;
         }
     };
-    if (blogID2 !== blogID) {
-        setIsLoading(true);
-        fetchBlogData();
-        fetchRelatedBlogs();
-    }
+    
+    setTimeout(() => {
+        if (blogID2 !== blogID) {
+            setIsLoading(true);
+            fetchBlogData();
+            fetchRelatedBlogs();
+        }
+    }, 500);
     useEffect(() => {
+        console.log("blogID is: ",blogID);
         fetchBlogData();
         fetchRelatedBlogs();
         const interval = setInterval(() => {
@@ -80,7 +84,7 @@ const BlogSubPage = () => {
     }
     
 
-    const { title, tileImage, uploaderName, uploadDate, category, mainBody, bodyParts } = blogData;
+    // const { title, tileImage, uploaderName, uploadDate, category, mainBody, bodyParts } = blogData;
     const handleNextClick = async () => {
         
         const relatedBlogCards = document.querySelector('.related-blog-card-group');
@@ -124,14 +128,14 @@ const BlogSubPage = () => {
         // data.unshift(lastCard);
 
     }
-    if (isLoading) {
+    if (isLoading || !blogData) {
         return (
             <div>
                 <PageLoading />
             </div>
         )
     }
-    // console.log("data is: ",data);
+    // console.log("blog data is: ",blogData);
     return (
         <div>
             <Container>
@@ -140,20 +144,20 @@ const BlogSubPage = () => {
                         <div className='blog-full-area'>
 
                             <div className='blog-title-area'>
-                                <p>{title}</p>
+                                <p>{blogData.title}</p>
                             </div>
 
                             <div className='blog-title-img'>
-                                <img src={tileImage} alt='blog-img' />
+                                <img src={blogData.tileImage} alt='blog-img' />
                             </div>
                             <div className='upload-details'>
-                                <p className='blog-uploader-name-date'>{`By ${uploaderName} ${uploadDate}`}</p>
+                                <p className='blog-uploader-name-date'>{`By ${blogData.uploaderName} ${blogData.uploadDate}`}</p>
                                 {/* <p className='blog-upload-date'>{uploadDate}</p> */}
-                                <p className='blog-category'>{`Category: ${category}`}</p>
+                                <p className='blog-category'>{`Category: ${blogData.category}`}</p>
                             </div>
-                            <p className='blog-main-body'>{mainBody}</p>
+                            <p className='blog-main-body'>{blogData.mainBody}</p>
                             {
-                                bodyParts.map(content => {
+                                blogData.bodyParts.map(content => {
                                     return (
                                         <div className='blog-content-area'>
                                             <p className='blog-content-title'>{content.title}</p>
@@ -163,7 +167,13 @@ const BlogSubPage = () => {
                                                     <div className='blog-content-list'>
                                                         <ol>
                                                             {
-                                                                content.listItems.map(listItem => <li>{listItem}</li>)
+                                                                content.listItems.map(
+                                                                    (item, index) => (
+                                                                    //    { if (item !== '') return <li key={index}>{item}</li> } 
+                                                                    item !== '' ? <li key={index}>{item}</li> : null
+                                                                    )
+
+                                                                )
                                                             }
                                                         </ol>
                                                     </div>

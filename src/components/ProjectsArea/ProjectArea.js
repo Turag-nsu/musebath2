@@ -36,6 +36,8 @@ const ProjectArea = () => {
     const [activeKey, setActiveKey] = React.useState("");
     const [projectImages, setProjectImages] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
+    const limitOfData = 17;
+    const [showData, setShowData] = React.useState([]);
     // const [category, setCategory] = React.useState("");
     const handleSelect = async (selectedKey) => {
         if (selectedKey === "") navigate(`/projects`);
@@ -54,6 +56,7 @@ const ProjectArea = () => {
         if (cat==="") {
             const response = await axios.get(`https://musebath.onrender.com/api/project-posts`);
             setProjects(response.data);
+            setShowData(response.data.slice(0, limitOfData));
             setProjectImages(projectsToProjectImagesArray(response.data));
             if (response.status === 200) setIsLoading(false);
             else { setIsLoading(false) };
@@ -61,6 +64,7 @@ const ProjectArea = () => {
             const response = await axios.get(`https://musebath.onrender.com/api/project-posts?category=${cat}`);
             // console.log(`http://localhost:3000/api/project-posts?category=${cat}`);
             setProjects(response.data);
+            setShowData(response.data.slice(0, limitOfData));
             setProjectImages(projectsToProjectImagesArray(response.data));
             if (response.status === 200) setIsLoading(false);
             else { setIsLoading(false) };
@@ -108,6 +112,12 @@ const ProjectArea = () => {
         // }
         return rows;
     };
+    const handleMoreClick = () => {
+        //add more proojects to the project area by using the same logic as above
+        const newLimit = limitOfData + 6;
+        setShowData(projects.slice(0, newLimit));
+    }
+
     if (isLoading) return <PageLoading />
     return (
         <div className="project-area">
@@ -136,25 +146,30 @@ const ProjectArea = () => {
                         {singleCol(1, 4, "")}
                         {singleCol(7, 10, 'large')}
                         {singleCol(13, 15, "")}
+                        
                     </Col>
                     <Col>
                         {singleCol(2, 6, 'large')}
                         {singleCol(9, "")}
                         {singleCol(12, 16, 'large')}
 
-                        {projects.length>17&& <div className="project-area-btn">
-                            <CustomButton text="View More" />
+                        {projects.length>limitOfData&& <div className="project-area-btn">
+                            <CustomButton
+                            onClick={handleMoreClick}
+                            text="View More" />
                         </div>}
-                        {/* Add more image rows as needed */}
+                        
                     </Col>
                     <Col>
                         {singleCol(3, 5, "")}
                         {singleCol(8, 11, 'large')}
                         {singleCol(14, 17, "")}
-                        {/* Add more image rows as needed */}
-                        <div className="project-area-btn2">
-                            <CustomButton text="View More" />
-                        </div>
+                        
+                        {projects.length>limitOfData&&<div className="project-area-btn2">
+                            <CustomButton
+                                onClick={handleMoreClick}
+                            text="View More" />
+                        </div>}
                     </Col>
                 </Row>
 

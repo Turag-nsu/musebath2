@@ -7,6 +7,7 @@ import TrustedArea from '../../components/TrustedArea/TrustedArea';
 import SingleProjectPage from './SingleProjectPage/SingleProjectPage';
 import BlogHeroPart from '../../components/BlogHeroPart/BlogHeroPart';
 import projectBg from '../../Images/Project/project-hero-bg.jpeg';
+import './ProjectPage.css'
 
 const ProjectPage = () => {
     useEffect(() => {
@@ -31,9 +32,7 @@ const ProjectPage = () => {
             <div>
                 <TrustedArea />
             </div>
-            <div>
-                {/* <SingleProjectPage project={projects} /> */}
-            </div>
+            
         </div>
     );
 };

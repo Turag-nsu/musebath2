@@ -60,6 +60,7 @@ const SingleProjectPage = () => {
                             <div className="single-projext-page-details-body">
                                 {
                                     project.description.map((item, index) => {
+                                        
                                         return (
                                             <p key={index}>{item}</p>
                                         )

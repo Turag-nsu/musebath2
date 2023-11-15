@@ -1,0 +1,23 @@
+.faka-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+.faka-box{
+    min-width: 30%;
+    background-color: blue;
+}
+.choto{
+    width: 90%;
+    height: 25rem;
+    border-radius: 2rem;
+    background-color: green;
+    padding: 1rem;
+}
+.boro{
+    width: 90%;
+    height: 35rem;
+    border-radius: 2rem;
+    background-color: yellow;
+    padding: 1rem;
+}
