@@ -58,6 +58,13 @@ line-height: 160%; /* 1.6rem */
     margin-top: 7rem;
 }
 
+@media (max-width: 993px){
+    .project-contact-us{
+        display: none;
+    }
+
+}
+
 @media screen and (max-width: 768px){
     .single-project-header{
         margin: 5rem 0 2.62rem 0;

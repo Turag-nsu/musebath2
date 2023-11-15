@@ -5,6 +5,8 @@ import emailIcon from '../../Images/Contact-us/emailbox.svg';
 import locationIcon from '../../Images/Contact-us/MapPin.svg';
 import socialMediaIcon from '../../Images/Contact-us/social-media.svg';
 import line from '../../Images/Contact-us/Line.svg';
+import fbLogo from '../../Images/facebook-logo.png';
+import instaLogo from '../../Images/instragram-logo.png';
 
 const ContactArea = () => {
     return (
@@ -33,7 +35,12 @@ const ContactArea = () => {
                 <p className='social-media-title'>Social Media</p>
                 <p className='social-media-sub-title'>Follow us on Social Media for Updates, News, and Insights</p>
                 <div className='social-media-icons'>
-                    <img src={socialMediaIcon} alt="" />
+                    <div className="social-logo">
+                        <a href="https://www.facebook.com/musebath.us/" target="_blank" >
+                            <img style={{border:"1px solid gray"}} src={fbLogo} alt="" />
+                        </a>
+                        <img style={{border:"1px solid gray"}} src={instaLogo} alt="" />
+                    </div>
 
                 </div>
             </div>

@@ -99,7 +99,7 @@ const ProjectArea = () => {
         rows.push(
             showImages[start - 1] && <Row>
                 <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200}>
-                <p>{start}</p>
+                {/* <p>{start}</p> */}
                     <Link to={`/projects/${showImages[start-1].id}`}>
                         <img src={showImages[start - 1].img} alt={`Project ${start}`} loading='lazy' />
                     </Link>
@@ -109,7 +109,7 @@ const ProjectArea = () => {
         rows.push(
             showImages[end - 1] && <Row>
                 <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200}>
-                    <p>{end}</p>
+                    {/* <p>{end}</p> */}
                     <Link to={`/projects/${showImages[end-1].id}`}>
                         <img src={showImages[end - 1].img} alt={`Project ${end}`} loading='lazy'/>
                     </Link>

@@ -52,24 +52,24 @@ const SingleProjectPage = () => {
             <ImageSlider images={project.images} />
             <Container>
                 <Row>
-                    <Col md={8}>
+                    <Col lg={8} md={12}>
                         <div className='single-projext-page-details-container'>
                             <div className="single-projext-page-details-title">
                                 <p>Project Description</p>
                             </div>
-                            <div className="single-projext-page-details-body">
+                            <div className="single-projext-page-details-body" >
                                 {
                                     project.description.map((item, index) => {
                                         
                                         return (
-                                            <p key={index}>{item}</p>
+                                            <p style={{whiteSpace:"pre-wrap"}} key={index}>{item}</p>
                                         )
                                     })
                                 }
                             </div>
                         </div>
                     </Col>
-                    <Col>
+                    <Col className='project-contact-us'>
                         <ContactUsForm />
                     </Col>
                 </Row>
