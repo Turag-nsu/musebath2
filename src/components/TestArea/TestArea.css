@@ -1,0 +1,20 @@
+.image-container {
+    columns: 6 auto;
+    gap: 2rem;
+
+}
+
+.image-container img {
+    width: 100%;
+
+}
+/* .image-container:nth-child(even){
+    height: 30rem;
+}
+.image-container:nth-child(odd){
+    height: 25rem;
+} */
+
+.TestArea{
+    margin-top: 6rem;
+}

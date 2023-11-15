@@ -1,9 +1,37 @@
 import React from "react";
 import "./FooterArea.css";
 import { Container, Row, Col } from "react-bootstrap";
-import socialIcons from "../../Images/Social-Media-Icons.svg"
 import footerLine from "../../Images/footerLine.svg"
+import fbLogo from "../../Images/facebook-logo.png"
+import instaLogo from "../../Images/instragram-logo.png"
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import logo from "../../Images/musebath-logo.svg"
 const FooterArea = () => {
+    const [selected, setSelected] = useState(null);
+  const scrollToSection = (sectionId) => {
+    setSelected(sectionId);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ block:"center", behavior: 'smooth' });
+    }
+  };
+  const checkServiceClick = () => {
+    if (selected === 'services') {
+      scrollToSection('services');
+      setSelected(null);
+    }
+  };
+  React.useEffect(() => {
+    checkServiceClick();
+    
+  }, []);
+
+  
+  const handleLinkClick = () => {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    navbarToggler.click();
+  };
     return (
         <div className="footer-area">
 
@@ -11,16 +39,35 @@ const FooterArea = () => {
                 <Row className="footer-row">
                     <Col className="footer-col1" xs={6}>
                         <div className="footer-area1">
-                            <p class="footer-logo">Muse Bath</p>
+                        <img style={{margin:"0.5rem 0 1rem 0"}} src={logo} alt="Muse Bath" />
                             <p class="footer-subtitle">Elevate your bathroom to a tranquil sanctuary.</p>
-                            <img src={socialIcons} alt=""></img>
+                            <div className="social-logo">
+                                <a href="https://www.facebook.com/musebath.us/" target="_blank" >
+                                    <img src={fbLogo} alt="" />
+                                </a>
+                                <img src={instaLogo} alt="" />
+                            </div>
+
                         </div>
                         <div className="footer-area2">
                             <p class="footer-title">Quick Menu</p>
-                            <p class="footer-subtitle">Home</p>
-                            <p class="footer-subtitle">Service</p>
-                            <p class="footer-subtitle">Projects</p>
-                            <p class="footer-subtitle">Blog</p>
+
+                            <a href="\" style={{ textDecoration: "none" }}>
+                                <p class="footer-subtitle" >Home</p>
+                            </a>
+
+                            <a href="\" style={{ textDecoration: "none" }} onClick={() => {handleLinkClick(); scrollToSection('services')}}>
+                                <p class="footer-subtitle">Service</p>
+                            </a>
+
+                            <a href="\projects" style={{ textDecoration: "none" }}>
+                                <p class="footer-subtitle">Projects</p>
+                            </a>
+
+                            <a href="\blog" style={{ textDecoration: "none" }}>
+                                <p class="footer-subtitle">Blog</p>
+                            </a>
+
                         </div>
                     </Col>
                     <Col className='footer-gap' xs={1}></Col>

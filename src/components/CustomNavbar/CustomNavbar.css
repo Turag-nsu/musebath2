@@ -18,6 +18,9 @@
     text-align: left;
     
 }
+.musebath-logo{
+    width: 3.75rem;
+}
 .logo:hover{
     transition: all 0.3s ease-in-out;
     color: #FFD700 !important;
@@ -45,7 +48,7 @@ span.navbar-toggler-icon{
     background-image: url('../../Images/menu.png');
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 767px){
     .customnav .mx-auto{
         padding-top: 1rem;
     }

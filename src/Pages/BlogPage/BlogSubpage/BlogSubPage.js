@@ -132,6 +132,7 @@ const BlogSubPage = () => {
         )
     }
     // console.log("data is: ",data);
+    const stringg = "hello\nworld";
     return (
         <div>
             <Container>
@@ -152,6 +153,7 @@ const BlogSubPage = () => {
                                 <p className='blog-category'>{`Category: ${category}`}</p>
                             </div>
                             <p className='blog-main-body'>{mainBody}</p>
+                            
                             {
                                 bodyParts.map(content => {
                                     return (
