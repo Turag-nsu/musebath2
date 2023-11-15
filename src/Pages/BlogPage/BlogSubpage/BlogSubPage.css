@@ -80,7 +80,7 @@
 
 .blog-main-body {
     color: var(--greyscale-shade-1, #52637A);
-
+    white-space: pre-wrap;
     /* Paragraph/P 1 */
     font-family: DM Sans;
     font-size: 1rem;
@@ -108,7 +108,7 @@
 
 .blog-content-body {
     color: var(--greyscale-shade-1, #52637A);
-
+    
     /* Paragraph/P 1 */
     font-family: DM Sans;
     font-size: 1rem;

@@ -135,7 +135,7 @@ const BlogSubPage = () => {
             </div>
         )
     }
-    // console.log("blog data is: ",blogData);
+    
     return (
         <div>
             <Container>

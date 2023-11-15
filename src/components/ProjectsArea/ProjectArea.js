@@ -36,9 +36,8 @@ const ProjectArea = () => {
     const [activeKey, setActiveKey] = React.useState("");
     const [projectImages, setProjectImages] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
-    const limitOfData = 17;
-    const [showData, setShowData] = React.useState([]);
-    // const [category, setCategory] = React.useState("");
+    const limit = 17;
+    const [showImages, setShowImages] = React.useState([]);
     const handleSelect = async (selectedKey) => {
         if (selectedKey === "") navigate(`/projects`);
         else navigate(`/projects?category=${selectedKey}`);
@@ -56,16 +55,18 @@ const ProjectArea = () => {
         if (cat==="") {
             const response = await axios.get(`https://musebath.onrender.com/api/project-posts`);
             setProjects(response.data);
-            setShowData(response.data.slice(0, limitOfData));
+            // setShowData(response.data.slice(0, limitOfData));
             setProjectImages(projectsToProjectImagesArray(response.data));
+            setShowImages(projectsToProjectImagesArray(response.data).slice(0, limit));
             if (response.status === 200) setIsLoading(false);
             else { setIsLoading(false) };
         } else {
             const response = await axios.get(`https://musebath.onrender.com/api/project-posts?category=${cat}`);
             // console.log(`http://localhost:3000/api/project-posts?category=${cat}`);
             setProjects(response.data);
-            setShowData(response.data.slice(0, limitOfData));
+            // setShowData(response.data.slice(0, limitOfData));
             setProjectImages(projectsToProjectImagesArray(response.data));
+            setShowImages(projectsToProjectImagesArray(response.data).slice(0, limit));
             if (response.status === 200) setIsLoading(false);
             else { setIsLoading(false) };
 
@@ -76,10 +77,14 @@ const ProjectArea = () => {
     const projectsToProjectImagesArray = (projects) => {
         const projectImagesArray = [];
         projects.forEach(project => {
-            projectImagesArray.push(project.images[0].img);
+            const allImg = project.images.map(image => {
+                return { img: image.img, id: project.id}
+            });
+            projectImagesArray.push(...allImg);
         });
         return projectImagesArray;
     }
+
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -89,22 +94,24 @@ const ProjectArea = () => {
     const singleCol = (start, end, cls) => {
         const rows = [];
         let imgClass = cls === 'large' ? 'project-area-pic-large' : 'project-area-pic-small';
-        imgClass = cls === 'last' ? 'project-area-pic-last' : imgClass;
-        // for (let i = start; i <= end; i++) {
+        // imgClass = cls === 'last' ? 'project-area-pic-last' : imgClass;
+        // console.log("start: ", start, " end: ", end);
         rows.push(
-            projectImages[start - 1] && <Row>
+            showImages[start - 1] && <Row>
                 <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200}>
-                    <Link to={`/projects/${start}`}>
-                        <img src={projectImages[start - 1]} alt={`Project ${start}`} loading='lazy' />
+                <p>{start}</p>
+                    <Link to={`/projects/${showImages[start-1].id}`}>
+                        <img src={showImages[start - 1].img} alt={`Project ${start}`} loading='lazy' />
                     </Link>
                 </div>
             </Row>
         );
         rows.push(
-            projectImages[end - 1] && <Row>
+            showImages[end - 1] && <Row>
                 <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200}>
-                    <Link to={`/projects/${end}`}>
-                        <img src={projectImages[end - 1]} alt={`Project ${end}`} loading='lazy'/>
+                    <p>{end}</p>
+                    <Link to={`/projects/${showImages[end-1].id}`}>
+                        <img src={showImages[end - 1].img} alt={`Project ${end}`} loading='lazy'/>
                     </Link>
                 </div>
             </Row>
@@ -113,9 +120,8 @@ const ProjectArea = () => {
         return rows;
     };
     const handleMoreClick = () => {
-        //add more proojects to the project area by using the same logic as above
-        const newLimit = limitOfData + 6;
-        setShowData(projects.slice(0, newLimit));
+        setShowImages(projectImages.slice(0, showImages.length + limit));
+        console.log(showImages, " pro: ", projectImages)
     }
 
     if (isLoading) return <PageLoading />
@@ -145,17 +151,25 @@ const ProjectArea = () => {
                     <Col>
                         {singleCol(1, 4, "")}
                         {singleCol(7, 10, 'large')}
-                        {singleCol(13, 15, "")}
-                        
+                        {singleCol(13, 16, "")}
+                        {singleCol(19,22, "large")}
+                        {singleCol(25, 28, "")}
+                        {singleCol(31, 34, "large")}
+                        {singleCol(37, 40, "")}
+                        {singleCol(43, 46, "large")}
                     </Col>
                     <Col>
                         {singleCol(2, 6, 'large')}
                         {singleCol(9, "")}
-                        {singleCol(12, 16, 'large')}
-
-                        {projects.length>limitOfData&& <div className="project-area-btn">
+                        {singleCol(12, 15, 'large')}
+                        {singleCol(18, "")}
+                        {singleCol(21, 24, "large")}
+                        {singleCol(27, '')}
+                        {singleCol(30, 33, "large")}
+                        {singleCol(42, "")}
+                        {projectImages.length>limit&&  projectImages.length!=showImages.length && <div className="project-area-btn">
                             <CustomButton
-                            onClick={handleMoreClick}
+                                onClick={handleMoreClick}
                             text="View More" />
                         </div>}
                         
@@ -164,8 +178,13 @@ const ProjectArea = () => {
                         {singleCol(3, 5, "")}
                         {singleCol(8, 11, 'large')}
                         {singleCol(14, 17, "")}
-                        
-                        {projects.length>limitOfData&&<div className="project-area-btn2">
+                        {singleCol(20, 23, 'large')}
+                        {singleCol(26, 29, '')}
+                        {singleCol(32, 35, "large")}
+                        {singleCol(36, 39, "")}
+                        {singleCol(41, 44, "large")}
+                        {/* Add more image rows as needed */}
+                        {projectImages.length>limit&& projectImages.length!=showImages.length && <div className="project-area-btn2">
                             <CustomButton
                                 onClick={handleMoreClick}
                             text="View More" />

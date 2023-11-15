@@ -22,7 +22,7 @@ import image1 from './Images/Project/1/pic-1.jpeg';
 import image2 from './Images/Project/1/pic-2.jpeg';
 import image3 from './Images/Project/1/pic-3.jpeg';
 import image4 from './Images/Project/1/pic-4.jpeg';
-import PageLoading from './components/PageLoading/PageLoading';
+import TestArea from './components/TestArea/TestArea';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 const projects = {
   images: {
@@ -125,7 +125,7 @@ function App() {
         <CustomNavbar />
 
         <Routes >
-          {/* <Route path="/test" element={<PageLoading />} /> */}
+          <Route path="/test" element={<TestArea />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/blog" element={<BlogPage />}>
 

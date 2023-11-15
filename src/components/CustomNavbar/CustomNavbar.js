@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './CustomNavbar.css';
 import CustomButton from '../CustomButton/CustomButton';
 import { Link } from 'react-router-dom';
+import logo from '../../Images/musebath-logo.svg';
 
 const CustomNavbar = () => {
   const [selected, setSelected] = useState(null);
@@ -36,7 +37,9 @@ const CustomNavbar = () => {
     
     <Navbar collapseOnSelect expand="md" className="customnav fixed-top">
       <Container>
-        <Navbar.Brand href="/" className="logo my-auto">Muse bath</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img src={logo} alt="Muse Bath" className="musebath-logo" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" data-toggle="collapse" data-target="#responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto navlinks">
