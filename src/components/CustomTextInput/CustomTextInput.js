@@ -56,7 +56,7 @@ const CustomTextInput = () => {
     // e.target.reset();
   };
   return (
-    <div className="formArea" data-aos="fade-right">
+    <div className="formArea" data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="200">
         <p className="form-header">Free Design<br></br>Consultation</p>
       <div className='custom-text-input'>
         <input type="text" placeholder="Name" name='name'/>

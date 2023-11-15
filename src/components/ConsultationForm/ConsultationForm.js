@@ -1,35 +1,9 @@
 import React from "react";
 import "./ConsultationForm.css";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import  emailjs  from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import closeBtn from "../../Images/closeButton.svg";
-// const handleSubmit = (e) => {
-        
-//   e.preventDefault();
-  
-//   const contactUsBtn = document.querySelector(".contact-us-submit-btn");
-//   contactUsBtn.innerHTML = "Sending...";
-//   contactUsBtn.style.backgroundColor = "#4986c4";
-//   const params = {
-//       from_name: e.target.elements.name.value,
-//       from_email: e.target.elements.email.value,
-//       from_phone: e.target.elements.phone.value,
-//       from_zip: "none",
-//       message: e.target.elements.message.value,
-//       from_time: "anytime",
-//   }
-//   emailjs.send("service_v5gzagl", "template_3nqje5k", params , "Ru3OjwteMUPoUY34t").then((result) => {
-//       console.log(result.text);
-//       contactUsBtn.innerHTML = "Sent";
-//       contactUsBtn.style.backgroundColor = "green";
-//       contactUsBtn.style.color = "white";
-//   }, (error) => {
-//       console.log(error.text);
-//       contactUsBtn.innerHTML = "Failed";
-//       contactUsBtn.style.backgroundColor = "red";
-//       contactUsBtn.style.color = "white";
-//   }); 
-// }
+
 const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
   const handleFormSubmit = () => {
     const getFormData = () => {
@@ -77,7 +51,12 @@ const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
 
   }
   return showForm && (
-    <div className="consultation-form">
+    <div className="consultation-form"
+      data-aos="zoom-in-up"
+      data-aos-delay={200}
+      data-aos-duration="1000"
+      data-aos-ofset="200"
+    >
       <div className="consultation-form-close-btn">
         <button onClick={() => setShowForm(false)}>
           <img src={closeBtn} className="close-btn" alt="Close" />
@@ -139,8 +118,8 @@ const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
                 </div>
                 <div>
                   <button
-                  onClick={handleFormSubmit}
-                  className="consultation-area-button">GET A FREE ESTIMATE NOW</button>
+                    onClick={handleFormSubmit}
+                    className="consultation-area-button">GET A FREE ESTIMATE NOW</button>
                 </div>
               </div>
             </Col>

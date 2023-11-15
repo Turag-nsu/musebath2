@@ -142,7 +142,7 @@ margin-right: 5rem;
 
     .btn-for-input {
         margin-top: 1rem;
-        width: fit-content;
+        /* width: fit-content; */
         border-radius: 1rem;
     }
 

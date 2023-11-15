@@ -13,24 +13,54 @@ const TrustedArea = () => {
         <Container>
         <div className="trusted-area">
             
-                <p className='trusted-area-title'>
+                <p className='trusted-area-title'
+                data-aos="zoom-in"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                >
                     The Bathroom Remodeler Trusted by the Entire Nation
                 </p>
                 <div className="logo-area">
                     <div className="trusted-area-logos">
-                        <div className="trust-single-logo">
+                        <div className="trust-single-logo" 
+                            data-aos="zoom-in"
+                            data-aos-delay={200}
+                            data-aos-duration="1000"
+                            data-aos-ofset="200"
+                        >
                             <img src={trustLogo1} alt="" />
                         </div>
-                        <div className="trust-single-logo">
+                        <div 
+                        data-aos="zoom-in"
+                        data-aos-delay={300}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        className="trust-single-logo">
                             <img src={trustLogo2} alt="" />
                         </div>
-                        <div className="trust-single-logo">
+                        <div
+                        data-aos="zoom-in"
+                        data-aos-delay={400}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        className="trust-single-logo">
                             <img src={trustLogo3} alt="" />
                         </div>
-                        <div className="trust-single-logo">
+                        <div 
+                        data-aos="zoom-in"
+                        data-aos-delay={300}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        className="trust-single-logo">
                             <img src={trustLogo4} alt="" />
                         </div>
-                        <div className="trust-single-logo">
+                        <div
+                        data-aos="zoom-in"
+                        data-aos-delay={200}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        className="trust-single-logo">
                             <img src={trustLogo5} alt="" />
                         </div>
                     </div>

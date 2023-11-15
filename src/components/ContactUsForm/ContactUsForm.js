@@ -1,57 +1,15 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
-
 import './ContactUsForm.css'
-// emailjs.send(serviceID, templateID, templateParams, publicKey);
-// emailjs.send("service_v5gzagl","template_3nqje5k",{
-//     from_name: "username",
-//     from_email: "email",
-//     from_phone: "number",
-//     from_zip: "zip",
-//     message: "message",
-//     from_time: "time",
-//     });
-
 
 const ContactUsForm = () => {
     const handleSubmit = (e) => {
-        // const serviceID = "service_v5gzagl";
-        // const templateID = "template_3nqje5k";
-        const publicKey = "Ru3OjwteMUPoUY34t";
+
         e.preventDefault();
-        // const templateParams = {
-        //     from_name: e.target.elements.name.value,
-        //     from_email: e.target.elements.email.value,
-        //     from_phone: e.target.elements.phone.value,
-        //     message: e.target.elements.message.value,
-        //     from_time: "anytime",
-        // };
-        // const templateForm = new FormData();
-        // const templateParamsToForm = (templateParams) => {
 
-        //     templateForm.append("from_name", templateParams.from_name);
-        //     templateForm.append("from_email", templateParams.from_email);
-        //     templateForm.append("from_phone", templateParams.from_phone);
-        //     templateForm.append("message", templateParams.message);
-        //     templateForm.append("from_time", templateParams.from_time);
-
-        //     return templateForm;
-        // }
-
-        // const  contents = templateParamsToForm(templateParams);
-
-
-        // emailjs.sendForm(serviceID, templateID, contents, publicKey)
-        // .then((result) => {
-        //     console.log(result.text);
-        // }
-        // ,(error) => {
-        //     console.log(error.text);
-        // });
         const contactUsBtn = document.querySelector(".contact-us-submit-btn");
         contactUsBtn.innerHTML = "Sending...";
         contactUsBtn.style.backgroundColor = "#4986c4";
-        //if the email is sent successfully set the button to "sent" and background color to green
         const params = {
             from_name: e.target.elements.name.value,
             from_email: e.target.elements.email.value,
@@ -60,7 +18,7 @@ const ContactUsForm = () => {
             message: e.target.elements.message.value,
             from_time: "anytime",
         }
-        emailjs.send("service_v5gzagl", "template_3nqje5k", params , "Ru3OjwteMUPoUY34t").then((result) => {
+        emailjs.send("service_v5gzagl", "template_3nqje5k", params, "Ru3OjwteMUPoUY34t").then((result) => {
             console.log(result.text);
             contactUsBtn.innerHTML = "Sent";
             contactUsBtn.style.backgroundColor = "green";
@@ -71,17 +29,14 @@ const ContactUsForm = () => {
             contactUsBtn.style.backgroundColor = "red";
             contactUsBtn.style.color = "white";
         });
-        // emailjs.send("service_v5gzagl","template_3nqje5k",{
-        //     from_name: e.target.elements.name.value,
-        //     from_email: e.target.elements.email.value,
-        //     from_phone: e.target.elements.phone.value,
-        //     from_zip: "none",
-        //     message: e.target.elements.message.value,
-        //     from_time: "anytime",
-        //     });
     }
     return (
-        <div className='contact-us-form-container'>
+        <div
+            data-aos="fade-left"
+            data-aos-delay={200}
+            data-aos-duration="1000"
+            data-aos-ofset="200"
+            className='contact-us-form-container'>
             <div className="contact-us-form-title">
                 <p>Connect With Us</p>
             </div>

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import PageLoading from '../PageLoading/PageLoading';
-
+import '../ProjectTabs/ProjectTabs.css'
 
 const ProjectArea = () => {
     const navigate = useNavigate();
@@ -111,7 +111,12 @@ const ProjectArea = () => {
     return (
         <div className="project-area">
             <Container>
-                <div className="project-tabs">
+                <div className="project-tabs"
+                data-aos="zoom-in"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                >
                     <Nav defaultActiveKey="" activeKey={activeKey} onSelect={handleSelect} as="ul" variant="underline">
                         <Nav.Item as="li">
                             <Nav.Link eventKey="">All</Nav.Link>

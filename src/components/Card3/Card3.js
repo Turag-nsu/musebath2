@@ -4,7 +4,8 @@ const Card3 = ({ id, imgLink, title }) => {
     return (
         <div className="card3-container"
             data-aos="flip-left"
-            data-aos-delay={200 + id * 100}
+            data-aos-duration="1000"
+            data-aos-delay={200 + id * 300}
         >
             <div className="card3-top">
                 <div className="card3-number">

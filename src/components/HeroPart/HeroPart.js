@@ -10,7 +10,7 @@ const HeroPart = () => {
     const showInputArea = pathname === '/';
     return (
         <div className="hero-part">
-            <div className="container2" data-aos="zoom-in" >
+            <div className="container2" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200" >
                 <p className="hero-text" >Elevate your bathroom to a tranquil sanctuary.</p>
                 <p className="hero-text2">Your Destination for Bathroom Renovation, Style, and Aesthetics</p>
                 <CustomButton text="GET A FREE ESTIMATE NOW" />

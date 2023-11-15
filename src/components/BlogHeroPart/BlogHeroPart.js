@@ -9,14 +9,21 @@ const BlogHeroPart = ({ text, bg }) => {
     return (
         <>
         
-        <div className="blog-hero-part" style={{ 
+        <div className="blog-hero-part"
+        
+        style={{ 
             backgroundImage: `url(${bg})`,
          }}>
             <div className="blog-hero-overlay"></div>
             <div className="blog-hero-text-area" data-aos="zoom-in" >
                 <p>{text}</p>
             </div>
-            <div className='estimate-btn'>
+            <div className='estimate-btn'
+            data-aos="fade-right"
+            data-aos-delay={300}
+            data-aos-duration="2000"
+            data-aos-ofset="0"
+            >
                 <button onClick={() => setShowForm(true)}>
                     <div className='overlay-btn'>
                         <img src={overlayBtn} alt="" />

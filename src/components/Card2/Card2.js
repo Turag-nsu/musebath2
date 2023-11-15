@@ -8,7 +8,8 @@ const Card2 = ({ imgLink, title, body, id }) => {
         <div
             className='card2-container'
             data-aos="flip-left"
-            data-aos-delay={200 + id * 100}
+            data-aos-offset="100" data-aos-duration="1000"
+            data-aos-delay={200 + id * 300}
             // onMouseOver={handleMouseOver}
             // onMouseOut={handleMouseOut}
         >
@@ -27,7 +28,7 @@ const Card2 = ({ imgLink, title, body, id }) => {
                 <div className='card2-body'>
                     <p className="card2-body-title">{title}</p>
                     <p className="card2-body-text">{body}</p>
-                    <a className='card2-body-link' href='#'>
+                    <a className='card2-body-link'>
                         <Link to={`/services/${id}`}>Read More</Link>
                     </a>
                 </div>

@@ -51,7 +51,13 @@ const FormAndMap = () => {
     return (
         <Container>
             <div className="form-map-area">
-                <div className="message-form">
+                <div 
+                data-aos="fade-right"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                data-aos-anchor-placement="top-center"
+                className="message-form">
                         <div>
                             <p className="message-area-title">How can we help you?</p>
                             <p className="message-area-subtitle">Please fill out the form below to request repair services from Muse Bath.</p>
@@ -110,7 +116,13 @@ const FormAndMap = () => {
                         </div>
 
                 </div>
-                <div className="input-map-area">
+                <div
+                data-aos="fade-left"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                data-aos-anchor-placement="top-center"
+                className="input-map-area">
                     <MyMap />
                 </div>
             </div>

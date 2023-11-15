@@ -17,7 +17,9 @@ const GallaryArea = ({ images, title }) => {
                     <Col md={3} >
                         <div className='gallary-pic-container' 
                         data-aos="flip-left"
-                        data-aos-delay={200 + 0 * 100}
+                        data-aos-delay={200}
+                        data-aos-duration="700"
+                        data-aos-ofset="200"
                         >
                             <img src={images[0]} alt="" />
                         </div>
@@ -62,7 +64,12 @@ const GallaryArea = ({ images, title }) => {
 
                     </Col>
                 </Row>
-                <div className="gallary-btn">
+                <div className="gallary-btn"
+                data-aos="zoom-in"
+                data-aos-delay={200}
+                data-aos-duration="700"
+                data-aos-ofset="200"
+                >
                     <Link to='/projects'><CustomButton text="View All Projects" /></Link>
                 </div>
             </Container>

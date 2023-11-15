@@ -61,7 +61,12 @@ const TestimonialArea = () => {
     return (
         <div className='testimonial-area'>
             <Container>
-                <div className="testimonial-area-title">
+                <div className="testimonial-area-title"
+                data-aos="zoom-in"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                >
                     <div>
                         <p>Testimonials from Our Valued Clients</p>
                     </div>

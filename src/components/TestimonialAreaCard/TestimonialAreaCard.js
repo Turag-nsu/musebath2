@@ -5,7 +5,12 @@ import dotdot from '../../Images/dotdot.svg'
 
 const TestimonialAreaCard = ({ img, text, name, title }) => {
     return (
-        <div className='testimonial-area-card-full'>
+        <div className='testimonial-area-card-full'
+            data-aos="zoom-in"
+            data-aos-delay={200}
+            data-aos-duration="1000"
+            data-aos-ofset="200"
+        >
             <div className='testimonial-area-card-container'>
                 <img style={{ width: '11rem', marginBottom: '1rem' }} src={stars} alt="" />
                 <p className="testimonial-area-card-text">{text}</p>

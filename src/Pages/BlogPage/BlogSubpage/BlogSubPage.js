@@ -139,19 +139,39 @@ const BlogSubPage = () => {
                     <Col lg={8} xs={12} className='blog-area-col'>
                         <div className='blog-full-area'>
 
-                            <div className='blog-title-area'>
+                            <div
+                            data-aos="zoom-in"
+                            data-aos-delay={400}
+                            data-aos-duration="1000"
+                            data-aos-ofset="200"
+                            className='blog-title-area'>
                                 <p>{blogData.title}</p>
                             </div>
 
-                            <div className='blog-title-img'>
+                            <div
+                            data-aos="zoom-in"
+                            data-aos-delay={200}
+                            data-aos-duration="1000"
+                            data-aos-ofset="200"
+                            className='blog-title-img'>
                                 <img src={blogData.tileImage} alt='blog-img' />
                             </div>
-                            <div className='upload-details'>
+                            <div
+                            data-aos="fade-in"
+                            data-aos-delay={200}
+                            data-aos-duration="1000"
+                            data-aos-ofset="200"
+                            className='upload-details'>
                                 <p className='blog-uploader-name-date'>{`By ${blogData.uploaderName} ${blogData.uploadDate}`}</p>
                                 {/* <p className='blog-upload-date'>{uploadDate}</p> */}
                                 <p className='blog-category'>{`Category: ${blogData.category}`}</p>
                             </div>
-                            <p className='blog-main-body'>{blogData.mainBody}</p>
+                            <p
+                            data-aos="fade-in"
+                            data-aos-delay={200}
+                            data-aos-duration="1000"
+                            data-aos-ofset="200"
+                            className='blog-main-body'>{blogData.mainBody}</p>
                             {
                                 blogData.bodyParts.map(content => {
                                     return (
@@ -192,7 +212,12 @@ const BlogSubPage = () => {
                                 })
                             }
                         </div>
-                        <div className='blog-tag-area'>
+                        <div
+                        data-aos="fade-in"
+                        data-aos-delay={200}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        className='blog-tag-area'>
                             <p>Tag: </p>
                             <button>Full Bathroom remodeling</button>
                             <button>Bathtub-shower conversions</button>
@@ -205,7 +230,12 @@ const BlogSubPage = () => {
                         </div>
                     </Col>
                 </Row>
-                <div className='related-blog-title-btn'>
+                <div
+                data-aos="zoom-in"
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                className='related-blog-title-btn'>
                     <p className='related-blog-area-title'>Related articles</p>
                     <div className='testimonial-area-title-buttons'>
                         <button

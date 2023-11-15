@@ -20,7 +20,9 @@
     margin-left: 1rem;
     padding: 0;
     display: none;
+    padding-bottom: 2rem;
 }
+
 .card2-body-link a{
     text-decoration: none;
 }

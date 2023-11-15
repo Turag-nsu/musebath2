@@ -101,7 +101,9 @@ const ImageSlider = ({images}) => {
         if (direction === 'right') setOfsetAmmount(ofsetAmmount + 1);
     };  
     return (
-        <div className="image-slider-area">
+        <div
+        
+        className="image-slider-area">
             <div className="image-slider-container">
                 <div className="selected-image-show-area">
                     <img

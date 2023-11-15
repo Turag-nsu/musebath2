@@ -7,11 +7,20 @@ import { Link } from 'react-router-dom';
 const CTAArea = () => {
     return (
         <Container>
-            <div className="cta-container">
+            <div className="cta-container"
+            data-aos="zoom-in"
+            data-aos-delay={200}
+            data-aos-duration="1000"
+            data-aos-ofset="200"
+            >
                 <Row>
-                    <div className="half-area"></div>
+                    <div 
+                    
+                    className="half-area"></div>
 
-                    <div className="half-area">
+                    <div 
+                    
+                    className="half-area">
                         <div className="whole-cta-area-col2">
                             <div className='cta-area-col2'>
                                 <div className="cta-area-content">
