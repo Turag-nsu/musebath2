@@ -1,35 +1,33 @@
-import serviceBg1 from '../Images/service-bg-1.jpeg'
+import serviceBg1 from '../Images/service-bg-1.webp'
 import serviceCardPic1 from '../Images/service-area-1-pic-1'
-import service1pic1 from '../Images/Service/service-1-renovation.jpeg'
-import service1pic2 from '../Images/Service/service-1-pic-2.jpeg'
-import service1pic3 from '../Images/Service/service-1-pic-3.jpeg'
-import service1pic4 from '../Images/Service/service-1-pic-4.jpeg'
-import service1pic5 from '../Images/Service/service-1-pic-5.jpeg'
-import service1buildImage from '../Images/Service/service-1-build-service.jpeg'
-import service1complementarypic from '../Images/Service/service-1-complementary-pic.jpeg'
-import serviceBg2 from '../Images/Service/service-2-heroBG.jpeg'
-import serviceCardPic2 from '../Images/Service/service-2-renovation.png'
-import service2pic1 from '../Images/Service/service-2-pic-1.jpeg'
-import service2pic2 from '../Images/Service/service-2-pic-2.jpeg'
-import service2pic3 from '../Images/Service/service-2-pic-3.jpeg'
-import service2pic4 from '../Images/Service/service-2-pic-4.jpeg'
-import service2pic5 from '../Images/Service/service-2-pic-5.jpeg'
-import service2buildImage from '../Images/Service/service-2-build-service.jpeg'
-import service2complementarypic from '../Images/Service/service-2-complementary.jpeg'
+import service1pic1 from '../Images/Service/service-1-renovation.webp'
+import service1pic2 from '../Images/Service/service-1-pic-2.webp'
+import service1pic3 from '../Images/Service/service-1-pic-3.webp'
+import service1pic4 from '../Images/Service/service-1-pic-4.webp'
+import service1pic5 from '../Images/Service/service-1-pic-5.webp'
+import service1buildImage from '../Images/Service/service-1-build-service.webp'
+import service1complementarypic from '../Images/Service/service-1-complementary-pic.webp'
+import serviceBg2 from '../Images/Service/service-2-herobg.webp'
+import serviceCardPic2 from '../Images/Service/service-2-renovation.webp'
+import service2pic1 from '../Images/Service/service-2-pic-1.webp'
+import service2pic2 from '../Images/Service/service-2-pic-2.webp'
+import service2pic3 from '../Images/Service/service-2-pic-3.webp'
+import service2pic4 from '../Images/Service/service-2-pic-4.webp'
+import service2pic5 from '../Images/Service/service-2-pic-5.webp'
+import service2buildImage from '../Images/Service/service-2-build-service.webp'
+import service2complementarypic from '../Images/Service/service-2-complementary.webp'
 import reviewer1 from '../Images/profile-1.png'
 import reviewer2 from '../Images/profile-2.png'
-import serviceBg3 from '../Images/Service/service-3-heroBG.jpeg'
-import serviceCardPic3 from '../Images/Service/service-3-renovation.jpeg'
-import service3pic1 from '../Images/Service/service-3-pic-1.jpeg'
-import service3pic2 from '../Images/Service/service-3-pic-2.jpeg'
-import service3pic3 from '../Images/Service/service-3-pic-3.jpeg'
-import service3pic4 from '../Images/Service/service-3-pic-4.jpeg'
-import service3pic5 from '../Images/Service/service-3-pic-5.jpeg'
-import service3buildImage from '../Images/Service/service-3-build-service.jpeg'
-import service3complementarypic from '../Images/Service/service-3-complementary.jpeg'
-import blog1pic1 from '../Images/Blog/blog-1/blog-body-pic1.jpeg'
-import blog1pic2 from '../Images/Blog/blog-1/blog-body-pic2.jpeg'
-import blog1titlepic from '../Images/Blog/blog-1/title_pic.jpeg'
+import serviceBg3 from '../Images/Service/service-3-herobg.webp'
+import serviceCardPic3 from '../Images/Service/service-3-renovation.webp'
+import service3pic1 from '../Images/Service/service-3-pic-1.webp'
+import service3pic2 from '../Images/Service/service-3-pic-2.webp'
+import service3pic3 from '../Images/Service/service-3-pic-3.webp'
+import service3pic4 from '../Images/Service/service-3-pic-4.webp'
+import service3pic5 from '../Images/Service/service-3-pic-5.webp'
+import service3buildImage from '../Images/Service/service-3-build-service.webp'
+import service3complementarypic from '../Images/Service/service-3-complementary.webp'
+
 
 
 
@@ -141,41 +139,7 @@ const data = [
             }
         },
 
-        blog1: {
-            mainTitle: "How showers and baths promote ultimate relaxation in your Home",    
-            mainImage: blog1titlepic,
-            uploaderName: "Alenco Inc",
-            uploadDate: "August 22, 2023",
-            category: "Full Bathroom remodeling",
-            mainBody: "When it comes to finding tranquility and relaxation within the confines of your own home, few spaces hold as much potential as your bathroom. Whether you reside in the bustling heart of St. Louis or the vibrant city of Kansas City, creating a bathroom environment that promotes relaxation is essential for your overall well-being. In this blog, we'll explore how showers and baths can become the ultimate tools for relaxation in your home.",
-            contents: [
-                {
-                    title: "A Sanctuary of Comfort",
-                    body: "In the midst of our busy lives, a warm shower or a luxurious bath can be a sanctuary of comfort and calm. The sensation of water cascading over your skin, the soothing aromas filling the air, and the gentle embrace of warm, steamy water can transport you to a world of tranquility, right in your own St. Louis or Kansas City home.",
-                    image: blog1pic1
-                },
-                {
-                    title: "The Power of Hydrotherapy",
-                    body: "Hydrotherapy is a time-tested method for relaxation and stress relief. The combination of water's natural soothing properties and its ability to ease muscle tension makes it a powerful tool for ultimate relaxation. In your bathroom, a well-designed shower or bath can provide you with your own personal hydrotherapy session whenever you need it"
-                },
-                {
-                    title: "Designing Your Oasis",
-                    body: "To fully embrace the potential of your bathroom as a relaxation haven, consider the following tips:",
-                    list: [
-                        "Luxurious Shower Systems: Upgrade your shower with multiple showerheads, including rain showerheads and body sprays. Opt for adjustable water pressure and temperature controls to tailor your experience.",
-                        "Whirlpool or Soaking Tubs: If space permits, invest in a whirlpool or soaking tub. These options provide deep relaxation through hydrotherapy, and the ambiance created by surrounding lighting can enhance the experience further.",
-                        "Aromatherapy: Integrate aromatherapy into your bathroom with scented candles, essential oil diffusers, or bath salts. Scents like lavender, eucalyptus, and chamomile are known for their calming properties.",
-                        "Music and Lighting: Install soft, ambient lighting and consider incorporating a sound system to play your favorite relaxing tunes while you soak or shower."
-                    ],
-                    image: blog1pic2
-                },
-                {
-                    title: "Muse Bath: Elevating Your Bathroom Experience",
-                    body: "To take your relaxation to the next level, consider Muse Bath's exquisite bath and body products. Their range of bath salts, shower gels, and bath bombs are meticulously crafted to provide a spa-like experience in the comfort of your home. With Muse Bath, you can transform your daily bathing ritual into a luxurious escape, no matter whether you're in St. Louis or Kansas City.",
-                    subBody: "Incorporating Muse Bath products into your bathroom routine allows you to engage all your senses and truly unwind. The soothing scents, nourishing ingredients, and elegant packaging make Muse Bath a perfect addition to your relaxation arsenal."
-                }
-            ]
-        },
+        
     }
 ]
 

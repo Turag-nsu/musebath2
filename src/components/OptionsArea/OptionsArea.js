@@ -1,6 +1,6 @@
 import React from 'react';
 import './OptionsArea.css'
-import optionAreaImg from '../../Images/optionAreaImg.png';
+import optionAreaImg from '../../Images/optionareaimg.webp';
 import CustomButton from '../CustomButton/CustomButton';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';

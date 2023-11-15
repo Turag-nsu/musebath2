@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import HeroPart from '../components/HeroPart/HeroPart';
@@ -13,11 +12,11 @@ import TestimonialArea from '../components/TestimonialArea/TestimonialArea';
 import ArticleArea from '../components/ArticleArea/ArticleArea';
 import TrustedArea from '../components/TrustedArea/TrustedArea';
 import CTAArea from '../components/CTAArea/CTAArea';
-import gallaryPic1 from '../Images/Gallery-pic-1.png';
-import gallaryPic2 from '../Images/Gallery-pic-2.png';
-import gallaryPic3 from '../Images/Gallery-pic-3.png';
-import gallaryPic4 from '../Images/Gallery-pic-4.png';
-import gallaryPic5 from '../Images/Gallery-pic-5.png';
+import gallaryPic1 from '../Images/gallery-pic-1.webp';
+import gallaryPic2 from '../Images/gallery-pic-2.webp';
+import gallaryPic3 from '../Images/gallery-pic-3.webp';
+import gallaryPic4 from '../Images/gallery-pic-4.webp';
+import gallaryPic5 from '../Images/gallery-pic-5.webp';
 const images = [gallaryPic1, gallaryPic2, gallaryPic3, gallaryPic4, gallaryPic5];
 const HomePage=()=> {
   useEffect(() => {

@@ -2,10 +2,10 @@ import React from 'react';
 import './WorkArea.css'
 import { Row, Col, Container } from 'react-bootstrap';
 import Card3 from '../Card3/Card3';
-import WorkAreaPic1 from '../../Images/workArea - 1.png'
-import WorkAreaPic2 from '../../Images/workArea - 2.png'
-import WorkAreaPic3 from '../../Images/workArea - 3.png'
-import WorkAreaPic4 from '../../Images/workArea - 4.png'
+import WorkAreaPic1 from '../../Images/workarea-1.webp'
+import WorkAreaPic2 from '../../Images/workarea-2.webp'
+import WorkAreaPic3 from '../../Images/workarea-3.webp'
+import WorkAreaPic4 from '../../Images/workarea-4.webp'
 
 import { useState, useEffect } from 'react';
 

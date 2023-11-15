@@ -3,7 +3,7 @@ import TrustedArea from '../../components/TrustedArea/TrustedArea';
 import Blogs from '../../components/Blogs/Blogs';
 import ConsultationForm from '../../components/ConsultationForm/ConsultationForm';
 import BlogHeroPart from '../../components/BlogHeroPart/BlogHeroPart';
-import blogBG from '../../Images/Blog/blog_bg.png'
+import blogBG from '../../Images/Blog/blog-bg.webp'
 const BlogPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
