@@ -56,6 +56,7 @@ const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
       data-aos-delay={200}
       data-aos-duration="1000"
       data-aos-ofset="200"
+      data-aos-anchor-placement="top-center"
     >
       <div className="consultation-form-close-btn">
         <button onClick={() => setShowForm(false)}>
@@ -69,7 +70,13 @@ const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
           <p className="consultation-area-title">Free on-site consultation today!</p>
           <Row xs={1} md={colCount || 2}>
             <Col>
-              <div className="consultation-input">
+              <div 
+              data-aos="fade-right"
+              data-aos-delay={200}
+              data-aos-duration="1000"
+              data-aos-ofset="200"
+              data-aos-anchor-placement="top-center"
+              className="consultation-input">
                 <input type="text" placeholder="Name" name="name" />
                 <input type="text" placeholder="Email" name="email" />
                 <input type="text" placeholder="Phone" name="phone" />
@@ -77,7 +84,13 @@ const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
               </div>
             </Col>
             <Col>
-              <div className="consultation-col">
+              <div 
+              data-aos="fade-left"
+              data-aos-delay={200}
+              data-aos-duration="1000"
+              data-aos-ofset="200"
+              data-aos-anchor-placement="top-center"
+              className="consultation-col">
                 <div className="consultation-input">
                   <p className="consultation-input-title">Describe your project</p>
                   <input className="project-description-input" type="text" placeholder="" name="message" />

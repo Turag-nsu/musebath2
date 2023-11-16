@@ -18,6 +18,7 @@ const TrustedArea = () => {
                 data-aos-delay={200}
                 data-aos-duration="1000"
                 data-aos-ofset="200"
+                anchor-placement="top-center"
                 >
                     The Bathroom Remodeler Trusted by the Entire Nation
                 </p>
@@ -28,6 +29,7 @@ const TrustedArea = () => {
                             data-aos-delay={200}
                             data-aos-duration="1000"
                             data-aos-ofset="200"
+                            anchor-placement="top-center"
                         >
                             <img src={trustLogo1} alt="" />
                         </div>
@@ -36,6 +38,7 @@ const TrustedArea = () => {
                         data-aos-delay={300}
                         data-aos-duration="1000"
                         data-aos-ofset="200"
+                        anchor-placement="top-center"
                         className="trust-single-logo">
                             <img src={trustLogo2} alt="" />
                         </div>
@@ -44,6 +47,7 @@ const TrustedArea = () => {
                         data-aos-delay={400}
                         data-aos-duration="1000"
                         data-aos-ofset="200"
+                        anchor-placement="top-center"
                         className="trust-single-logo">
                             <img src={trustLogo3} alt="" />
                         </div>
@@ -52,6 +56,7 @@ const TrustedArea = () => {
                         data-aos-delay={300}
                         data-aos-duration="1000"
                         data-aos-ofset="200"
+                        anchor-placement="top-center"
                         className="trust-single-logo">
                             <img src={trustLogo4} alt="" />
                         </div>
@@ -60,6 +65,7 @@ const TrustedArea = () => {
                         data-aos-delay={200}
                         data-aos-duration="1000"
                         data-aos-ofset="200"
+                        anchor-placement="top-center"
                         className="trust-single-logo">
                             <img src={trustLogo5} alt="" />
                         </div>

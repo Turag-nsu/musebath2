@@ -62,10 +62,22 @@ const ServiceTestimonial = () => {
         <div className='service-container'>
             <Container>
                 <div className='service-testimonial-area'>
-                    <div className='service-testimonial-area-title'>
+                    <div
+                    data-aos="fade-in"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
+                    data-aos-anchor-placement="top-center"
+                    className='service-testimonial-area-title'>
                         <p>Testimonials from Our Valued Clients</p>
                     </div>
-                    <div className='service-testimonial-area-card'>
+                    <div
+                    data-aos="zoom-in"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
+                    data-aos-anchor-placement="top-center"
+                    className='service-testimonial-area-card'>
                         <div className='service-testimonial-area-card-container'>
                             <img style={{ width: '11rem', marginBottom: '1rem' }} src={star} alt="" />
                             <p className="service-testimonial-area-card-text">{text}</p>
@@ -80,7 +92,13 @@ const ServiceTestimonial = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='service-testimonial-next-btn' onClick={handelClickNext}>
+                    <div
+                    data-aos="fade-right"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
+                    data-aos-anchor-placement="top-center"
+                    className='service-testimonial-next-btn' onClick={handelClickNext}>
                         <button
                             
                             // style={{ border: 'none' }}
@@ -88,7 +106,13 @@ const ServiceTestimonial = () => {
                             <img src={nextbtn} alt="" />
                         </button>
                     </div>
-                    <div className='service-testimonial-previous-btn' onClick={handelClickPrev}>
+                    <div
+                    data-aos="fade-left"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
+                    data-aos-anchor-placement="top-center"
+                    className='service-testimonial-previous-btn' onClick={handelClickPrev}>
                         <button
                             
                         >

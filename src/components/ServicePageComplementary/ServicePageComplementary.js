@@ -7,7 +7,13 @@ const ServicePageComplementary = ({title, body1, body2, image}) => {
             <Container>
                 <Row>
                     <Col md={6}>
-                        <div className="complementary-body">
+                        <div
+                        data-aos="fade-right"
+                        data-aos-delay={200}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        data-aos-anchor-placement="top-center"
+                        className="complementary-body">
                             <div className="complementary-subtitle">
                                 <p>Claim your complimentary</p>
                             </div>
@@ -22,7 +28,13 @@ const ServicePageComplementary = ({title, body1, body2, image}) => {
                         </div>
                     </Col>
                     <Col md={6}>
-                        <div className="complementary-pic-container">
+                        <div
+                        data-aos="fade-left"
+                        data-aos-delay={200}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        data-aos-anchor-placement="top-center"
+                        className="complementary-pic-container">
                             <img src={image} alt="" />
                         </div>
                         <button className="complementary-btn2">

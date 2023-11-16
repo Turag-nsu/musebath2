@@ -78,7 +78,14 @@ const ProjectArea = () => {
         // console.log("start: ", start, " end: ", end);
         rows.push(
             showImages[start - 1] && <Row>
-                <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200}>
+                <div className={`${imgClass}`} 
+                data-aos="flip-up" 
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                data-aos-anchor-placement="top-center"
+                >
+
                 {/* <p>{start}</p> */}
                     <Link to={`/projects/${showImages[start-1].id}`}>
                         <img 
@@ -89,7 +96,13 @@ const ProjectArea = () => {
         );
         rows.push(
             showImages[end - 1] && <Row>
-                <div className={`${imgClass}`} data-aos="flip-up" data-aos-delay={200}>
+                <div className={`${imgClass}`} 
+                data-aos="flip-up" 
+                data-aos-delay={200}
+                data-aos-duration="1000"
+                data-aos-ofset="200"
+                data-aos-anchor-placement="top-center"
+                >
                     {/* <p>{end}</p> */}
                     <Link to={`/projects/${showImages[end-1].id}`}>
                         <img 
@@ -155,7 +168,14 @@ const ProjectArea = () => {
                         {singleCol(27, '')}
                         {singleCol(30, 33, "large")}
                         {singleCol(42, "")}
-                        {projectImages.length>limit&&  projectImages.length!=showImages.length && <div className="project-area-btn">
+                        {projectImages.length>limit&&  projectImages.length!=showImages.length && 
+                        <div 
+                        data-aos="fade-up"
+                        data-aos-delay={200}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        data-aos-anchor-placement="top-center"
+                        className="project-area-btn">
                             <CustomButton
                                 onClick={handleMoreClick}
                             text="View More" />

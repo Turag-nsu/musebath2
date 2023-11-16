@@ -6,10 +6,22 @@ const ServicePageCard1 = ({image, title, body1, body2}) => {
         <div className='service-page-card-1' style={{position:"relative", zIndex:"-1"}}>
             <Container>
                 <div className='service-page-card-1-container'>
-                    <div className="service-page-card-1-pic-container">
+                    <div 
+                    data-aos="fade-right"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
+                    data-aos-anchor-placement="top-center"
+                    className="service-page-card-1-pic-container">
                         <img src={image} alt="Service Card Pic 1" />
                     </div>
-                    <div className="service-page-card-1-text-container">
+                    <div
+                    data-aos="fade-left"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
+                    data-aos-anchor-placement="top-center"
+                    className="service-page-card-1-text-container">
                         <div className="service-page-card-1-title">
                             <p>{title}</p>
                         </div>

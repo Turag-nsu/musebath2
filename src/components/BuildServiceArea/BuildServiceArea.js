@@ -8,8 +8,13 @@ const BuildServiceArea = ({ img }) => {
     return (
 
         <div
+            data-aos="zoom-in"
+            data-aos-delay={200}
+            data-aos-duration="1000"
+            data-aos-ofset="200"
+            data-aos-anchor-placement="top-center"
             className='build-area-container'
-            style={{backgroundImage: `url(${img})`}}
+            style={{ backgroundImage: `url(${img})` }}
         >
             <div className='build-area-overlay'></div>
             <Container>
@@ -17,14 +22,26 @@ const BuildServiceArea = ({ img }) => {
                     <Row>
 
                         <Col md={5}>
-                            <div className='build-area-logo'>
+                            <div
+                            data-aos="fade-right"
+                            data-aos-delay={200}
+                            data-aos-duration="1000"
+                            data-aos-ofset="200"
+                            data-aos-anchor-placement="top-center"
+                            className='build-area-logo'>
                                 <img src={buildLogo} alt="" />
                                 {/* <img src={img} alt="" /> */}
                             </div>
                         </Col>
 
                         <Col md={7}>
-                            <div className='build-area-text-btn'>
+                            <div
+                            data-aos="fade-left"
+                            data-aos-delay={200}
+                            data-aos-duration="1000"
+                            data-aos-ofset="200"
+                            data-aos-anchor-placement="top-center"
+                            className='build-area-text-btn'>
                                 <div className='build-area-text'>
                                     <div className='build-area-text-title'>
                                         <p>Design Build services</p>

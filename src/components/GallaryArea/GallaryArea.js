@@ -10,7 +10,12 @@ const GallaryArea = ({ images, title }) => {
     return (
         <div className='gallary-area' >
             <Container>
-                <p className='gallary-area-title'>
+                <p
+                data-aos="zoom-in"
+                data-aos-delay={200}
+                data-aos-duration="700"
+                data-aos-ofset="200"
+                className='gallary-area-title'>
                     {title}
                 </p>
                 <Row xs={1} md={3}>
@@ -18,8 +23,9 @@ const GallaryArea = ({ images, title }) => {
                         <div className='gallary-pic-container' 
                         data-aos="flip-left"
                         data-aos-delay={200}
-                        data-aos-duration="700"
+                        data-aos-duration="1000"
                         data-aos-ofset="200"
+                        data-aos-anchor-placement="top-center"
                         >
                             <img src={images[0]} alt="" />
                         </div>
@@ -29,6 +35,9 @@ const GallaryArea = ({ images, title }) => {
                         <div 
                         data-aos="flip-left"
                         data-aos-delay={200 + 1 * 100}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        data-aos-anchor-placement="top-center"
                         className='gallary-pic-container'>
                             <img src={images[1]} alt="" />
                         </div>
@@ -38,6 +47,9 @@ const GallaryArea = ({ images, title }) => {
                         <div 
                         data-aos="flip-left"
                         data-aos-delay={200 + 2 * 100}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        data-aos-anchor-placement="top-center"
                         className='gallary-pic-container'>
                             <img src={images[2]} alt="" />
                         </div>
@@ -49,6 +61,9 @@ const GallaryArea = ({ images, title }) => {
                         <div 
                         data-aos="flip-left"
                         data-aos-delay={200 + 3 * 100}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        data-aos-anchor-placement="top-center"
                         className='gallary-pic-container'>
                             <img src={images[3]} alt="" />
                         </div>
@@ -58,6 +73,9 @@ const GallaryArea = ({ images, title }) => {
                         <div
                         data-aos="flip-left"
                         data-aos-delay={200 + 4 * 100}
+                        data-aos-duration="1000"
+                        data-aos-ofset="200"
+                        data-aos-anchor-placement="top-center"
                         className='gallary-pic-container'>
                             <img src={images[4]} alt="" />
                         </div>
@@ -69,6 +87,7 @@ const GallaryArea = ({ images, title }) => {
                 data-aos-delay={200}
                 data-aos-duration="700"
                 data-aos-ofset="200"
+                data-aos-anchor-placement="top-center"
                 >
                     <Link to='/projects'><CustomButton text="View All Projects" /></Link>
                 </div>
