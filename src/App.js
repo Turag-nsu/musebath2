@@ -21,21 +21,16 @@ import TestArea from './components/TestArea/TestArea';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
-  const admin = {
-    details: {
-      username: "admin",
-      password: "password"
-    },
-  }
+  
   const user = {
     details: {
       username: "",
-      password: ""
+      password: "",
     },
     loggedIn: (username, password) => {
       // const checkUser = JSON.parse(localStorage.getItem('user'));
       // console.log(user.details.username, admin.details.username, user.details.password, admin.details.password);
-      if (username === admin.details.username && password === admin.details.password) {
+      if (username === process.env.REACT_APP_ADMIN && password === process.env.REACT_APP_PASSWORD) {
         return true;
       }
       return false;
@@ -44,7 +39,7 @@ function App() {
       user.details.username = userName;
       user.details.password = password;
       localStorage.setItem('user', JSON.stringify(user.details));
-      console.log(JSON.parse(localStorage.getItem('user')));
+      // console.log(JSON.parse(localStorage.getItem('user')));
     },
     isAdmin: () => {
       // return false
@@ -57,6 +52,7 @@ function App() {
       return user.loggedIn(checkUser.username, checkUser.password);
     }
   }
+  // console.log(process.env.REACT_APP_ADMIN, process.env.REACT_APP_PASSWORD);
   return (
 
     <div className="App">
