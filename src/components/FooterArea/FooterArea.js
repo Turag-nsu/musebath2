@@ -9,29 +9,29 @@ import { useState } from "react";
 import logo from "../../Images/musebath-logo.svg"
 const FooterArea = () => {
     const [selected, setSelected] = useState(null);
-  const scrollToSection = (sectionId) => {
-    setSelected(sectionId);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ block:"center", behavior: 'smooth' });
-    }
-  };
-  const checkServiceClick = () => {
-    if (selected === 'services') {
-      scrollToSection('services');
-      setSelected(null);
-    }
-  };
-  React.useEffect(() => {
-    checkServiceClick();
-    
-  }, []);
+    const scrollToSection = (sectionId) => {
+        setSelected(sectionId);
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ block: "center", behavior: 'smooth' });
+        }
+    };
+    const checkServiceClick = () => {
+        if (selected === 'services') {
+            scrollToSection('services');
+            setSelected(null);
+        }
+    };
+    React.useEffect(() => {
+        checkServiceClick();
 
-  
-  const handleLinkClick = () => {
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    navbarToggler.click();
-  };
+    }, []);
+
+
+    const handleLinkClick = () => {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        navbarToggler.click();
+    };
     return (
         <div className="footer-area">
 
@@ -39,7 +39,9 @@ const FooterArea = () => {
                 <Row className="footer-row">
                     <Col className="footer-col1" xs={6}>
                         <div className="footer-area1">
-                        <img style={{margin:"0.5rem 0 1rem 0"}} src={logo} alt="Muse Bath" />
+                            <a href="/">
+                                <img style={{ margin: "0.5rem 0 1rem 0" }} src={logo} alt="Muse Bath" />
+                            </a>
                             <p class="footer-subtitle">Elevate your bathroom to a tranquil sanctuary.</p>
                             <div className="social-logo">
                                 <a href="https://www.facebook.com/musebath.us/" target="_blank" >
@@ -56,7 +58,7 @@ const FooterArea = () => {
                                 <p class="footer-subtitle" >Home</p>
                             </a>
 
-                            <a href="\" style={{ textDecoration: "none" }} onClick={() => {handleLinkClick(); scrollToSection('services')}}>
+                            <a href="\" style={{ textDecoration: "none" }} onClick={() => { handleLinkClick(); scrollToSection('services') }}>
                                 <p class="footer-subtitle">Service</p>
                             </a>
 
@@ -87,7 +89,7 @@ const FooterArea = () => {
 
                 <img className="footer-line" src={footerLine} ></img>
                 <div className="copyright-area">
-                    <p>Copyright © 2023  All rights reserved</p>
+                    <p>Copyright ©MUSE BATH 2023  All rights reserved</p>
                 </div>
             </Container>
 

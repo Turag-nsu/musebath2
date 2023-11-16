@@ -28,10 +28,10 @@ const ContactArea = () => {
                         <img src={emailIcon} alt="" />
                         <p className='mail-id'>info@musebath.us</p>
                     </div>
-                    <div className='location-area'>
+                    {/* <div className='location-area'>
                         <img src={locationIcon} alt="" />
                         <p className='location'>7477 Wise Avenue<br />Richmond Heights, MO 63117</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div
