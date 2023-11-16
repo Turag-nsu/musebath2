@@ -40,7 +40,7 @@ const FooterArea = () => {
                     <Col className="footer-col1" xs={6}>
                         <div className="footer-area1">
                             <a href="/">
-                                <img style={{ margin: "0.5rem 0 1rem 0" }} src={logo} alt="Muse Bath" />
+                                <img className="footer-logo" style={{ margin: "0.5rem 0 1rem 0" }} src={logo} alt="Muse Bath" />
                             </a>
                             <p class="footer-subtitle">Elevate your bathroom to a tranquil sanctuary.</p>
                             <div className="social-logo">

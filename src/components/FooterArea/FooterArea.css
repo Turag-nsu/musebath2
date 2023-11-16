@@ -94,6 +94,10 @@
     padding-left: 10rem;
 
 }
+
+.footer-logo{
+    width: 10rem
+}
 .social-logo{
     display: flex;
     justify-content:flex-start;
