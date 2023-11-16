@@ -1,12 +1,14 @@
 .customnav{
+    /* background-image: linear-gradient(to top, #ffffff00 10% , #00000000 20% ,  #00000075, #000000 ); */
     background-color: #000A1A;
+    ;
     min-height: 3rem;
 }
 .customnav ,.navlinks a{
     color: white;
     text-decoration: none;
     font-family: var(--heading-h-3);
-    border: solid 1px transparent;
+    /* border: solid 1px transparent; */
 }
 .logo{
     color: var(--essential-white, #FFF);
@@ -19,8 +21,8 @@
     
 }
 .musebath-logo{
-    /* filter: drop-shadow(0.5px 0.5px 0.5px #FFD700); */
-    width: 3.75rem;
+    filter: drop-shadow(1px 1px 1px #000000);
+    width: 13.75rem;
 }
 .logo:hover{
     transition: all 0.3s ease-in-out;
