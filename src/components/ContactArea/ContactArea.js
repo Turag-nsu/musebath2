@@ -35,11 +35,11 @@ const ContactArea = () => {
                 </div>
             </div>
             <div
-                data-aos="zoom-in"
-                data-aos-delay={200}
-                data-aos-duration="1000"
-                data-aos-ofset="200"
-                data-aos-anchor-placement="top-center"
+                // data-aos="zoom-in"
+                // data-aos-delay={200}
+                // data-aos-duration="1000"
+                // data-aos-ofset="200"
+                // data-aos-anchor-placement="top-center"
                 className='divide-line'>
                 <img src={line} alt="" />
             </div>

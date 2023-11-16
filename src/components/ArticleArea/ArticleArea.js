@@ -25,10 +25,10 @@ const ArticleArea = () => {
         <div className='article-area'>
             <Container>
                 <p className='article-area-title'
-                data-aos="zoom-in"
-                data-aos-delay={200}
-                data-aos-duration="1000"
-                data-aos-ofset="200"
+                    data-aos="zoom-in"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
                 >
                     Tips for a Successful Bathroom Remodel
                 </p>
@@ -44,12 +44,14 @@ const ArticleArea = () => {
                     </Row>
                 </div>
                 <div className="article-area-btn"
-                data-aos="zoom-in"
-                data-aos-delay={200}
-                data-aos-duration="1000"
-                data-aos-ofset="200"
+                    data-aos="zoom-in"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
                 >
-                <CustomButton text='View All Article'/>
+                    <a href='/blog'>
+                        <CustomButton text='View All Article' />
+                    </a>
                 </div>
             </Container>
         </div>
