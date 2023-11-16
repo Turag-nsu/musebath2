@@ -91,6 +91,7 @@
     display: flex;
     /* align-items: center; */
     justify-content: space-between;
+    padding-left: 10rem;
 
 }
 .social-logo{
@@ -122,6 +123,9 @@
     .footer-area1 {
         max-width: 6rem;
     }
+    .footer-area2{
+        padding-left: 2rem;
+    }
 
     .footer-gap {
         display: none;
@@ -131,5 +135,9 @@
     .footer-area3 {
         /* padding: .25rem; */
         margin-right: 1.5rem;
+    }
+
+    .footer-col2{
+        padding-left: 4rem;
     }
 }

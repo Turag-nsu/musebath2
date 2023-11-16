@@ -73,7 +73,7 @@ const FooterArea = () => {
                         </div>
                     </Col>
                     <Col className='footer-gap' xs={1}></Col>
-                    <Col style={{paddingLeft:"10rem"}} className="footer-col2" xs={5}>
+                    <Col className="footer-col2" xs={5}>
                         <div className="footer-area3">
                             <p class="footer-title">Schedule Your Estimation</p>
                             <p class="footer-subtitle">Call us:<br></br>3144082708</p>
