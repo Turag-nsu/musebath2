@@ -1,0 +1,88 @@
+/* import React from "react";
+import "./MyModal.css";
+
+const MyModal = ({ mainImageIdx, images }) => {
+    const [titleImgIdx, setTitleImgIdx] = useState(mainImageIdx);
+    const modalNextClickHandler = () => {
+        if (titleImgIdx < images.length - 1) {
+            titleImgIdx++;
+        }
+    }
+    const modalPrevClickHandler = () => {
+        if (titleImgIdx > 0) {
+            titleImgIdx--;
+        }
+    }
+    return (
+        <div className="modal-area">
+            <div className="main-Image">
+                <img src={images[mainImageIdx]} alt="" />
+            </div>
+            <div className="modal-buttons">
+                <div className="modal-next-btn">
+                    <button
+                    onClick={modalNextClickHandler}
+                    >Next</button>
+                    </div>
+                <div className="modal-prev-btn">
+                    <button
+                    onClick={modalPrevClickHandler}
+                    >Prev</button>
+                    </div>
+            </div>
+        </div>
+    );
+}
+export default MyModal; */
+.modal-area{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-area img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    z-index: 500;
+}
+.main-Image img{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.modal-buttons{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.modal-buttons button{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    /* color: white; */
+    cursor: pointer;
+}
+.modal-buttons button:hover{
+    color: #f1f1f1;
+}
+.modal-buttons button:focus{
+    outline: none;
+}
+.modal-next-btn{
+    margin-left: 2rem;
+}
+.modal-prev-btn{
+    margin-right: 2rem;
+}
