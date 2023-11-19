@@ -33,6 +33,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    z-index: 101;
 }
 .modal-buttons button{
     background-color: transparent;
@@ -42,7 +43,7 @@
     cursor: pointer;
 }
 .modal-buttons button:hover{
-    color: #f1f1f1;
+    /* color: #f1f1f1; */
 }
 .modal-buttons button:focus{
     outline: none;
@@ -60,4 +61,8 @@
     transform: translate(-50%, -50%);
     /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: 100;
+}
+.modal-prev-btn .testimonial-prev-button:hover{
+    /* background-color: var(--primary-shade-1, #FFD700) !important; */
+    
 }

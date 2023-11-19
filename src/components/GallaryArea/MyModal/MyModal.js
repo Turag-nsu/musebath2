@@ -83,7 +83,7 @@ const MyModal = ({ mainImageIdx, images }) => {
                         onClick={modalPrevClickHandler}
                         style={{ border: 'none' }}
                     >
-                        <div className="testimonial-prev-button" style={{ backgroundColor: '#000a1a' }}>
+                        <div className="testimonial-prev-button" style={{ backgroundColor: '#000a1a', border:"none" }}>
                             <img src={callMade2} alt="" />
                         </div>
                     </button>
