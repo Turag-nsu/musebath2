@@ -17,9 +17,38 @@ import gallaryPic2 from '../Images/gallery-pic-2.webp';
 import gallaryPic3 from '../Images/gallery-pic-3.webp';
 import gallaryPic4 from '../Images/gallery-pic-4.webp';
 import gallaryPic5 from '../Images/gallery-pic-5.webp';
-const images = [gallaryPic1, gallaryPic2, gallaryPic3, gallaryPic4, gallaryPic5];
+import {handleGetProjects} from '../services/projectServices';
+import { useState } from 'react';
+
+// const images = [gallaryPic1, gallaryPic2, gallaryPic3, gallaryPic4, gallaryPic5];
+
 const HomePage=()=> {
+  const [images, setImages] = useState([]);
+  const getImages = async () => {
+    const { data } = await handleGetProjects();
+    const imagesArray = data.map((item) => item.images.map((image) => image.img)).flat();
+    setImages(imagesArray);
+    const shuffleImages = (array) => {
+      let currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+
+      while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+
+        return array;
+      }
+    };
+    await shuffleImages(images);
+    console.log(images);
+  }
   useEffect(() => {
+    getImages();
     window.scrollTo(0, 0);
   }, []);
   return (
