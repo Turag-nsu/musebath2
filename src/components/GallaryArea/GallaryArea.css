@@ -73,8 +73,8 @@
     right: 2rem;
     font-size: 2rem;
     cursor: pointer;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    padding: 0.1rem 1rem;
     color: var(--essential-black, #000A1A);
     background-color: var(--primary-shade-1, #FFD700);
     border: none;
