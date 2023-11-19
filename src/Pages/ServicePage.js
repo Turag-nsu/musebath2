@@ -16,7 +16,7 @@ import { Container } from 'react-bootstrap';
 import { useEffect } from 'react';
 
 const ServicePage = () => {
-  // console.log(data);
+  // const [showModal, setShowModal] = React.useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
 }, []);
