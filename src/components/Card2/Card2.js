@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import './Card2.css';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 const Card2 = ({ imgLink, title, body, id }) => {
-
+    const navigator = useNavigate();
     return (
         <div
             className='card2-container'
             data-aos="flip-left"
             data-aos-offset="100" data-aos-duration="1000"
             data-aos-delay={200 + id * 300}
-            // onMouseOver={handleMouseOver}
-            // onMouseOut={handleMouseOut}
+            onClick={() =>{
+                navigator(`/services/${id}`);
+            }}  
         >
             <div
 
