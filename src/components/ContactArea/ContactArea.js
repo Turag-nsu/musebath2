@@ -26,7 +26,7 @@ const ContactArea = () => {
                     </div>
                     <div className='mail-area'>
                         <img src={emailIcon} alt="" />
-                        <p className='mail-id'>info@musebath.us</p>
+                        <p className='mail-id'>westestate@yahoo.com</p>
                     </div>
                     {/* <div className='location-area'>
                         <img src={locationIcon} alt="" />

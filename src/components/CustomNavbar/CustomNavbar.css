@@ -22,7 +22,7 @@
 }
 .musebath-logo{
     filter: drop-shadow(1px 1px 1px #000000);
-    width: 13.75rem;
+    width: 12.75rem;
 }
 .logo:hover{
     transition: all 0.3s ease-in-out;
