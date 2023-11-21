@@ -12,15 +12,9 @@ import TestimonialArea from '../components/TestimonialArea/TestimonialArea';
 import ArticleArea from '../components/ArticleArea/ArticleArea';
 import TrustedArea from '../components/TrustedArea/TrustedArea';
 import CTAArea from '../components/CTAArea/CTAArea';
-import gallaryPic1 from '../Images/gallery-pic-1.webp';
-import gallaryPic2 from '../Images/gallery-pic-2.webp';
-import gallaryPic3 from '../Images/gallery-pic-3.webp';
-import gallaryPic4 from '../Images/gallery-pic-4.webp';
-import gallaryPic5 from '../Images/gallery-pic-5.webp';
+
 import {handleGetProjects} from '../services/projectServices';
 import { useState } from 'react';
-
-// const images = [gallaryPic1, gallaryPic2, gallaryPic3, gallaryPic4, gallaryPic5];
 
 const HomePage=()=> {
   const [images, setImages] = useState([]);
@@ -28,25 +22,31 @@ const HomePage=()=> {
     const { data } = await handleGetProjects();
     const imagesArray = data.map((item) => item.images.map((image) => image.img)).flat();
     setImages(imagesArray);
+
     const shuffleImages = (array) => {
-      let currentIndex = array.length,
-        temporaryValue,
-        randomIndex;
+      return new Promise((resolve) => {
+        let currentIndex = array.length,
+          temporaryValue,
+          randomIndex;
 
-      while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+        while (0 !== currentIndex) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
 
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
 
-        return array;
-      }
+        resolve(array);
+      });
     };
-    await shuffleImages(images);
-    console.log(images);
-  }
+
+    const shuffledArray = await shuffleImages(imagesArray);
+    setImages(shuffledArray);
+    // console.log(shuffledArray);
+  };
+
   useEffect(() => {
     getImages();
     window.scrollTo(0, 0);
