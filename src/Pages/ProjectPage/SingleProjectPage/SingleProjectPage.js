@@ -44,13 +44,7 @@ const SingleProjectPage = () => {
     return (
         <div style={{ overflow: 'hidden' }} className='single-project-page-container'>
             <Container>
-            <div 
-            data-aos="zoom-in"
-            data-aos-delay={200}
-            data-aos-duration="1000"
-            data-aos-ofset="200"
-            
-            className="single-project-header">
+            <div className="single-project-header">
                 <p className='title'>{project.title}</p>
                 <p className='subtitle'>{project.subtitle}</p>
             </div>
@@ -60,27 +54,15 @@ const SingleProjectPage = () => {
                 <Row>
                     <Col lg={8} md={12}>
                         <div className='single-projext-page-details-container'>
-                            <div
-                            data-aos="fade-in"
-                            data-aos-delay={200}
-                            data-aos-duration="1000"
-                            data-aos-ofset="200"
-                            className="single-projext-page-details-title">
+                            <div className="single-projext-page-details-title">
                                 <p>Project Description</p>
                             </div>
-                            <div 
-                            data-aos="fade-up"
-                            data-aos-delay={200}
-                            data-aos-duration="1000"
-                            data-aos-ofset="200"
-                            className="single-projext-page-details-body" >
+                            <div className="single-projext-page-details-body" >
                                 {
                                     project.description.map((item, index) => {
                                         
                                         return (
-                                            <p
-                                            
-                                            style={{whiteSpace:"pre-wrap"}} key={index}>{item}</p>
+                                            <p style={{whiteSpace:"pre-wrap"}} key={index}>{item}</p>
                                         )
                                     })
                                 }
