@@ -10,9 +10,8 @@
     /* margin-bottom: 2rem; */
     height: 103vh;
     background-color: (--greyscale-shade-4, #F8F9FA);
+    margin-top: 3rem;
 }
-
-.hero-part p {}
 
 .hero-padding {
     padding: 6rem;
@@ -43,7 +42,7 @@
     /* 5.5rem */
     text-transform: capitalize;
     margin-top: 7.5rem;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
 }
 
 .hero-text2 {

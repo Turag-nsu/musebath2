@@ -19,6 +19,7 @@ import ViewProject from './components/AdminComponents/ViewProject/ViewProject';
 
 import TestArea from './components/TestArea/TestArea';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import AboutusPage from './Pages/AboutusPage';
 
 function App() {
   
@@ -67,6 +68,7 @@ function App() {
           </Route>
           <Route path='blog/:blogID' element={<BlogSubPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/about-us" element={<AboutusPage />} />
           <Route path="/services" element={<ServicePage />} >
             <Route path=":serviceID" element={<ServicePage />} />
           </Route>

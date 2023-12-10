@@ -51,6 +51,15 @@ span.navbar-toggler-icon{
     background-image: url('../../Images/menu.png');
 }
 
+@media screen and (max-width: 993px){
+    .customnav .mx-auto{
+        padding-top: 1rem;
+    }
+    .mx-auto.navlinks.navbar-nav{
+        margin-bottom: 3rem;
+    }
+}
+
 @media screen and (max-width: 767px){
     .customnav .mx-auto{
         padding-top: 1rem;
