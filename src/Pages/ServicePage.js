@@ -14,6 +14,7 @@ import { useParams } from 'react-router-dom';
 import data from '../Database/Data';
 import { Container } from 'react-bootstrap';
 import { useEffect } from 'react';
+import ErrorPage from '../components/ErrorPage/ErrorPage';
 
 const ServicePage = () => {
   // const [showModal, setShowModal] = React.useState(false);
@@ -24,12 +25,7 @@ const ServicePage = () => {
   const serviceID = params.serviceID;
   if(serviceID >3 || serviceID <1){
     return(
-      <Container>
-        <div className='not-found-area'>
-        
-        <p>404<br></br>Link not found</p>
-      </div>
-      </Container>
+      <ErrorPage text="Service not found" />
     )
   }
   // console.log(data[0]);
@@ -50,10 +46,7 @@ const ServicePage = () => {
         body2 = {service.renovation.body2}
       />
       <ConsultationForm showForm={true}/>
-      <GallaryArea
-        images={service.gallery.images}
-        title={service.gallery.title}
-      />
+      
       <BuildServiceArea img={service.buildService.image}/>
       <ServicePageComplementary 
         title={service.complementaryService.title}

@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import CustomButton from '../CustomButton/CustomButton';
 import { Link } from 'react-router-dom';
 // import {CloseButton} from "react-bootstrap";
-
+import imgLoading from '../../Images/Loading_2.gif'
 import { useState } from "react";
 import MyModal from './MyModal/MyModal';
 
@@ -12,6 +12,13 @@ import MyModal from './MyModal/MyModal';
 const GallaryArea = ({ images, title }) => {
     const [showModal, setShowModal] = useState(false);
     const [mainImageIdx, setMainImageIdx] = useState(0);
+    const [loadingImages, setLoadingImages] = useState(Array(images.length).fill(true));
+    const handleImageLoad = (idx) => {
+        const newLoadingImages = [...loadingImages];
+        newLoadingImages[idx] = false;
+        setLoadingImages(newLoadingImages);
+    }
+        
     return (
         <div className='gallary-area' >
             <div stile={{ marginTop: "13.5rem" }} className="lightbox-viewer">
@@ -19,7 +26,7 @@ const GallaryArea = ({ images, title }) => {
                     <div>
                         <div className='modal-overlay' onClick={() => setShowModal(false)}></div>
                         <MyModal mainImageIdx={mainImageIdx} images={images} />
-                        <button className='close-btn' onClick={() => setShowModal(false)}>X</button>
+                        <button className='modal-close-btn' onClick={() => setShowModal(false)}>X</button>
                     </div>
                 }
             </div>
@@ -49,7 +56,8 @@ const GallaryArea = ({ images, title }) => {
                             }
                             }
                         >
-                            <img src={images[0]} alt="" />
+                            {loadingImages[0] && <img src={imgLoading} alt=""   />}
+                            <img src={images[0]} alt="" onLoad={()=>{handleImageLoad(0)}} />
                         </div>
 
                     </Col>
@@ -66,7 +74,8 @@ const GallaryArea = ({ images, title }) => {
                                 setMainImageIdx(1);
                             }
                             }>
-                            <img src={images[1]} alt="" />
+                            {loadingImages[1] && <img src={imgLoading} alt=""   />}
+                            <img src={images[1]} alt="" onLoad={()=>{handleImageLoad(1)}} />
                         </div>
 
                     </Col>
@@ -84,7 +93,8 @@ const GallaryArea = ({ images, title }) => {
                                 setMainImageIdx(2);
                             }
                             }>
-                            <img src={images[2]} alt="" />
+                            {loadingImages[2] && <img src={imgLoading} alt=""   />}
+                            <img src={images[2]} alt="" onLoad={()=>{handleImageLoad(2)}} />
                         </div>
 
                     </Col>
@@ -104,7 +114,8 @@ const GallaryArea = ({ images, title }) => {
                             }
                             }
                         >
-                            <img src={images[3]} alt="" />
+                            {loadingImages[3] && <img src={imgLoading} alt=""   />}
+                            <img src={images[3]} alt="" onLoad={()=>{handleImageLoad(3)}} />
                         </div>
 
                     </Col>
@@ -121,7 +132,8 @@ const GallaryArea = ({ images, title }) => {
                             }
                             }
                             className='gallary-pic-container'>
-                            <img src={images[4]} alt="" />
+                            {loadingImages[4] && <img src={imgLoading} alt=""   />}
+                            <img src={images[4]} alt="" onLoad={()=>{handleImageLoad(4)}} />
                         </div>
 
                     </Col>

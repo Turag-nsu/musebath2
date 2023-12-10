@@ -14,7 +14,7 @@ const ArticleArea = () => {
         setData(response.data.slice(0, 3));
         if (response.status === 200) setIsLoading(false);
         else { setIsLoading(false) };
-        console.log(response);
+        // console.log(response);
     }
     React.useEffect(() => {
         fetchBlogs();
