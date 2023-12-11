@@ -36,7 +36,7 @@ const CustomNavbar = () => {
   return (
     
     <Navbar collapseOnSelect expand="md" className="customnav fixed-top">
-      <Container>
+      <Container >
         <Navbar.Brand href="/">
           <img src={NavLogo} alt="Muse Bath" className="musebath-logo" />
         </Navbar.Brand>
@@ -46,7 +46,7 @@ const CustomNavbar = () => {
             <Link to="/" onClick={handleLinkClick}>Home</Link>
             <Link to="/" onClick={() => {handleLinkClick(); scrollToSection('services')}}>Services</Link>
             <Link to="/projects" onClick={handleLinkClick}>Projects</Link>
-            {/* <Link to="/blog" onClick={handleLinkClick}>Blog</Link> */}
+            <Link to="/blog" onClick={handleLinkClick}>Blog</Link>
             <Link to="/about-us" onClick={handleLinkClick}>About</Link>
           </Nav>
           <Link to="/contact-us">

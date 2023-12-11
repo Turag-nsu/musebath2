@@ -4,6 +4,7 @@
     ;
     min-height: 3rem;
 }
+
 .customnav ,.navlinks a{
     color: white;
     text-decoration: none;
@@ -52,11 +53,13 @@ span.navbar-toggler-icon{
 }
 
 @media screen and (max-width: 993px){
-    .customnav .mx-auto{
-        padding-top: 1rem;
+    .customnav Container{
+        padding: 0 0rem;
     }
-    .mx-auto.navlinks.navbar-nav{
-        margin-bottom: 3rem;
+
+    .navlinks{
+        gap: 0rem;  
+        margin-left: 1px;
     }
 }
 
