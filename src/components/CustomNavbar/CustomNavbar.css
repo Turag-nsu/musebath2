@@ -50,6 +50,7 @@
 }
 span.navbar-toggler-icon{
     background-image: url('../../Images/menu.png');
+    /* background-color: #FFD700; */
 }
 
 @media screen and (max-width: 993px){

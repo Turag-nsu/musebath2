@@ -116,6 +116,10 @@
         font-size: 1rem;
     }
 
+    .footer-logo{
+        width: 6rem
+    }
+
     .footer-subtitle {
         font-size: 0.6rem;
     }
