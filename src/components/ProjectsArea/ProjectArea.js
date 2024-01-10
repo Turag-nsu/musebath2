@@ -53,12 +53,24 @@ const ProjectArea = () => {
         }
 
     }
-
+    const linkGenerator = (title, id) => {
+        const link = title.toLowerCase().replace(/ /g, '-');
+        const linkId = id.toString();
+        const linkIdLength = linkId.length;
+        const linkIdLengthDifference = 5 - linkIdLength;
+        let linkIdString = '';
+        for (let i = 0; i < linkIdLengthDifference; i++) {
+            linkIdString += '0';
+        }
+        linkIdString += linkId;
+        return `${link}-${linkIdString}`;
+    }
     const projectsToProjectImagesArray = (projects) => {
+        console.log(projects);
         const projectImagesArray = [];
         projects.forEach(project => {
             const allImg = project.images.map(image => {
-                return { img: image.img, id: project.id}
+                return { img: image.img, id: project.id, title: project.title}
             });
             projectImagesArray.push(...allImg);
         });
@@ -86,8 +98,10 @@ const ProjectArea = () => {
                 data-aos-anchor-placement="top-center"
                 >
 
-                {/* <p>{start}</p> */}
-                    <Link to={`/projects/${showImages[start-1].id}`}>
+                {/* {console.log(showImages[start-1].title, showImages[start-1].id)} */}
+                    <Link to={`/projects/${
+                        linkGenerator(showImages[start-1].title, showImages[start-1].id)
+                        }`}>
                         <img 
                         loading="lazy" src={showImages[start - 1].img} alt={`Project ${start}`} />
                     </Link>
@@ -104,7 +118,9 @@ const ProjectArea = () => {
                 data-aos-anchor-placement="top-center"
                 >
                     {/* <p>{end}</p> */}
-                    <Link to={`/projects/${showImages[end-1].id}`}>
+                    <Link to={`/projects/${
+                        linkGenerator(showImages[end-1].title, showImages[end-1].id)
+                    }`}>
                         <img 
                         
                         loading="lazy" src={showImages[end - 1].img} alt={`Project ${end}`}/>

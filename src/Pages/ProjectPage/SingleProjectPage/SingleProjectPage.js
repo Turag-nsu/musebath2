@@ -9,13 +9,15 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import PageLoading from '../../../components/PageLoading/PageLoading';
 import ErrorPage from '../../../components/ErrorPage/ErrorPage';
+import { Helmet } from 'react-helmet';
 
 const SingleProjectPage = () => {
     const [project, setProject] = React.useState();
     const [isLoading, setIsLoading] = React.useState(true);
     const [error, setError] = React.useState(false);
-    const {projectID} = useParams();
-    
+    const {projectLink} = useParams();
+    //Number(blogLink.slice(blogLink.length - 5))
+    const projectID = Number(projectLink.slice(projectLink.length - 5));
     const fetchProject = async () => {
         
         try {
@@ -43,6 +45,11 @@ const SingleProjectPage = () => {
     if(isLoading) return <PageLoading />
     return (
         <div style={{ overflow: 'hidden' }} className='single-project-page-container'>
+            <Helmet>
+                <title>{project.title} | Muse Bathrooms</title>
+                <meta name="description" content={project.subtitle} />
+                <meta name="keywords" content={project.keywords} />
+            </Helmet>
             <Container>
             <div className="single-project-header">
                 <p className='title'>{project.title}</p>

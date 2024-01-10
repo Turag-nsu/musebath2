@@ -66,11 +66,11 @@ function App() {
           <Route path="/blog" element={<BlogPage />}>
 
           </Route>
-          <Route path='blog/:blogID' element={<BlogSubPage />} />
+          <Route path='blog/:blogLink' element={<BlogSubPage />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/about-us" element={<AboutusPage />} />
           <Route path="/services" element={<ServicePage />} >
-            <Route path=":serviceID" element={<ServicePage />} />
+            <Route path=":serviceTitle" element={<ServicePage />} />
           </Route>
           <Route path="/projects" element={<ProjectPage />} />
           <Route path="/admin" element={<AdminPage user={user} />} >
@@ -80,7 +80,7 @@ function App() {
             <Route path='view-blogs' element={<ViewPosts />} />
             <Route path='view-project' element={<ViewProject />} />
           </Route>
-          <Route path="/projects/:projectID" element={<SingleProjectPage />} />
+          <Route path="/projects/:projectLink" element={<SingleProjectPage />} />
           <Route path="/:any" element={<ErrorPage />} />
           {/* <Route path="/admin/blog-post" element={<BlogPostArea />} /> */}
         </Routes>

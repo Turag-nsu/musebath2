@@ -5,6 +5,19 @@ import arrow from '../../Images/arrow.svg'
 import { Link } from 'react-router-dom';
 const ArticleAreaCard = ({ img, date, title, body, id }) => {
     // console.log(img)
+    const linkGenerator = (title, id) => {
+        const link = title.toLowerCase().replace(/ /g, '-');
+        const linkId = id.toString();
+        //the id will be 5 digits long. if it is less than 5 digits, add 0s to the front
+        const linkIdLength = linkId.length;
+        const linkIdLengthDifference = 5 - linkIdLength;
+        let linkIdString = '';
+        for (let i = 0; i < linkIdLengthDifference; i++) {
+            linkIdString += '0';
+        }
+        linkIdString += linkId;
+        return `${link}-${linkIdString}`;
+    }
     return (
         <div className="ArticleAreaCardContainer card"
             data-aos="flip-up"
@@ -36,7 +49,7 @@ const ArticleAreaCard = ({ img, date, title, body, id }) => {
             </div>
 
             <div className="article-area-card-button">
-                <Link to={`/blog/${id}`}>
+                <Link to={`/blog/${linkGenerator(title, id)}`}>
                     <button onClick={() => {
                         window.scrollTo(0, 0);
 

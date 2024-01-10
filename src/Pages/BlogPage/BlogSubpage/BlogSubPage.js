@@ -13,17 +13,37 @@ import ContactUsForm from '../../../components/ContactUsForm/ContactUsForm';
 import axios from 'axios';
 import PageLoading from '../../../components/PageLoading/PageLoading';
 import ErrorPage from '../../../components/ErrorPage/ErrorPage';
+import { Helmet } from 'react-helmet';
 // import { set } from 'mongoose';
 
 
 const BlogSubPage = () => {
-    const { blogID } = useParams();
+    const { blogLink } = useParams();
     const [blogID2, setBlogID2] = useState(1);
     const [blogData, setBlogData] = useState();
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(false);
-
+    /**
+     const linkGenerator = (title, id) => {
+        const link = title.toLowerCase().replace(/ /g, '-');
+        const linkId = id.toString();
+        //the id will be 5 digits long. if it is less than 5 digits, add 0s to the front
+        const linkIdLength = linkId.length;
+        const linkIdLengthDifference = 5 - linkIdLength;
+        let linkIdString = '';
+        for (let i = 0; i < linkIdLengthDifference; i++) {
+            linkIdString += '0';
+        }
+        linkIdString += linkId;
+        return `${link}-${linkIdString}`;
+    }
+     */
+    // const purseBlogIDFromLinkGenerator = (blogID) => {
+        
+    //     return Number(blogID.slice(blogID.length - 5));
+    // }
+    const blogID = Number(blogLink.slice(blogLink.length - 5));
     const fetchBlogData = async () => {
         setBlogID2(blogID);
         try {
@@ -76,7 +96,8 @@ const BlogSubPage = () => {
     }, []);
 
     if (error) {
-        return <ErrorPage text="Blog not found" />;
+        console.log(blogID);
+        // return <ErrorPage text="Blog not found" />;
     }
 
 
@@ -134,6 +155,11 @@ const BlogSubPage = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>{blogData.title} | Muse Bathrooms</title>
+                <meta name="description" content={blogData.mainBody} />
+                <meta name="keywords" content={blogData.keywords} />
+            </Helmet>
             <Container>
                 <Row style={{ position: "relative", overflow: "hidden" }}>
                     <Col lg={8} xs={12} className='blog-area-col'>
