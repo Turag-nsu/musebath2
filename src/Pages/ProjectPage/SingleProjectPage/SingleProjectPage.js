@@ -43,12 +43,27 @@ const SingleProjectPage = () => {
     }, []);
     if(error) return <ErrorPage text="Project not found" />
     if(isLoading) return <PageLoading />
+    const metaLink = `https://musebath.com/project/${projectLink}`;
+    const allDescription = project.description.map((item) => item).join(' ');
+    const metaDescription = allDescription.slice(0, 150);
     return (
         <div style={{ overflow: 'hidden' }} className='single-project-page-container'>
             <Helmet>
-                <title>{project.title} | Muse Bathrooms</title>
-                <meta name="description" content={project.subtitle} />
+                <title>{project.title} | Musebath</title>
+                <meta name="description" content={metaDescription} />
                 <meta name="keywords" content={project.keywords} />
+                <meta name="author" content="Musebath" />
+                {/* links */}
+                <meta name='url' content={metaLink} />
+                <meta name='identifier-URL' content={metaLink} />
+                <meta property="og:title" content={project.title} />
+                <meta property="og:description" content={metaDescription} />
+                <meta property="og:image" content={project.images[0].img} />
+                <meta property="og:url" content={metaLink} />
+                <meta property="og:type" content="website" />
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:site_name" content="Musebath" />
+
             </Helmet>
             <Container>
             <div className="single-project-header">

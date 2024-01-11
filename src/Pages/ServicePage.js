@@ -169,15 +169,29 @@ const ServicePage = () => {
     else return null
   }
   const service = findService();
-  console.log(serviceTitle.replace(/-/g, ' '));
-  console.log(data[0].service1.hero.title.toLowerCase());
-
+  if (!service) {
+    return (
+      <ErrorPage text="Service not found" />
+    )
+  }
+  const metaLink = `https://musebath.com/services/${serviceTitle}`;
+  const allDescription = service.renovation.body1 + service.renovation.body2 + service.complementaryService.body1 + service.complementaryService.body2;
+  const metaDescription = allDescription.slice(0, 320);
   return (
     <div>
       <Helmet>
         <title>{service.hero.title} | Muse Bathrooms</title>
-        <meta name="description" content={service.hero.body} />
-        <meta name="keywords" content={service.hero.keywords} />
+        <meta name="description" content={metaDescription} />
+        <meta name='url' content={metaLink} />
+        <meta name='identifier-URL' content={metaLink} />
+        <meta property="og:title" content={service.hero.title} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={service.hero.image} />
+        <meta property="og:url" content={metaLink} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Musebath" />
+        
       </Helmet>
       <BlogHeroPart
         bg={service.hero.image}

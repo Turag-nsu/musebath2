@@ -20,6 +20,9 @@ const Blogs = () => {
         if (response.status === 200) setIsLoading(false);
         else { setIsLoading(false) };
     }
+    
+    
+
     React.useEffect(() => {
         setLimitOfData(12);
         fetchBlogs();

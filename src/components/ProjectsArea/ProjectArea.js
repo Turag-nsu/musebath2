@@ -25,7 +25,28 @@ const ProjectArea = () => {
         setActiveKey(selectedKey);
         await fetchProjects(selectedKey);
     };
-
+    // const getAllLinks = async () => {
+    //     const response = await axios.get(`https://musebath.onrender.com/api/project-posts`);
+    //     const links = [];
+    //     response.data.forEach(project => {
+    //         links.push(linkGenerator2(project.title, project.id));
+    //     });
+    //     console.log(links);
+    // }
+    // getAllLinks();
+    // const linkGenerator2 = (title, id) => {
+    //     const link = title.toLowerCase().replace(/ /g, '-');
+    //     const linkId = id.toString();
+    //     //the id will be 5 digits long. if it is less than 5 digits, add 0s to the front
+    //     const linkIdLength = linkId.length;
+    //     const linkIdLengthDifference = 5 - linkIdLength;
+    //     let linkIdString = '';
+    //     for (let i = 0; i < linkIdLengthDifference; i++) {
+    //         linkIdString += '0';
+    //     }
+    //     linkIdString += linkId;
+    //     return `https://musebath.us/projects/${link}-${linkIdString}`;
+    // }
     
     const fetchProjects = async (cat) => {
         // const { category } = useParams();
@@ -37,6 +58,7 @@ const ProjectArea = () => {
             
             // setShowData(response.data.slice(0, limitOfData));
             setProjectImages(projectsToProjectImagesArray(response.data));
+            
             setShowImages(projectsToProjectImagesArray(response.data).slice(0, limit));
             if (response.status === 200) setIsLoading(false);
             else { setIsLoading(false) };

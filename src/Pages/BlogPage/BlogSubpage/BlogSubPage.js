@@ -152,13 +152,27 @@ const BlogSubPage = () => {
             </div>
         )
     }
-
+    const metaDescription = blogData.mainBody.slice(0, 320);
+    const metaBlogLink = `https://www.musebath.us/blog/${blogLink}`;
     return (
         <div>
             <Helmet>
-                <title>{blogData.title} | Muse Bathrooms</title>
-                <meta name="description" content={blogData.mainBody} />
+                <title>{blogData.title} | Musebath</title>
+                <meta name="description" content={metaDescription} />
                 <meta name="keywords" content={blogData.keywords} />
+                <meta name="author" content={blogData.uploaderName} />
+                <meta name="distribution" content="global" />
+                <meta name="rating" content="general" />
+                <meta name="revisit-after" content="1 days" />
+                <meta name="language" content="en" />
+                <meta name="url" content={metaBlogLink} />
+                <meta name="identifier-URL" content={metaBlogLink} />
+                {/* image */}
+                <meta property="og:title" content={`${blogData.title} | Musebath`} />
+                <meta property="og:description" content={metaDescription} />
+                <meta property="og:image" content={blogData.tileImage} />
+                <meta property="og:url" content={metaBlogLink} />
+                
             </Helmet>
             <Container>
                 <Row style={{ position: "relative", overflow: "hidden" }}>

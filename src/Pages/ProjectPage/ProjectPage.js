@@ -5,6 +5,7 @@ import TrustedArea from '../../components/TrustedArea/TrustedArea';
 import BlogHeroPart from '../../components/BlogHeroPart/BlogHeroPart';
 import projectBg from '../../Images/Project/project-hero-bg.jpeg';
 import './ProjectPage.css'
+import { Helmet } from 'react-helmet';
 
 const ProjectPage = () => {
     useEffect(() => {
@@ -14,6 +15,11 @@ const ProjectPage = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Our Projects | Musebath</title>
+                <meta name="description" content="Musebath has amazing bathroom renovation projects. Check out our projects and get ideas for your bathroom renovation. We are the best bathroom renovation company in Missouri." />
+                <meta name="keywords" content="bathroom renovations, bathroom renovations Missouri, bathroom renovations near me, bathroom renovations in melbourne, bathroom renovations eastern suburbs, bathroom renovations south eastern suburbs" />
+            </Helmet>
             {/* <div > */}
             <BlogHeroPart text="Our Projects" bg={projectBg} />
             {/* </div> */}
