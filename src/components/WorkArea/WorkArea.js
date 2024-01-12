@@ -48,21 +48,22 @@ const WorkArea = () => {
     }, []);
 
     // const marginTopCalculation = (id) => (id % 2 === 0 ? '2.5' : '0') + (isMobile ? '0' : '') + 'rem';
-    const marginTopCalculation =(id)=>{
-        if(isMobile)
-        {
+    const marginTopCalculation = (id) => {
+        if (isMobile) {
             return '0rem';
         }
-        else
-        {
-            return (id % 2 === 0 ? '2.5' : '0')+'rem';
+        else {
+            return (id % 2 === 0 ? '2.5' : '0') + 'rem';
         }
     }
     return (
         <div className='work-area' >
             <Container>
                 <Row>
-                    <p className='work-area-title'>Our Working Process</p>
+                    <article>
+                        <h1 className='work-area-title'>Our Working Process</h1>
+                    </article>
+
                 </Row>
                 <Row xs={1} md={4}>
                     {works.map(work => (

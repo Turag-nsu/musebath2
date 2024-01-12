@@ -66,14 +66,19 @@
 }
 
 .article-area-card-body {
-    margin: 1rem 0 1rem 0;
+    margin: 1.5rem 0 1rem 0;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-self: normal;
 }
 
-.article-area-card-title {
+.article-area-card-title{
+    margin-bottom: 0.6rem;
+
+}
+
+.article-area-card-title h3 {
     color: var(--essential-black, #000A1A);
 
     /* Title/T 2 */

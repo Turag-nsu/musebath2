@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.testimonial-area-title p {
+.testimonial-area-title h1{
     color: var(--essential-black, #000A1A);
     font-family: DM Sans;
     font-size: 2.625rem;

@@ -23,7 +23,7 @@ const TestimonialArea = () => {
             title: "Product designer",
             text: "Muse Bath stands out as a beacon of tranquility in the world of self-care products. Their bath soaks, infused with natural essences and botanicals, turn ordinary baths into sublime escapes from the daily hustle. With each use, I am transported to a state of calmness and balance, thanks to the harmonious blend of scents and the thoughtfully designed packaging. Muse Bath has undeniably mastered the art of crafting products that nourish both the body and the soul."
         },
-        
+
     ]);
 
     const handelClickNext = () => {
@@ -62,18 +62,20 @@ const TestimonialArea = () => {
         <div className='testimonial-area'>
             <Container>
                 <div className="testimonial-area-title"
-                data-aos="zoom-in"
-                data-aos-delay={200}
-                data-aos-duration="1000"
-                data-aos-ofset="200"
+                    data-aos="zoom-in"
+                    data-aos-delay={200}
+                    data-aos-duration="1000"
+                    data-aos-ofset="200"
                 >
                     <div>
-                        <p>Testimonials from Our Valued Clients</p>
+                        <article>
+                            <h1>Testimonials from Our Valued Clients</h1>
+                        </article>
                     </div>
                     <div className='testimonial-area-title-buttons'>
-                        <button 
-                        onClick={handelClickPrev}
-                        style={{ border: 'none' }}>
+                        <button
+                            onClick={handelClickPrev}
+                            style={{ border: 'none' }}>
                             <div className="testimonial-prev-button">
                                 <img src={callMade3} alt="" />
                             </div>

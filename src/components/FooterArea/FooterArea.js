@@ -44,10 +44,10 @@ const FooterArea = () => {
                             </a>
                             <p class="footer-subtitle">Elevate your bathroom to a tranquil sanctuary.</p>
                             <div className="social-logo">
-                                <a href="https://www.facebook.com/musebath.us/" target="_blank" >
-                                    <img src={fbLogo} alt="" />
+                                <a href="https://www.facebook.com/musebath.us/" target="_blank" aria-level="connect us on facebook" >
+                                    <img src={fbLogo} alt="musebath facebook" />
                                 </a>
-                                <img src={instaLogo} alt="" />
+                                <img src={instaLogo} alt="musebath instagram" />
                             </div>
 
                         </div>
@@ -87,7 +87,7 @@ const FooterArea = () => {
                     </Col>
                 </Row>
 
-                <img className="footer-line" src={footerLine} ></img>
+                <img className="footer-line" src={footerLine} alt="Muse Bath footer line" ></img>
                 <div className="copyright-area">
                     <p>Copyright ©MUSE BATH 2023  All rights reserved</p>
                 </div>

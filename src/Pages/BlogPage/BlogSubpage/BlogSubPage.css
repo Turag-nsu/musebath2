@@ -13,7 +13,7 @@
     padding: 4rem 3rem 3rem 3rem;
 }
 
-.blog-title-area p {
+h1 {
     color: var(--essential-black, #000A1A);
 
     /* Heading/H 3 */
@@ -267,12 +267,14 @@
     }
 
     .blog-full-area{
+        margin-top: 4rem;
         padding: 0 0 2rem 0;
         border-radius: 0;
         margin-bottom: 0;
     }
 
     .blog-title-area{
+        /* margin-top: 4rem; */
         padding: 2rem 1rem 1rem 1rem;
     }
 

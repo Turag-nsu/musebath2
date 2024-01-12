@@ -26,22 +26,10 @@ const Card2 = ({ imgLink, title, body, id }) => {
                 ></div>
                 <p className="card2-title" style={{ width: "16.625rem" }}>{title}</p>
             </div>
-            {/* {isExpanded && ( */}
             <div className='card2-body'>
                 <p className="card2-body-title">{title}</p>
                 <p className="card2-body-text">{body}</p>
-                <a className='card2-body-link'>
-                    {/**
-                         if (serviceTitle !== 'complete-bathroom-remodeling' && serviceTitle !== 'bathtub-shower-conversions' && serviceTitle !== 'senior-friendly-bathroom') {
-    return (
-      <ErrorPage text="Service not found" />
-    )
-  }
-                         */}
-                    {/* <Link to={`/services/${id}`}>Read More</Link> */}
-                </a>
             </div>
-            {/* )} */}
         </div>
     );
 };

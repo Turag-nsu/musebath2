@@ -16,10 +16,10 @@ import BlogPostArea from './components/AdminComponents/BlogPostArea/BlogPostArea
 import ProjectPostArea from './components/AdminComponents/ProjectPostArea/ProjectPostArea';
 import ViewPosts from './components/AdminComponents/ViewPosts/ViewPosts';
 import ViewProject from './components/AdminComponents/ViewProject/ViewProject';
-
 import TestArea from './components/TestArea/TestArea';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import AboutusPage from './Pages/AboutusPage';
+import { Helmet } from 'react-helmet';
 
 function App() {
   
@@ -29,9 +29,7 @@ function App() {
       password: "",
     },
     loggedIn: (username, password) => {
-      // const checkUser = JSON.parse(localStorage.getItem('user'));
-      // console.log(user.details.username, admin.details.username, user.details.password, admin.details.password);
-      if (username === process.env.REACT_APP_ADMIN && password === process.env.REACT_APP_PASSWORD) {
+ if (username === process.env.REACT_APP_ADMIN && password === process.env.REACT_APP_PASSWORD) {
         return true;
       }
       return false;
@@ -40,20 +38,16 @@ function App() {
       user.details.username = userName;
       user.details.password = password;
       localStorage.setItem('user', JSON.stringify(user.details));
-      // console.log(JSON.parse(localStorage.getItem('user')));
     },
     isAdmin: () => {
-      // return false
-      // return user.details.username === admin.details.username && user.details.password === admin.details.password;
+
       const checkUser = JSON.parse(localStorage.getItem('user'));
-      // console.log(checkUser);
       if (checkUser === null) {
         return false;
       }
       return user.loggedIn(checkUser.username, checkUser.password);
     }
   }
-  // console.log(process.env.REACT_APP_ADMIN, process.env.REACT_APP_PASSWORD);
   return (
 
     <div className="App">
@@ -82,7 +76,6 @@ function App() {
           </Route>
           <Route path="/projects/:projectLink" element={<SingleProjectPage />} />
           <Route path="/:any" element={<ErrorPage />} />
-          {/* <Route path="/admin/blog-post" element={<BlogPostArea />} /> */}
         </Routes>
       </BrowserRouter>
       <FooterArea />

@@ -88,13 +88,6 @@ const MyModal = ({ mainImageIdx, images }) => {
                         </div>
                     </button>
                 </div>
-                {/* <div className="plaggging">
-                    <button 
-                    
-                    className= "share-btn" style={{ border: 'none' }}>
-                        share
-                    </button>
-                </div> */}
             </div>
         </div>
     );

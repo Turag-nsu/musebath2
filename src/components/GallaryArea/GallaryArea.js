@@ -33,14 +33,17 @@ const GallaryArea = ({ images, title }) => {
 
 
             <Container>
-                <p
+                <article>
+                <h1
                     data-aos="zoom-in"
                     data-aos-delay={200}
                     data-aos-duration="700"
                     data-aos-ofset="200"
                     className='gallary-area-title'>
                     {title}
-                </p>
+                </h1>
+                </article>
+                
                 <Row xs={1} md={3}>
                     <Col md={3} >
                         <div className='gallary-pic-container'

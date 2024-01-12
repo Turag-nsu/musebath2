@@ -24,14 +24,17 @@ const ArticleArea = () => {
     return (
         <div className='article-area'>
             <Container>
-                <p className='article-area-title'
+                <article>
+                <h1 className='article-area-title'
                     data-aos="zoom-in"
                     data-aos-delay={200}
                     data-aos-duration="1000"
                     data-aos-ofset="200"
                 >
                     Tips for a Successful Bathroom Remodel
-                </p>
+                </h1>
+                </article>
+                
                 <div className="article-cards">
                     <Row className='card-group'>
                         {data.map(article => (

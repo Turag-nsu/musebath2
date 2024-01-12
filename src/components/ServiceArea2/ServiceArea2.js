@@ -44,37 +44,40 @@ const ServiceArea2 = () => {
     return (
         <div className='service-area-2'>
             <Container>
-                <p className='Service-area-2-title' 
+                <article>
+                    <h1 className='Service-area-2-title'
                         data-aos="zoom-in"
                         data-aos-delay={200}
                         data-aos-duration="700"
                         data-aos-ofset="200">
-                    Restyling Bathrooms Across the United States
-                </p>
+                        Restyling Bathrooms Across the United States
+                    </h1>
+                </article>
+
                 <Row>
                     <Col md={6} >
-                        <div className='map-area'  
-                        data-aos="zoom-in"
-                        data-aos-delay={200}
-                        data-aos-duration="700"
-                        data-aos-ofset="200">
+                        <div className='map-area'
+                            data-aos="zoom-in"
+                            data-aos-delay={200}
+                            data-aos-duration="700"
+                            data-aos-ofset="200">
                             <Mymap />
                         </div>
                     </Col>
                     <Col md={6}>
                         <p className="service-area-text"
-                        data-aos="zoom-in"
-                        data-aos-delay={200}
-                        data-aos-duration="100"
-                        data-aos-ofset="200"
+                            data-aos="zoom-in"
+                            data-aos-delay={200}
+                            data-aos-duration="100"
+                            data-aos-ofset="200"
                         >
                             Our professional bathroom remodeling services are designed to transform your ordinary bathroom into a luxurious oasis. With a keen eye for design and a commitment to quality.
                         </p>
                         <p className="Location-title"
-                        data-aos="zoom-in"
-                        data-aos-delay={200}
-                        data-aos-duration="100"
-                        data-aos-ofset="200"
+                            data-aos="zoom-in"
+                            data-aos-delay={200}
+                            data-aos-duration="100"
+                            data-aos-ofset="200"
                         >
                             We provide our services in the following cities:
                         </p>
@@ -82,10 +85,10 @@ const ServiceArea2 = () => {
                             <Row xs={2} md={3}>
                                 {
                                     serviceLocations.map(location =>
-                                        <div className="location" key={location.id}  data-aos="zoom-in"
-                                        data-aos-delay={200}
-                                        data-aos-duration="100"
-                                        data-aos-ofset="200">
+                                        <div className="location" key={location.id} data-aos="zoom-in"
+                                            data-aos-delay={200}
+                                            data-aos-duration="100"
+                                            data-aos-ofset="200">
                                             <Col>
                                                 <SingleLocation name={location.city} />
                                             </Col>
@@ -97,10 +100,10 @@ const ServiceArea2 = () => {
                     </Col>
                 </Row>
                 <div className="option-area-button mx-auto"
-                data-aos="zoom-in"
-                data-aos-delay={200}
-                data-aos-duration="100"
-                data-aos-ofset="200"
+                    data-aos="zoom-in"
+                    data-aos-delay={200}
+                    data-aos-duration="100"
+                    data-aos-ofset="200"
                 >
                     <Link to="/contact-us">
                         <CustomButton text="Free Consultation" />

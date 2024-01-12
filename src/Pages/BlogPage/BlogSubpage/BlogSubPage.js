@@ -40,7 +40,7 @@ const BlogSubPage = () => {
     }
      */
     // const purseBlogIDFromLinkGenerator = (blogID) => {
-        
+
     //     return Number(blogID.slice(blogID.length - 5));
     // }
     const blogID = Number(blogLink.slice(blogLink.length - 5));
@@ -168,11 +168,21 @@ const BlogSubPage = () => {
                 <meta name="url" content={metaBlogLink} />
                 <meta name="identifier-URL" content={metaBlogLink} />
                 {/* image */}
+
                 <meta property="og:title" content={`${blogData.title} | Musebath`} />
+                <meta property="og:site_name" content="Musebath" />
+                <meta property="og:url" content={metaBlogLink} />
+                <meta property="og:description" content={metaDescription} />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content= {blogData.tileImage} />
+                
+                {/* <meta property="og:title" content={`${blogData.title} | Musebath`} />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:image" content={blogData.tileImage} />
                 <meta property="og:url" content={metaBlogLink} />
-                
+                <meta property="og:image:width" content="2500"/> 
+                n<meta property="og:image:height" content="1330"/> */}
+
             </Helmet>
             <Container>
                 <Row style={{ position: "relative", overflow: "hidden" }}>
@@ -185,7 +195,10 @@ const BlogSubPage = () => {
                                 data-aos-duration="1000"
                                 data-aos-ofset="200"
                                 className='blog-title-area'>
-                                <p>{blogData.title}</p>
+                                <article>
+                                    <h1>{blogData.title}</h1>
+                                </article>
+
                             </div>
 
                             <div
@@ -206,71 +219,74 @@ const BlogSubPage = () => {
                                 {/* <p className='blog-upload-date'>{uploadDate}</p> */}
                                 <p className='blog-category'>{`Category: ${blogData.category}`}</p>
                             </div>
-                            <p
-                                data-aos="fade-up"
-                                data-aos-delay={200}
-                                data-aos-duration="1000"
-                                data-aos-ofset="200"
-                                className='blog-main-body'>{blogData.mainBody}</p>
-                            {
-                                blogData.bodyParts.map(content => {
-                                    return (
-                                        <div className='blog-content-area'>
-                                            <p 
-                                            data-aos="fade-in"
-                                            data-aos-delay={200}
-                                            data-aos-duration="1000"
-                                            
-                                            className='blog-content-title'>{content.title}</p>
-                                            <p className='blog-content-body'>{content.content}</p>
-                                            {
-                                                content.listItems ? (
-                                                    <div className='blog-content-list'>
-                                                        <ol>
-                                                            {
-                                                                content.listItems.map(
-                                                                    (item, index) => (
-                                                                        //    { if (item !== '') return <li key={index}>{item}</li> } 
-                                                                        item !== '' ? <li
-                                                                        data-aos="fade-up"
-                data-aos-delay={200}
-                data-aos-duration="1000"
-                data-aos-ofset="200"
-                                                                        key={index}>{item}</li> : null
-                                                                    )
+                            <article>
+                                <p
+                                    data-aos="fade-up"
+                                    data-aos-delay={200}
+                                    data-aos-duration="1000"
+                                    data-aos-ofset="200"
+                                    className='blog-main-body'>{blogData.mainBody}
+                                </p>
+                                {
+                                    blogData.bodyParts.map(content => {
+                                        return (
+                                            <div className='blog-content-area'>
+                                                <h2
+                                                    data-aos="fade-in"
+                                                    data-aos-delay={200}
+                                                    data-aos-duration="1000"
 
-                                                                )
-                                                            }
-                                                        </ol>
-                                                    </div>
-                                                ) : null
-                                            }
-                                            {
-                                                content.image ? (
-                                                    <div
-                                                        data-aos="zoom-in"
-                                                        data-aos-delay={200}
-                                                        data-aos-duration="1000"
-                                                        data-aos-ofset="200"
-                                                        className='blog-content-pic'>
-                                                        <img src={content.image} alt='blog-img' />
-                                                    </div>
-                                                ) : null
-                                            }
-                                            {
-                                                content.subBody ? (
-                                                    <p
-                                                    data-aos="fade-up"
-                data-aos-delay={200}
-                data-aos-duration="1000"
-                data-aos-ofset="200"
-                                                    className='blog-content-sub-body'>{content.subBody}</p>
-                                                ) : null
-                                            }
-                                        </div>
-                                    )
-                                })
-                            }
+                                                    className='blog-content-title'>{content.title}</h2>
+                                                <p className='blog-content-body'>{content.content}</p>
+                                                {
+                                                    content.listItems ? (
+                                                        <div className='blog-content-list'>
+                                                            <ol>
+                                                                {
+                                                                    content.listItems.map(
+                                                                        (item, index) => (
+                                                                            //    { if (item !== '') return <li key={index}>{item}</li> } 
+                                                                            item !== '' ? <li
+                                                                                data-aos="fade-up"
+                                                                                data-aos-delay={200}
+                                                                                data-aos-duration="1000"
+                                                                                data-aos-ofset="200"
+                                                                                key={index}>{item}</li> : null
+                                                                        )
+
+                                                                    )
+                                                                }
+                                                            </ol>
+                                                        </div>
+                                                    ) : null
+                                                }
+                                                {
+                                                    content.image ? (
+                                                        <div
+                                                            data-aos="zoom-in"
+                                                            data-aos-delay={200}
+                                                            data-aos-duration="1000"
+                                                            data-aos-ofset="200"
+                                                            className='blog-content-pic'>
+                                                            <img src={content.image} alt='blog-img' />
+                                                        </div>
+                                                    ) : null
+                                                }
+                                                {
+                                                    content.subBody ? (
+                                                        <p
+                                                            data-aos="fade-up"
+                                                            data-aos-delay={200}
+                                                            data-aos-duration="1000"
+                                                            data-aos-ofset="200"
+                                                            className='blog-content-sub-body'>{content.subBody}</p>
+                                                    ) : null
+                                                }
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </article>
                         </div>
                         <div
                             data-aos="fade-up"

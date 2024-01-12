@@ -32,7 +32,9 @@ const ServiceArea = () => {
         <Container>
             <div className="service-area-container">
                 <div className="service-title-area" data-aos="zoom-in-down">
-                    <p className="service-title-text">services We Provide</p>
+                    <article>
+                        <h1 className="service-title-text">services We Provide</h1>
+                    </article>
                     <Link to="/contact-us"><CustomButton text="Free Consultation" className="service-button" /></Link>
                 </div>
 

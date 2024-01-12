@@ -33,7 +33,7 @@ const WhyChoosePart = () => {
     return (
         <div className='why-choose-area' >
             <Container>
-                <p className="title-line">Why Choose our services</p>
+                <h1 className="title-line">Why Choose our services</h1>
                 <div className="cardArea">
                     <Row xs={1} md={4}>
                         {card1Data.map((data, index) =>

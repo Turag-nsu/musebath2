@@ -25,31 +25,34 @@ const ArticleAreaCard = ({ img, date, title, body, id }) => {
             data-aos-duration="1000"
             data-aos-ofset="200"
         >
-            <div className="article-area-top">
-                <div className="article-area-pic-container">
-                    <img src={img} alt="" />
-                </div>
-                <div className="article-area-date">
-                    <div>
-                        <img src={calender_month} alt="" />
+            <Link to={`/blog/${linkGenerator(title, id)}`} >
+                <div className="article-area-top">
+                    <div className="article-area-pic-container">
+                        <img src={img} alt="" />
                     </div>
-                    <div className="article-area-date-text">
-                        <p className=''>{date}</p>
+                    <div className="article-area-date">
+                        <div>
+                            <img src={calender_month} alt="" />
+                        </div>
+                        <div className="article-area-date-text">
+                            <p className=''>{date}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="article-area-card-body ">
-                <div className="article-area-card-title">
-                    <p>{title.slice(0, 60)}</p>
-                </div>
-                <div className="article-area-card-text">
-                    <p>{body.slice(0, 100)}</p>
+                <div className="article-area-card-body ">
+                    <article>
+                        <div className="article-area-card-title">
+                            <h3>{title.slice(0, 60)}</h3>
+                        </div>
+                        <div className="article-area-card-text">
+                            <p>{body.slice(0, 100)}</p>
+                        </div>
+                    </article>
+
+
                 </div>
 
-            </div>
-
-            <div className="article-area-card-button">
-                <Link to={`/blog/${linkGenerator(title, id)}`}>
+                <div className="article-area-card-button">
                     <button onClick={() => {
                         window.scrollTo(0, 0);
 
@@ -57,9 +60,9 @@ const ArticleAreaCard = ({ img, date, title, body, id }) => {
                         Read More
                         <img style={{ width: "1.5rem", height: "0.5rem" }} alt='click to read more' src={arrow} />
                     </button>
-                </Link>
 
-            </div>
+                </div>
+            </Link>
         </div>
     );
 };

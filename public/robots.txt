@@ -1,4 +1,4 @@
 
 User-agent: *
 Disallow: /admin/
-Sitemap: musebath.us/sitemap.xml
+Sitemap: https://musebath.us/sitemap.xml
