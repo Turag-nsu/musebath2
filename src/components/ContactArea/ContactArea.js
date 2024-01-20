@@ -54,7 +54,7 @@ const ContactArea = () => {
                 <p className='social-media-sub-title'>Follow us on Social Media for Updates, News, and Insights</p>
                 <div className='social-media-icons'>
                     <div className="social-logo">
-                        <a href="https://www.facebook.com/musebath.us/" target="_blank" aria-level="connect us on facebook" >
+                        <a href="https://www.facebook.com/musebath.us/" target="_blank" aria-label="connect us on facebook" >
                             <img style={{ border: "1px solid gray" }} src={fbLogo} alt="" />
                         </a>
                         <img style={{ border: "1px solid gray" }} src={instaLogo} alt="" />

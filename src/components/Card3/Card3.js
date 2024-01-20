@@ -13,7 +13,10 @@ const Card3 = ({ id, imgLink, title }) => {
                 </div>
             </div>
             <div className="img-container">
-                <img src={imgLink} alt="" />
+                <img
+                 loading="lazy"
+                 decoding="async"
+                src={imgLink} alt="" />
             </div>
             <div className="card3-title">
                 <p>{title}</p>

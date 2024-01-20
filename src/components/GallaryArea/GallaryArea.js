@@ -60,7 +60,10 @@ const GallaryArea = ({ images, title }) => {
                             }
                         >
                             {loadingImages[0] && <img src={imgLoading} alt=""   />}
-                            <img src={images[0]} alt="" onLoad={()=>{handleImageLoad(0)}} />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={images[0]} alt="" onLoad={()=>{handleImageLoad(0)}} />
                         </div>
 
                     </Col>
@@ -78,7 +81,10 @@ const GallaryArea = ({ images, title }) => {
                             }
                             }>
                             {loadingImages[1] && <img src={imgLoading} alt=""   />}
-                            <img src={images[1]} alt="" onLoad={()=>{handleImageLoad(1)}} />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={images[1]} alt="" onLoad={()=>{handleImageLoad(1)}} />
                         </div>
 
                     </Col>
@@ -97,7 +103,10 @@ const GallaryArea = ({ images, title }) => {
                             }
                             }>
                             {loadingImages[2] && <img src={imgLoading} alt=""   />}
-                            <img src={images[2]} alt="" onLoad={()=>{handleImageLoad(2)}} />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={images[2]} alt="" onLoad={()=>{handleImageLoad(2)}} />
                         </div>
 
                     </Col>
@@ -118,7 +127,10 @@ const GallaryArea = ({ images, title }) => {
                             }
                         >
                             {loadingImages[3] && <img src={imgLoading} alt=""   />}
-                            <img src={images[3]} alt="" onLoad={()=>{handleImageLoad(3)}} />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={images[3]} alt="" onLoad={()=>{handleImageLoad(3)}} />
                         </div>
 
                     </Col>
@@ -136,7 +148,10 @@ const GallaryArea = ({ images, title }) => {
                             }
                             className='gallary-pic-container'>
                             {loadingImages[4] && <img src={imgLoading} alt=""   />}
-                            <img src={images[4]} alt="" onLoad={()=>{handleImageLoad(4)}} />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={images[4]} alt="" onLoad={()=>{handleImageLoad(4)}} />
                         </div>
 
                     </Col>

@@ -15,11 +15,11 @@ const SingleProjectPage = () => {
     const [project, setProject] = React.useState();
     const [isLoading, setIsLoading] = React.useState(true);
     const [error, setError] = React.useState(false);
-    const {projectLink} = useParams();
+    const { projectLink } = useParams();
     //Number(blogLink.slice(blogLink.length - 5))
     const projectID = Number(projectLink.slice(projectLink.length - 5));
     const fetchProject = async () => {
-        
+
         try {
             const response = await axios.get(`https://musebath.onrender.com/api/project-posts/${projectID}`);
             console.log(response);
@@ -35,20 +35,21 @@ const SingleProjectPage = () => {
             setIsLoading(false);
             // return <ErrorPage />;
         }
-       
+
     }
     React.useEffect(() => {
         window.scrollTo(0, 0);
         fetchProject();
     }, []);
-    if(error) return <ErrorPage text="Project not found" />
-    if(isLoading) return <PageLoading />
+    if (error) return <ErrorPage text="Project not found" />
+    if (isLoading) return <PageLoading />
     const metaLink = `https://musebath.com/project/${projectLink}`;
     const allDescription = project.description.map((item) => item).join(' ');
     const metaDescription = allDescription.slice(0, 150);
     return (
         <div style={{ overflow: 'hidden' }} className='single-project-page-container'>
             <Helmet>
+                <link rel="canonical" href={metaLink} />
                 <title>{project.title} | Musebath</title>
                 <meta name="description" content={metaDescription} />
                 <meta name="keywords" content={project.keywords} />
@@ -58,7 +59,7 @@ const SingleProjectPage = () => {
                 <meta name='identifier-URL' content={metaLink} />
                 <meta property="og:title" content={project.title} />
                 <meta property="og:description" content={metaDescription} />
-                <meta property="og:image" content={project.images[0].img} />
+                {/* <meta property="og:image" content={project.images[0].img} /> */}
                 <meta property="og:url" content={metaLink} />
                 <meta property="og:type" content="website" />
                 <meta property="og:locale" content="en_US" />
@@ -66,10 +67,10 @@ const SingleProjectPage = () => {
 
             </Helmet>
             <Container>
-            <div className="single-project-header">
-                <p className='title'>{project.title}</p>
-                <p className='subtitle'>{project.subtitle}</p>
-            </div>
+                <div className="single-project-header">
+                    <p className='title'>{project.title}</p>
+                    <p className='subtitle'>{project.subtitle}</p>
+                </div>
             </Container>
             <ImageSlider images={project.images} />
             <Container>
@@ -82,9 +83,9 @@ const SingleProjectPage = () => {
                             <div className="single-projext-page-details-body" >
                                 {
                                     project.description.map((item, index) => {
-                                        
+
                                         return (
-                                            <p style={{whiteSpace:"pre-wrap"}} key={index}>{item}</p>
+                                            <p style={{ whiteSpace: "pre-wrap" }} key={index}>{item}</p>
                                         )
                                     })
                                 }

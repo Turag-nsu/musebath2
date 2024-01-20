@@ -67,7 +67,7 @@ line-height: 160%; /* 1.6rem */
 
 @media screen and (max-width: 768px){
     .single-project-header{
-        margin: 5rem 0 2.62rem 0;
+        margin: 7rem 0 2.62rem 0;
     }
     .single-project-header .title{
         font-size: 1.5rem;

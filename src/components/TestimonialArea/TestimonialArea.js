@@ -75,14 +75,14 @@ const TestimonialArea = () => {
                     <div className='testimonial-area-title-buttons'>
                         <button
                             onClick={handelClickPrev}
-                            style={{ border: 'none' }}>
+                            style={{ border: 'none' }} aria-label='previous button'>
                             <div className="testimonial-prev-button">
                                 <img src={callMade3} alt="" />
                             </div>
                         </button>
                         <button
                             onClick={handelClickNext}
-                            style={{ border: 'none' }}>
+                            style={{ border: 'none' }} aria-label='next button'>
                             <div className="testimonial-next-button">
                                 <img src={callMade2} alt="" />
                             </div>

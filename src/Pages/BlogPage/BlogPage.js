@@ -12,9 +12,11 @@ const BlogPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Our Blogs | Musebath</title>
-        <meta name="description" content="Musebath writes blogs on bathroom renovations, bathroom remodeling, bathroom design, bathroom renovation ideas, bathroom renovation cost. Read our blogs to get ideas for your bathroom renovation." />
-        <meta name="keywords" content="bathroom renovations, bathroom renovations Missouri, bathroom renovations near me" />
+        <title>Discover Expert Bathroom Remodeling Insights | Musebath Blog</title>
+        <meta name="description" content="Explore the best in bathroom remodeling with Musebath's insightful blog. Trusted tips, trends, and inspiration for transforming your space in Missouri, USA. Your go-to resource for top-notch ideas and expertise, right here, near you."/>
+        <meta name="author" content="Musebath" />
+        <meta name="keywords" content="Bathroom Remodeling Missouri, Trusted Bathroom Renovations, Best Bathroom Interior Design, Top-Rated Remodelers in USA, Expert Bathroom Contractors, Missouri's Premier Bath Renovations, America's Trusted Bathroom Remodels, Near Me Bathroom Upgrades, Best USA Bathroom Makeovers, Musebath Excellence in Remodeling"/>
+        
       </Helmet>
       <div style={{ backgroundColor: '#FFF' }}>
         <BlogHeroPart text="Our Blogs" bg={blogBG} />

@@ -18,9 +18,15 @@ const AboutusPage = () => {
     return (
         <div>
             <Helmet>
-                <title>About Us | Muse Bathrooms</title>
-                <meta name="description" content="Muse Bathrooms is a family owned and operated business that has been in the industry for over 30 years. We specialize in bathroom renovations in Missouri." />
-                <meta name="keywords" content="bathroom renovations, bathroom renovations Missouri, bathroom renovations near me, bathroom renovations in melbourne, bathroom renovations eastern suburbs, bathroom renovations south eastern suburbs, bathroom renovations north eastern suburbs, bathroom renovations bayside, bathroom renovations south east melbourne, bathroom renovations north melbourne, bathroom renovations south Missouri, bathroom renovations west Missouri, bathroom renovations south east, bathroom renovations north east, bathroom renovations bayside Missouri, bathroom renovations south east suburbs, bathroom renovations north east suburbs, bathroom renovations bayside suburbs, bathroom renovations south east suburbs Missouri, bathroom renovations north east suburbs Missouri, bathroom renovations bayside suburbs Missouri, bathroom renovations south east suburbs Missouri, bathroom renovations north east suburbs Missouri, bathroom renovations bayside suburbs vic" />
+                <title>About Musebath - Your Trusted Partner in Exceptional Bathroom Remodeling</title>
+                <meta name="description" content="Learn about Musebath, the name synonymous with trusted craftsmanship and innovative designs in the realm of bathroom remodeling. Discover our commitment to excellence and personalized service in Missouri, USA. As your dedicated partner, we transform spaces and redefine bathroom interiors with creativity and passion." />
+                <meta name="keywords" content="About Musebath, Trusted remodeling company, Innovative bathroom designs, Exceptional craftsmanship, Bathroom remodeling expertise, Missouri, USA, Personalized service, Passionate team, Creative transformations, Reliability in remodeling" />
+
+                <meta property="og:title" content="About Musebath - Your Trusted Partner in Exceptional Bathroom Remodeling" />
+                <meta property="og:description" content="Learn about Musebath, the name synonymous with trusted craftsmanship and innovative designs in the realm of bathroom remodeling. Discover our commitment to excellence and personalized service in Missouri, USA. As your dedicated partner, we transform spaces and redefine bathroom interiors with creativity and passion." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://musebath.us/about-us" />
+
             </Helmet>
             <BlogHeroPart text="About Us" bg={aboutHero} />
             <Container style={{ padding: '0' }}>

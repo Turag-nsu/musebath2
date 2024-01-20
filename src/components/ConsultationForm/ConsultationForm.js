@@ -93,7 +93,7 @@ const ConsultationForm = ({ colCount, showForm, setShowForm }) => {
               className="consultation-col">
                 <div className="consultation-input">
                   <p className="consultation-input-title">Describe your project</p>
-                  <input className="project-description-input" type="text" placeholder="" name="message" />
+                  <input className="project-description-input" type="text" placeholder="" name="message" aria-label="project description" />
                 </div>
                 <div className="consultation-area-radio-group-title" >
                   <p >Preferred Time to Talk</p>

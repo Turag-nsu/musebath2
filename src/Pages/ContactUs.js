@@ -12,15 +12,22 @@ const ContactUs = () => {
     return (
         <div className="contact-us">
             <Helmet>
-                <title>Contact Us | Muse Bathrooms</title>
-                <meta name="description" content="Contact Muse Bathrooms for bathroom renovations in Missouri. We are a family owned and operated business that has been in the industry for over 30 years." />
-                <meta name="keywords" content="bathroom renovations, bathroom renovations Missouri, bathroom renovations near me, bathroom renovations in melbourne, bathroom renovations eastern suburbs, bathroom renovations south eastern suburbs, bathroom renovations north eastern suburbs, bathroom renovations bayside, bathroom renovations south east melbourne, bathroom renovations north melbourne, bathroom renovations south Missouri, bathroom renovations west Missouri, bathroom renovations south east, bathroom renovations north east, bathroom renovations bayside Missouri, bathroom renovations south east suburbs, bathroom renovations north east suburbs, bathroom renovations bayside suburbs, bathroom renovations south east suburbs Missouri, bathroom renovations north east suburbs Missouri, bathroom renovations bayside suburbs Missouri, bathroom renovations south east suburbs Missouri, bathroom renovations north east suburbs Missouri, bathroom renovations bayside suburbs vic" />
+                <title>Transform Your Space with Musebath - Contact Us for Exceptional Bathroom Remodeling in Missouri, USA!</title>
+                <meta name="description" content="Connect with Musebath, your trusted source for unparalleled bathroom remodeling in Missouri, USA. Elevate your space with innovative designs and top-notch craftsmanship. Contact us now to turn your dream bathroom into a reality – excellence, just a message away!" />
+                <meta name="keywords" content="bathroom remodeling, remodeling contractors, expert craftsmanship, innovative designs, trusted remodeling services, premier bathroom solutions, Missouri bathroom remodeling, USA bathroom renovations, near me bathroom contractors, creative bathroom designs, professional remodelers, bathroom makeover specialists, customized bathroom projects, exceptional space transformations" />
+
+                {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Transform Your Space with Musebath - Contact Us for Exceptional Bathroom Remodeling in Missouri, USA!" />
+                <meta property="og:description" content="Connect with Musebath, your trusted source for unparalleled bathroom remodeling in Missouri, USA. Elevate your space with innovative designs and top-notch craftsmanship. Contact us now to turn your dream bathroom into a reality – excellence, just a message away!" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://musebath.us/contact-us" />
             </Helmet>
+
             <div style={{ backgroundColor: '#FFF' }}>
                 <ContactUsHeroPart />
             </div>
             <Container>
-                <div className='form-map-area' style={{position:"relative"}}>
+                <div className='form-map-area' style={{ position: "relative" }}>
                     <FormAndMap />
                 </div>
                 <div style={{ backgroundColor: '#FFF' }}>

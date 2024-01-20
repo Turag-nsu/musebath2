@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Card2.css';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 const Card2 = ({ imgLink, title, body, id }) => {
     const navigator = useNavigate();
@@ -19,7 +18,10 @@ const Card2 = ({ imgLink, title, body, id }) => {
 
                 className={`card2-img-container`}
             >
-                <img className='card2-container-img' src={imgLink} alt={title} />
+                <img 
+                 loading="lazy"
+                 decoding="async"
+                className='card2-container-img' src={imgLink} alt={title} />
                 <div className="card2-img-overlay">Click for details</div>
                 <div
                     className={`card2-overley`}

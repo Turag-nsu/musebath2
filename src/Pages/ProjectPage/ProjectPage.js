@@ -16,9 +16,15 @@ const ProjectPage = () => {
     return (
         <div>
             <Helmet>
-                <title>Our Projects | Musebath</title>
-                <meta name="description" content="Musebath has amazing bathroom renovation projects. Check out our projects and get ideas for your bathroom renovation. We are the best bathroom renovation company in Missouri." />
-                <meta name="keywords" content="bathroom renovations, bathroom renovations Missouri, bathroom renovations near me, bathroom renovations in melbourne, bathroom renovations eastern suburbs, bathroom renovations south eastern suburbs" />
+                <title>Masterpiece Bathroom Remodeling Projects | Musebath Portfolio</title>
+                <meta name="description" content="Explore Musebath's portfolio showcasing the best in bathroom remodeling projects. Trusted craftsmanship and innovative designs come together in our Missouri, USA transformations. Get inspired by our top-notch work, near you, as we redefine bathroom interiors with excellence." />
+                <meta name="author" content="Musebath" />
+                <meta name="keywords" content="Bathroom Remodeling Missouri, Trusted Bathroom Renovations, Best Bathroom Interior Design, Top-Rated Remodelers in USA, Expert Bathroom Contractors, Missouri's Premier Bath Renovations, America's Trusted Bathroom Remodels, Near Me Bathroom Upgrades, Best USA Bathroom Makeovers, Musebath Excellence in Remodeling" />
+
+                <meta property="og:title" content="Masterpiece Bathroom Remodeling Projects | Musebath Portfolio" />
+                <meta property="og:description" content="Explore Musebath's portfolio showcasing the best in bathroom remodeling projects. Trusted craftsmanship and innovative designs come together in our Missouri, USA transformations. Get inspired by our top-notch work, near you, as we redefine bathroom interiors with excellence." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://musebath.us/about-us" />
             </Helmet>
             {/* <div > */}
             <BlogHeroPart text="Our Projects" bg={projectBg} />
@@ -35,7 +41,7 @@ const ProjectPage = () => {
             <div>
                 <TrustedArea />
             </div>
-            
+
         </div>
     );
 };

@@ -4,11 +4,13 @@ import calender_month from '../../Images/calendar_month.svg'
 import arrow from '../../Images/arrow.svg'
 import { Link } from 'react-router-dom';
 const ArticleAreaCard = ({ img, date, title, body, id }) => {
-    // console.log(img)
     const linkGenerator = (title, id) => {
+        // if link has ? mark then remove it
+        if (title.includes('?')) {
+            title = title.replace('?', '');
+        }
         const link = title.toLowerCase().replace(/ /g, '-');
         const linkId = id.toString();
-        //the id will be 5 digits long. if it is less than 5 digits, add 0s to the front
         const linkIdLength = linkId.length;
         const linkIdLengthDifference = 5 - linkIdLength;
         let linkIdString = '';
@@ -28,11 +30,17 @@ const ArticleAreaCard = ({ img, date, title, body, id }) => {
             <Link to={`/blog/${linkGenerator(title, id)}`} >
                 <div className="article-area-top">
                     <div className="article-area-pic-container">
-                        <img src={img} alt="" />
+                        <img
+                         loading="lazy"
+                         decoding="async"
+                        src={img} alt="" />
                     </div>
                     <div className="article-area-date">
                         <div>
-                            <img src={calender_month} alt="" />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={calender_month} alt="" />
                         </div>
                         <div className="article-area-date-text">
                             <p className=''>{date}</p>
@@ -42,7 +50,7 @@ const ArticleAreaCard = ({ img, date, title, body, id }) => {
                 <div className="article-area-card-body ">
                     <article>
                         <div className="article-area-card-title">
-                            <h3>{title.slice(0, 60)}</h3>
+                            <h1>{title.slice(0, 60)}</h1>
                         </div>
                         <div className="article-area-card-text">
                             <p>{body.slice(0, 100)}</p>
@@ -58,7 +66,10 @@ const ArticleAreaCard = ({ img, date, title, body, id }) => {
 
                     }} style={{ border: "none", backgroundColor: "transparent" }}>
                         Read More
-                        <img style={{ width: "1.5rem", height: "0.5rem" }} alt='click to read more' src={arrow} />
+                        <img
+                         loading="lazy"
+                         decoding="async"
+                        style={{ width: "1.5rem", height: "0.5rem" }} alt='click to read more' src={arrow} />
                     </button>
 
                 </div>

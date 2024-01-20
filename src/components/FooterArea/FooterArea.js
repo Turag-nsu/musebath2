@@ -44,7 +44,7 @@ const FooterArea = () => {
                             </a>
                             <p class="footer-subtitle">Elevate your bathroom to a tranquil sanctuary.</p>
                             <div className="social-logo">
-                                <a href="https://www.facebook.com/musebath.us/" target="_blank" aria-level="connect us on facebook" >
+                                <a href="https://www.facebook.com/musebath.us/" target="_blank" aria-label="connect us on facebook" >
                                     <img src={fbLogo} alt="musebath facebook" />
                                 </a>
                                 <img src={instaLogo} alt="musebath instagram" />

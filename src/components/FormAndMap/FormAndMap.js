@@ -71,7 +71,7 @@ const FormAndMap = () => {
                             <div className="message-col">
                                 <div className="message-input">
                                     <p className="message-input-title">Describe your project</p>
-                                    <input className="project-description-input" type="text" placeholder="" name="message" />
+                                    <input className="project-description-input" type="text" placeholder="" name="message" aria-label="project description"/>
                                 </div>
                                 <div className="message-area-radio-group-title" >
                                     <p >Preferred Time to Talk</p>

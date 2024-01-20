@@ -31,7 +31,10 @@ const TrustedArea = () => {
                             data-aos-ofset="200"
                             anchor-placement="top-center"
                         >
-                            <img src={trustLogo1} alt="" />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={trustLogo1} alt="" />
                         </div>
                         <div 
                         data-aos="zoom-in"
@@ -40,7 +43,10 @@ const TrustedArea = () => {
                         data-aos-ofset="200"
                         anchor-placement="top-center"
                         className="trust-single-logo">
-                            <img src={trustLogo2} alt="" />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={trustLogo2} alt="" />
                         </div>
                         <div
                         data-aos="zoom-in"
@@ -49,7 +55,10 @@ const TrustedArea = () => {
                         data-aos-ofset="200"
                         anchor-placement="top-center"
                         className="trust-single-logo">
-                            <img src={trustLogo3} alt="" />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={trustLogo3} alt="" />
                         </div>
                         <div 
                         data-aos="zoom-in"
@@ -58,7 +67,10 @@ const TrustedArea = () => {
                         data-aos-ofset="200"
                         anchor-placement="top-center"
                         className="trust-single-logo">
-                            <img src={trustLogo4} alt="" />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={trustLogo4} alt="" />
                         </div>
                         <div
                         data-aos="zoom-in"
@@ -67,7 +79,10 @@ const TrustedArea = () => {
                         data-aos-ofset="200"
                         anchor-placement="top-center"
                         className="trust-single-logo">
-                            <img src={trustLogo5} alt="" />
+                            <img
+                             loading="lazy"
+                             decoding="async"
+                            src={trustLogo5} alt="" />
                         </div>
                     </div>
                 </div>

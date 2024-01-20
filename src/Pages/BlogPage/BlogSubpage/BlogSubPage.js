@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import './BlogSubPage.css'
-import { Container, Row, Col } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 // import blogData from '../../../Database/Data'
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
@@ -14,7 +17,6 @@ import axios from 'axios';
 import PageLoading from '../../../components/PageLoading/PageLoading';
 import ErrorPage from '../../../components/ErrorPage/ErrorPage';
 import { Helmet } from 'react-helmet';
-// import { set } from 'mongoose';
 
 
 const BlogSubPage = () => {
@@ -24,43 +26,22 @@ const BlogSubPage = () => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(false);
-    /**
-     const linkGenerator = (title, id) => {
-        const link = title.toLowerCase().replace(/ /g, '-');
-        const linkId = id.toString();
-        //the id will be 5 digits long. if it is less than 5 digits, add 0s to the front
-        const linkIdLength = linkId.length;
-        const linkIdLengthDifference = 5 - linkIdLength;
-        let linkIdString = '';
-        for (let i = 0; i < linkIdLengthDifference; i++) {
-            linkIdString += '0';
-        }
-        linkIdString += linkId;
-        return `${link}-${linkIdString}`;
-    }
-     */
-    // const purseBlogIDFromLinkGenerator = (blogID) => {
-
-    //     return Number(blogID.slice(blogID.length - 5));
-    // }
     const blogID = Number(blogLink.slice(blogLink.length - 5));
     const fetchBlogData = async () => {
         setBlogID2(blogID);
         try {
             const response = await axios.get(`https://musebath.onrender.com/api/blog-posts/${blogID}`);
-            // console.log(response);
             if (response.status !== 200) {
                 throw new Error('Failed to fetch blog data');
             } else {
                 setBlogData(response.data);
-                // console.log(response.status);
                 setIsLoading(false);
             }
 
         } catch (error) {
             setError(true);
             setIsLoading(false);
-            // return <ErrorPage />;
+            return <ErrorPage />;
         }
     };
     const fetchRelatedBlogs = async () => {
@@ -73,19 +54,18 @@ const BlogSubPage = () => {
         } catch (error) {
             setError(true);
             setIsLoading(false);
-            // return <ErrorPage />;
         }
     };
 
     setTimeout(() => {
-        if (blogID2 !== blogID) {
+        if (blogID2 != blogID) {
             setIsLoading(true);
             fetchBlogData();
             fetchRelatedBlogs();
+            window.scrollTo(0, 0);
         }
     }, 500);
     useEffect(() => {
-        console.log("blogID is: ", blogID);
         fetchBlogData();
         fetchRelatedBlogs();
         const interval = setInterval(() => {
@@ -95,13 +75,9 @@ const BlogSubPage = () => {
         return () => clearInterval(interval);
     }, []);
 
-    if (error) {
-        console.log(blogID);
-        // return <ErrorPage text="Blog not found" />;
+    if (error || blogLink.length < 4) {
+        return <ErrorPage text="Blog not found" />;
     }
-
-
-    // const { title, tileImage, uploaderName, uploadDate, category, mainBody, bodyParts } = blogData;
     const handleNextClick = async () => {
 
         const relatedBlogCards = document.querySelector('.related-blog-card-group');
@@ -119,9 +95,6 @@ const BlogSubPage = () => {
             relatedBlogCards.style.transition = 'opacity 0.5s ease-in-out';
 
         }, 500);
-        // const firstCard = data.shift();
-        // data.push(firstCard);
-
 
     }
     const handlePrevClick = async () => {
@@ -141,9 +114,6 @@ const BlogSubPage = () => {
             relatedBlogCards.style.transition = 'opacity 0.5s ease-in-out';
 
         }, 500);
-        // const lastCard = data.pop();
-        // data.unshift(lastCard);
-
     }
     if (isLoading || !blogData) {
         return (
@@ -157,6 +127,7 @@ const BlogSubPage = () => {
     return (
         <div>
             <Helmet>
+                <link rel="canonical" href={metaBlogLink} />
                 <title>{blogData.title} | Musebath</title>
                 <meta name="description" content={metaDescription} />
                 <meta name="keywords" content={blogData.keywords} />
@@ -174,8 +145,8 @@ const BlogSubPage = () => {
                 <meta property="og:url" content={metaBlogLink} />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content= {blogData.tileImage} />
-                
+                {/* <meta property="og:image" content= {blogData.tileImage} /> */}
+
                 {/* <meta property="og:title" content={`${blogData.title} | Musebath`} />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:image" content={blogData.tileImage} />
@@ -315,6 +286,7 @@ const BlogSubPage = () => {
                     <p className='related-blog-area-title'>Related articles</p>
                     <div className='testimonial-area-title-buttons'>
                         <button
+                            aria-label='previous button'
                             onClick={handlePrevClick}
                             style={{ border: 'none' }}>
                             <div className="testimonial-prev-button">
@@ -322,6 +294,7 @@ const BlogSubPage = () => {
                             </div>
                         </button>
                         <button
+                            aria-label='next button'
                             onClick={handleNextClick}
                             style={{ border: 'none' }}>
                             <div className="testimonial-next-button">
@@ -335,7 +308,6 @@ const BlogSubPage = () => {
                     <Row className='related-blog-card-group'>
                         {data.map(article => (
                             <Col key={article.id} md={4} xs={12}>
-                                {/* <ArticleAreaCard */}
                                 <ArticleAreaCard img={article.tileImage} date={article.uploadDate} title={article.title} body={article.mainBody} id={article.id} />
                             </Col>
                         ))
@@ -344,11 +316,9 @@ const BlogSubPage = () => {
                 </div>
             </Container>
             <div className='blog-consultation-form'>
-                {/* <ConsultationForm */}
                 <ConsultationForm showForm={true} />
             </div>
             <div className='blog-trusted-area'>
-                {/* <TrustedArea */}
                 <TrustedArea />
             </div>
         </div>

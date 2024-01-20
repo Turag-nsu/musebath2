@@ -49,7 +49,7 @@ const ContactUsForm = () => {
                 >
                     <div className="form-group">
                         <input type="text" className="form-control" placeholder="Your Name" name='name'></input>
-                        {/* <imput type="text" className="form-control" placeholder="Your Name"></imput> */}
+                       
                         <input type="tel" className="form-control" placeholder="Your Phone" name="phone" />
                         <input type="email" className="form-control" placeholder="Your Email" name="email"></input>
                         <textarea className="form-control message-area" placeholder="Write message" name="message"></textarea>

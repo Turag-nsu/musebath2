@@ -6,23 +6,31 @@ import ConsultationForm from './../ConsultationForm/ConsultationForm';
 
 const BlogHeroPart = ({ text, bg }) => {
     const [showForm, setShowForm] = useState(false);
+    const [bgImg, setBgImg] = useState(null);
+
+    useEffect(() => {
+        const bgImage = new Image();
+        bgImage.src = bg;
+
+        bgImage.onload = () => {
+            setBgImg(bgImage);
+        };
+    }, [bg]);
+
     return (
         <>
-
-            <div className="blog-hero-part" style={{
-                backgroundImage: `url(${bg})`,
-            }}>
+            <div className="blog-hero-part" style={{ backgroundImage: `url(${bgImg ? bgImg.src : ''})` }}>
                 <div className="blog-hero-overlay"></div>
-                <div className="blog-hero-text-area" data-aos="zoom-in" >
+                <div className="blog-hero-text-area" data-aos="zoom-in">
                     <p>{text}</p>
                 </div>
                 <div className='estimate-btn'>
                     <button onClick={() => setShowForm(true)}>
                         <div className='overlay-btn'>
-                            <img src={overlayBtn} alt="" />
+                            <img src={overlayBtn} alt="" loading="lazy" />
                         </div>
                         <div className='overlay-btn-border'>
-                            <img src={overlayBoder} alt="" />
+                            <img src={overlayBoder} alt="" loading="lazy" />
                         </div>
                         <div className='estimate-btn-text'>
                             <p className='free-text'>FREE</p>
